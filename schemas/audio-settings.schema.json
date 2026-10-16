@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.game/schemas/audio-settings.schema.json",
+  "title": "Roentgen Audio Settings",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "enabled",
+    "masterVolume",
+    "quality",
+    "maximumVoices",
+    "renderBlockFrames",
+    "submittedBufferFrames"
+  ],
+  "properties": {
+    "enabled": {
+      "type": "boolean"
+    },
+    "masterVolume": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "musicVolume": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "interfaceVolume": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "weaponsVolume": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "creaturesVolume": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "foleyVolume": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "ambienceVolume": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "focusVolume": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "quality": {
+      "enum": [
+        "RealtimeLow",
+        "RealtimeHigh"
+      ]
+    },
+    "maximumVoices": {
+      "type": "integer",
+      "minimum": 16,
+      "maximum": 512
+    },
+    "targetQueuedBuffers": {
+      "type": "integer",
+      "minimum": 2,
+      "maximum": 8
+    },
+    "renderBlockFrames": {
+      "enum": [
+        256,
+        512,
+        1024
+      ]
+    },
+    "submittedBufferFrames": {
+      "type": "integer",
+      "minimum": 256
+    },
+    "pcmRingBlocks": {
+      "type": "integer",
+      "minimum": 4,
+      "maximum": 64
+    },
+    "occlusionRayBudgetPerFrame": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 128
+    },
+    "dynamicRange": {
+      "enum": [
+        "Wide",
+        "Standard",
+        "Night",
+        "ReducedSuddenSounds"
+      ]
+    },
+    "reduceSuddenSounds": {
+      "type": "boolean"
+    },
+    "reduceHighFrequencyDiagnosticSounds": {
+      "type": "boolean"
+    },
+    "monoOutput": {
+      "type": "boolean"
+    },
+    "muteWhenUnfocused": {
+      "type": "boolean"
+    },
+    "continueAmbienceInMenus": {
+      "type": "boolean"
+    }
+  }
+}

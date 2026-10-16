@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "campaignSeed": 5931035436993955150,
+  "characters": [
+    {
+      "namespace": "phase9-character",
+      "key": "clinic-caretaker",
+      "expected": "8612e00889de94b04a5196ddd10a8a32",
+      "characterRootDomain": "character.8612e00889de94b04a5196ddd10a8a32",
+      "expectedRootDomainSeed": 13595073734035235925,
+      "headBoneId": "f42817819c1616603565cc91360cfaee"
+    },
+    {
+      "namespace": "phase9-character",
+      "key": "clinic-guard",
+      "expected": "f407c1c6eea5e7a655444db3aef3ea7a",
+      "characterRootDomain": "character.f407c1c6eea5e7a655444db3aef3ea7a",
+      "expectedRootDomainSeed": 2841137967492347345,
+      "headBoneId": "14c4de15648f7a793cc0e7f00dc78ac6"
+    },
+    {
+      "namespace": "phase9-character",
+      "key": "clinic-technician",
+      "expected": "cb9ac6b70798be15c8ff4ae4685365eb",
+      "characterRootDomain": "character.cb9ac6b70798be15c8ff4ae4685365eb",
+      "expectedRootDomainSeed": 8138414393580314845,
+      "headBoneId": "aa469cc7c4e0371330ca980a8f6c6b72"
+    },
+    {
+      "namespace": "phase9-character",
+      "key": "clinic-resident",
+      "expected": "78a7148ed9bb54df1bc1a1246f5164bc",
+      "characterRootDomain": "character.78a7148ed9bb54df1bc1a1246f5164bc",
+      "expectedRootDomainSeed": 11483252060270340940,
+      "headBoneId": "0f7ce993de81a4e9097dce9c5745592d"
+    },
+    {
+      "namespace": "phase9-character",
+      "key": "blackwater-scavenger",
+      "expected": "df8f8d90ae4ec068ee5e4983edaf6b1d",
+      "characterRootDomain": "character.df8f8d90ae4ec068ee5e4983edaf6b1d",
+      "expectedRootDomainSeed": 15491436288656465712,
+      "headBoneId": "d1ca5376edac556ef2b2b7f0a3b76317"
+    },
+    {
+      "namespace": "phase9-character",
+      "key": "blackwater-hostile",
+      "expected": "e5e73a21c99960f06414d375ccc56bac",
+      "characterRootDomain": "character.e5e73a21c99960f06414d375ccc56bac",
+      "expectedRootDomainSeed": 16879186824284148899,
+      "headBoneId": "87d7ef6a9dd346a6ac12e8099b106706"
+    },
+    {
+      "namespace": "phase9-character",
+      "key": "relay-technician",
+      "expected": "319176ea0dd5771d529fff4135c6f3a1",
+      "characterRootDomain": "character.319176ea0dd5771d529fff4135c6f3a1",
+      "expectedRootDomainSeed": 1272450141321814994,
+      "headBoneId": "18b7ba727424a01e71dffb9fd3032fb3"
+    },
+    {
+      "namespace": "phase9-creature",
+      "key": "blackwater-quadruped",
+      "expected": "a2dc7811f7e8f9b369e6758275bdfbe7",
+      "characterRootDomain": "character.a2dc7811f7e8f9b369e6758275bdfbe7",
+      "expectedRootDomainSeed": 17250980623281021629,
+      "headBoneId": "c36b0daf56769495a993a0c6a3d23184"
+    }
+  ],
+  "skinWeightVectors": [
+    {
+      "input": [
+        0.4,
+        0.4,
+        0.4,
+        0.4
+      ],
+      "expected": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "input": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "expected": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "input": [
+        -1,
+        0.25,
+        0.75,
+        0
+      ],
+      "expected": [
+        0,
+        0.25,
+        0.75,
+        0
+      ]
+    }
+  ]
+}

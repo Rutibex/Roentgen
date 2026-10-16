@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Roentgen Character Creation Draft",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "characterId": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{32}$"
+    },
+    "personalHistorySeed": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "attributes": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 10
+      }
+    },
+    "specializedSkills": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "backgroundId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "traitIds": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "equipmentPackageId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "value": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "value"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "characterId",
+    "personalHistorySeed",
+    "attributes",
+    "specializedSkills",
+    "backgroundId",
+    "traitIds",
+    "equipmentPackageId",
+    "history"
+  ]
+}

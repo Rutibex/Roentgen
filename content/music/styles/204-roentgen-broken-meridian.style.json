@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "id": "roentgen-broken-meridian",
+  "name": "Roentgen — Broken Meridian",
+  "description": "Original desert-noir wasteland score: dry guitar fragments, lonely reed colors, sub-bass drones and far-off industrial resonance.",
+  "version": "1.1.0",
+  "family": "game",
+  "abstract": false,
+  "extends": "game-dark-ambient-fps",
+  "tempo": {
+    "minimum": 48,
+    "maximum": 70
+  },
+  "candidateCount": 20,
+  "scales": [
+    "naturalMinor",
+    "dorian",
+    "phrygian"
+  ],
+  "rhythms": [
+    {
+      "id": "meridian-drift",
+      "steps": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "meridian-machine-echo",
+      "steps": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "roles": [
+    {
+      "id": "melody",
+      "role": "lead",
+      "generalMidiProgram": 25,
+      "rhythmPatternId": "meridian-drift",
+      "density": 15,
+      "minimumPitch": 50,
+      "maximumPitch": 82,
+      "instrumentSelector": {
+        "families": [
+          "guitar",
+          "reed",
+          "pipe"
+        ],
+        "preferredTags": [
+          "expressive",
+          "distinct"
+        ],
+        "maximumBrightness": 0.72,
+        "maximumLayers": 1
+      }
+    },
+    {
+      "id": "bass",
+      "role": "bass",
+      "generalMidiProgram": 38,
+      "rhythmPatternId": "meridian-machine-echo",
+      "density": 17,
+      "instrumentSelector": {
+        "families": [
+          "bass",
+          "strings",
+          "synthPad"
+        ],
+        "preferredTags": [
+          "low",
+          "supportive"
+        ],
+        "maximumLayers": 1
+      }
+    },
+    {
+      "id": "chords",
+      "role": "chords",
+      "generalMidiProgram": 92,
+      "density": 14,
+      "instrumentSelector": {
+        "families": [
+          "synthPad",
+          "strings",
+          "organ",
+          "guitar"
+        ],
+        "preferredTags": [
+          "atmospheric",
+          "sustaining"
+        ],
+        "maximumBrightness": 0.6,
+        "maximumLayers": 2
+      }
+    },
+    {
+      "id": "arpeggio",
+      "role": "arpeggio",
+      "rhythmPatternId": "meridian-machine-echo",
+      "density": 7,
+      "instrumentSelector": {
+        "families": [
+          "chromaticPercussion",
+          "guitar",
+          "synthEffects"
+        ],
+        "maximumBrightness": 0.58,
+        "maximumLayers": 1
+      }
+    },
+    {
+      "id": "counter",
+      "role": "counterMelody",
+      "rhythmPatternId": "meridian-drift",
+      "density": 5,
+      "instrumentSelector": {
+        "families": [
+          "reed",
+          "pipe",
+          "strings"
+        ],
+        "maximumLayers": 1
+      }
+    },
+    {
+      "id": "texture",
+      "role": "texture",
+      "density": 32,
+      "minimumPitch": 28,
+      "maximumPitch": 88,
+      "instrumentSelector": {
+        "families": [
+          "synthPad",
+          "synthEffects",
+          "strings",
+          "soundEffects"
+        ],
+        "preferredTags": [
+          "atmospheric",
+          "sustaining",
+          "environmental"
+        ],
+        "maximumBrightness": 0.55,
+        "maximumLayers": 2
+      }
+    },
+    {
+      "id": "drums",
+      "role": "drums",
+      "enabled": false,
+      "density": 0
+    }
+  ],
+  "constraints": {
+    "maximumDensityRatio": 0.55,
+    "maximumMelodicLeap": 8,
+    "maximumRepeatedPitch": 4
+  }
+}

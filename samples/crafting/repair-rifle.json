@@ -1,0 +1,12 @@
+{
+  "planId": "00000000000000100000000000000001",
+  "actorId": "00000000000000010000000000000001",
+  "targetItemId": "rifle",
+  "componentItemIds": [
+    "material.scrap-steel",
+    "material.lubricant"
+  ],
+  "skill": "Engineering",
+  "difficulty": 50,
+  "maximumRestoredConditionPermille": 850
+}

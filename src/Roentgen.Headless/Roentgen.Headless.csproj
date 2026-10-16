@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Roentgen.Headless</RootNamespace>
+    <AssemblyName>Roentgen.Headless</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Roentgen.Contracts\Roentgen.Contracts.csproj" />
+    <ProjectReference Include="..\Roentgen.Core\Roentgen.Core.csproj" />
+    <ProjectReference Include="..\Roentgen.Diagnostics\Roentgen.Diagnostics.csproj" />
+    <ProjectReference Include="..\Roentgen.Entities\Roentgen.Entities.csproj" />
+    <ProjectReference Include="..\Roentgen.Generation\Roentgen.Generation.csproj" />
+    <ProjectReference Include="..\Roentgen.Persistence\Roentgen.Persistence.csproj" />
+    <ProjectReference Include="..\Roentgen.Simulation\Roentgen.Simulation.csproj" />
+  </ItemGroup>
+</Project>

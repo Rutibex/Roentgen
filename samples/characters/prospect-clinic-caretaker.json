@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "archetypeId": "clinic-caretaker",
+  "species": "Human",
+  "heightRangeMillimeters": {
+    "minimum": 1580,
+    "maximum": 1900
+  },
+  "buildRangePermille": {
+    "minimum": 750,
+    "maximum": 1250
+  },
+  "clothingProfiles": [
+    "clinic-layered-workwear",
+    "medical-apron"
+  ],
+  "equipmentPoseProfiles": [
+    "unarmed",
+    "tool"
+  ]
+}

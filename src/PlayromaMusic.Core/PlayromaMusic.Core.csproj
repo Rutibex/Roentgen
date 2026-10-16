@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>PlayromaMusic.Core</RootNamespace>
+    <AssemblyName>PlayromaMusic.Core</AssemblyName>
+    <Description>Integrated engine-independent Playroma Music model and theory library.</Description>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 18,
+  "campaignSeed": "0x524F454E5447454E",
+  "region": "BrokenMeridian",
+  "sampleRate": 48000,
+  "channels": 2,
+  "renderBlockFrames": 512,
+  "submittedBufferFrames": 1024,
+  "maximumVoices": 96,
+  "stressSeconds": 30,
+  "events": [
+    "WeaponFire",
+    "Impact",
+    "FootContact",
+    "Explosion",
+    "FocusEnter",
+    "FocusTarget",
+    "FocusCommit"
+  ]
+}

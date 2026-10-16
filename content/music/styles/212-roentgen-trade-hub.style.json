@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "id": "roentgen-trade-hub",
+  "name": "Roentgen \u2014 Trade Hub",
+  "description": "Busy but bounded mercantile texture with regional color.",
+  "version": "1.0.0",
+  "family": "game",
+  "abstract": false,
+  "extends": "game-isometric-crpg"
+}

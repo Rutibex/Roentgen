@@ -1,0 +1,53 @@
+{
+  "id": "scrap-rifle-sample",
+  "schemaVersion": 1,
+  "parts": [
+    {
+      "id": "receiver",
+      "primitive": "box",
+      "size": { "x": 0.55, "y": 0.17, "z": 0.14 },
+      "radius": 0.0,
+      "height": 0.0,
+      "segments": 4,
+      "rings": 2,
+      "profile": [],
+      "polygon": [],
+      "path": [],
+      "transform": {
+        "translation": { "x": 0.0, "y": 0.04, "z": 0.0 },
+        "rotationDegrees": { "x": 0.0, "y": 0.0, "z": 0.0 },
+        "scale": { "x": 1.0, "y": 1.0, "z": 1.0 }
+      },
+      "color": { "r": 76, "g": 72, "b": 67, "a": 255 },
+      "materialSlot": 0,
+      "minimumLod": 0,
+      "uvProjection": "primitive",
+      "modifiers": []
+    },
+    {
+      "id": "barrel",
+      "primitive": "cylinder",
+      "size": { "x": 1.0, "y": 1.0, "z": 1.0 },
+      "radius": 0.035,
+      "height": 0.72,
+      "segments": 12,
+      "rings": 2,
+      "profile": [],
+      "polygon": [],
+      "path": [],
+      "transform": {
+        "translation": { "x": 0.0, "y": 0.06, "z": -0.55 },
+        "rotationDegrees": { "x": 90.0, "y": 0.0, "z": 0.0 },
+        "scale": { "x": 1.0, "y": 1.0, "z": 1.0 }
+      },
+      "color": { "r": 132, "g": 120, "b": 104, "a": 255 },
+      "materialSlot": 0,
+      "minimumLod": 0,
+      "uvProjection": "primitive",
+      "modifiers": []
+    }
+  ],
+  "collision": "compoundBoxes",
+  "lodCount": 3,
+  "metadata": { "family": "weapon", "sample": "true" }
+}

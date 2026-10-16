@@ -1,0 +1,15 @@
+{
+  "id": "00000000000000010000000000000002",
+  "definitionId": "weapon.hunting-rifle",
+  "location": {
+    "kind": "Inventory",
+    "holderId": "00000000000000010000000000000001"
+  },
+  "quantity": 1,
+  "condition": {
+    "structuralPermille": 620,
+    "calibrationPermille": 480,
+    "cleanlinessPermille": 550,
+    "contaminationPermille": 80
+  }
+}

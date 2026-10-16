@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.game/schemas/campaign-plan.schema.json",
+  "title": "Roentgen Phase 17 Generated Campaign Plan",
+  "type": "object",
+  "required": ["schemaVersion", "campaignId", "campaignSeed", "premise", "milestones", "revelations", "choices", "convergence", "endingFamilies", "criticalRoles", "fingerprint"],
+  "properties": {
+    "schemaVersion": { "const": 17 },
+    "campaignId": { "type": "string", "minLength": 1 },
+    "campaignSeed": { "type": "string", "pattern": "^(0x)?[0-9A-Fa-f]{1,16}$" },
+    "premise": {
+      "type": "object",
+      "required": ["kernelId", "kind", "primaryRegion", "hiddenCauseEventId"],
+      "properties": {
+        "kernelId": { "type": "string" },
+        "kind": { "type": "string" },
+        "primaryRegion": { "type": "string" },
+        "hiddenCauseEventId": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "milestones": {
+      "type": "array", "minItems": 12,
+      "items": {
+        "type": "object",
+        "required": ["id", "sequence", "role", "questKernelId", "predecessorIds"],
+        "properties": {
+          "id": { "type": "string" }, "sequence": { "type": "integer", "minimum": 0 },
+          "role": { "type": "string" }, "questKernelId": { "type": "string" },
+          "predecessorIds": { "type": "array", "items": { "type": "string" }, "uniqueItems": true }
+        }
+      }
+    },
+    "revelations": { "type": "array", "minItems": 3 },
+    "choices": { "type": "array", "minItems": 2 },
+    "convergence": { "type": "object" },
+    "endingFamilies": { "type": "array", "minItems": 4 },
+    "criticalRoles": { "type": "array", "minItems": 1 },
+    "fingerprint": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+  },
+  "additionalProperties": true
+}

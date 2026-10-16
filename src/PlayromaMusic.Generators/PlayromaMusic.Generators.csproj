@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>PlayromaMusic.Generators</RootNamespace>
+    <AssemblyName>PlayromaMusic.Generators</AssemblyName>
+    <Description>Integrated deterministic Playroma Music generation and orchestration library.</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PlayromaMusic.Core\PlayromaMusic.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\content\music\styles\*.json" Link="StylePacks\%(Filename)%(Extension)" />
+    <None Include="..\..\content\music\styles\*.json" Link="StylePacks\%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

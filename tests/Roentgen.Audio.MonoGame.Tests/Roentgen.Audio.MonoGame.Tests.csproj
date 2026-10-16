@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><IsPackable>false</IsPackable><IsTestProject>true</IsTestProject></PropertyGroup>
+  <ItemGroup><PackageReference Include="Microsoft.NET.Test.Sdk" /><PackageReference Include="xunit" /><PackageReference Include="xunit.runner.visualstudio" /><PackageReference Include="coverlet.collector" /></ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Roentgen.Audio\Roentgen.Audio.csproj" />
+    <ProjectReference Include="..\..\src\Roentgen.Audio.Playroma\Roentgen.Audio.Playroma.csproj" />
+    <ProjectReference Include="..\..\src\Roentgen.Audio.MonoGame\Roentgen.Audio.MonoGame.csproj" />
+  </ItemGroup>
+</Project>

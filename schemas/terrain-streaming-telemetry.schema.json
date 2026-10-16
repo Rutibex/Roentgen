@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.game/schemas/terrain-streaming-telemetry.schema.json",
+  "title": "Roentgen terrain streaming telemetry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["epoch", "focusChunk", "requested", "generating", "awaitingUpload", "resident", "dormant", "failed", "pendingQueue", "cpuResidentBytes"],
+  "properties": {
+    "epoch": { "type": "integer", "minimum": 0 },
+    "focusChunk": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["x", "z"],
+      "properties": { "x": { "type": "integer" }, "z": { "type": "integer" } }
+    },
+    "requested": { "type": "integer", "minimum": 0 },
+    "generating": { "type": "integer", "minimum": 0 },
+    "awaitingUpload": { "type": "integer", "minimum": 0 },
+    "resident": { "type": "integer", "minimum": 0 },
+    "dormant": { "type": "integer", "minimum": 0 },
+    "failed": { "type": "integer", "minimum": 0 },
+    "pendingQueue": { "type": "integer", "minimum": 0 },
+    "cpuResidentBytes": { "type": "integer", "minimum": 0 }
+  }
+}

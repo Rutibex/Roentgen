@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>Roentgen.Content</RootNamespace>
+    <AssemblyName>Roentgen.Content</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\..\content\roentgen\phase21-launch-content.json" Link="content\roentgen\phase21-launch-content.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="..\..\content\roentgen\phase21-launch-content.sha256" Link="content\roentgen\phase21-launch-content.sha256" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

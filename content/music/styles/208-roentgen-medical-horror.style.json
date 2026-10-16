@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "id": "roentgen-medical-horror",
+  "name": "Roentgen \u2014 Medical Horror",
+  "description": "Clinical dissonance, choir textures and diagnostic instability.",
+  "version": "1.0.0",
+  "family": "game",
+  "abstract": false,
+  "extends": "jrpg-occult-dungeon"
+}

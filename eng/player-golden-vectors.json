@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "vectors": [
+    {
+      "name": "running-east",
+      "playerId": "c11ae62587360ebf6805cbfbc90494d3",
+      "feetMillimeters": [
+        250000,
+        18200,
+        -125000
+      ],
+      "velocityMillimetersPerSecond": [
+        4200,
+        0,
+        0
+      ],
+      "bodyYawUnits": 900000,
+      "stance": "Standing",
+      "locomotion": "Running",
+      "grounded": true,
+      "revision": 120,
+      "checksum": "a0571b26160b1139c8ead1a1e00b23df80b057d07418a21097b4ebad66b4b661"
+    },
+    {
+      "name": "crouched-container",
+      "playerId": "c11ae62587360ebf6805cbfbc90494d3",
+      "feetMillimeters": [
+        250000,
+        18200,
+        -125000
+      ],
+      "velocityMillimetersPerSecond": [
+        0,
+        0,
+        0
+      ],
+      "bodyYawUnits": 900000,
+      "stance": "Crouched",
+      "locomotion": "Crouching",
+      "grounded": true,
+      "controlMode": "Container",
+      "openContainerId": "dddf46e5d7f31d13e85d5977a9472e6c",
+      "revision": 121,
+      "checksum": "bc67fb7a0fe6b7e86eb5cb027639e160e497b9f65f74e75a2b5d2a5af7ecfa54"
+    }
+  ]
+}

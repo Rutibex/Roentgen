@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "id": "roentgen-ossuary-fields",
+  "name": "Roentgen \u2014 Ossuary Fields",
+  "description": "Pale industrial waste, eroded medical relics and haunted open space.",
+  "version": "1.0.0",
+  "family": "game",
+  "abstract": false,
+  "extends": "dark-ambient"
+}

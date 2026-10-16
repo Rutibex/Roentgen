@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.local/schemas/loot-profile.schema.json",
+  "title": "Loot Profile",
+  "type": "object",
+  "required": [
+    "id",
+    "slots",
+    "valueBudgetMinorUnits"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "slots": {
+      "type": "array"
+    },
+    "valueBudgetMinorUnits": {
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "additionalProperties": true
+}

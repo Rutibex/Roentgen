@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "campaignSeed": 5931035436993955150,
+  "actor": {
+    "namespace": "phase10-vector",
+    "key": "player",
+    "expected": "a8229242206c3941858a412b0521632d"
+  },
+  "weapon": {
+    "parent": "a8229242206c3941858a412b0521632d",
+    "kind": "weapon",
+    "key": "phase10.rifle",
+    "expected": "dbcbf16e52be09b6b46346a4a7f7aa28"
+  },
+  "rolls": [
+    {
+      "tick": 1,
+      "sequence": 0,
+      "domain": "jam",
+      "expected": 52
+    },
+    {
+      "tick": 3,
+      "sequence": 0,
+      "domain": "spread.yaw",
+      "expected": 172
+    },
+    {
+      "tick": 3,
+      "sequence": 0,
+      "domain": "spread.pitch",
+      "expected": 927
+    },
+    {
+      "tick": 21,
+      "sequence": 1,
+      "domain": "jam",
+      "expected": 372
+    }
+  ],
+  "boundedState": {
+    "feedbackCapacity": 128,
+    "simulationTicksPerSecond": 60
+  }
+}

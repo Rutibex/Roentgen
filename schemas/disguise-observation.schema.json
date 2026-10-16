@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "observerActorId",
+    "subjectActorId",
+    "believedFactionId",
+    "confidencePermille",
+    "evaluation",
+    "observedDay"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "observerActorId": {
+      "type": "string"
+    },
+    "subjectActorId": {
+      "type": "string"
+    },
+    "believedFactionId": {
+      "type": "string"
+    },
+    "confidencePermille": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1000
+    },
+    "evaluation": {
+      "enum": [
+        "Accepted",
+        "Suspicious",
+        "Exposed"
+      ]
+    },
+    "observedDay": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "shared": {
+      "type": "boolean"
+    }
+  },
+  "title": "Roentgen Disguise Observation"
+}

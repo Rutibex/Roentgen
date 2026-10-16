@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.local/schemas/trade-quote.schema.json",
+  "title": "Trade Quote",
+  "type": "object",
+  "required": [
+    "quoteId",
+    "merchantId",
+    "buyerId",
+    "lines",
+    "expiresTick"
+  ],
+  "properties": {
+    "quoteId": {
+      "type": "string"
+    },
+    "merchantId": {
+      "type": "string"
+    },
+    "buyerId": {
+      "type": "string"
+    },
+    "lines": {
+      "type": "array"
+    },
+    "expiresTick": {
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,29 @@
+{
+  "id": "missing-shipment",
+  "version": 1,
+  "displayName": "The Pale Manifest",
+  "themes": ["diagnostic-trade", "world-fact", "multi-solution"],
+  "requiredSlots": [
+    "DEPENDENT_SETTLEMENT",
+    "REQUESTING_ACTOR",
+    "ACCUSED_FACTION",
+    "MISSING_RESOURCE",
+    "PRIMARY_LOCATION",
+    "EVIDENCE"
+  ],
+  "routeFamilies": [
+    "Technical",
+    "Scientific",
+    "Medical",
+    "Social",
+    "Economic",
+    "Stealth",
+    "Combat",
+    "Exploration"
+  ],
+  "recoveryPolicies": [
+    "ActorReplacement",
+    "EvidenceSubstitute",
+    "AftermathRoute"
+  ]
+}

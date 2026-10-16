@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 19,
+  "window": {
+    "title": "Roentgen \u2014 Phase 19 Integrated Playroma Music",
+    "width": 1280,
+    "height": 720,
+    "allowResize": true,
+    "verticalSync": true
+  },
+  "simulation": {
+    "ticksPerSecond": 60,
+    "maximumCatchUpTicks": 5
+  },
+  "diagnostics": {
+    "minimumLevel": "Information",
+    "writeConsole": true
+  },
+  "rendering": {
+    "fieldOfViewDegrees": 75.0,
+    "nearPlane": 0.04,
+    "farPlane": 1600.0,
+    "shadowMapSize": 2048,
+    "shadowDistance": 180.0,
+    "fogStart": 110.0,
+    "fogEnd": 620.0,
+    "exposure": 1.0,
+    "gamma": 2.2,
+    "vignetteStrength": 0.16,
+    "enableShadows": true,
+    "enablePostProcessing": true,
+    "enableFrustumCulling": true,
+    "maximumUploadsPerFrame": 8,
+    "maximumUploadBytesPerFrame": 8388608,
+    "maximumUploadMillisecondsPerFrame": 2.5,
+    "maximumPendingUploadOperations": 512,
+    "maximumPendingUploadBytes": 268435456
+  },
+  "assets": {
+    "memoryCacheMegabytes": 256,
+    "diskCacheMegabytes": 2048,
+    "persistentCacheEnabled": true,
+    "maximumMeshVertices": 1000000,
+    "maximumMeshIndices": 3000000,
+    "maximumAtlasWidth": 2048,
+    "atlasPadding": 2
+  },
+  "world": {
+    "profile": "phase6-micro-region",
+    "campaignSeed": "0x524F454E5447454E",
+    "showStreamingDiagnostics": true
+  },
+  "player": {
+    "capsuleRadiusMillimeters": 340,
+    "standingHeightMillimeters": 1780,
+    "crouchedHeightMillimeters": 1160,
+    "standingEyeHeightMillimeters": 1630,
+    "crouchedEyeHeightMillimeters": 1030,
+    "maximumStepMillimeters": 350,
+    "maximumSlopeDegrees": 46,
+    "walkSpeedMillimetersPerSecond": 2000,
+    "runSpeedMillimetersPerSecond": 4200,
+    "sprintSpeedMillimetersPerSecond": 6000,
+    "crouchSpeedMillimetersPerSecond": 1700,
+    "interactionReachMillimeters": 2250
+  },
+  "input": {
+    "mouseSensitivity": 0.12,
+    "gamepadLookSensitivity": 2.2,
+    "invertVerticalLook": false,
+    "crouchBehavior": "Toggle",
+    "sprintBehavior": "Hold",
+    "gamepadDeadZone": 0.17
+  },
+  "accessibility": {
+    "headBobIntensity": 0.35,
+    "landingMotionIntensity": 0.25,
+    "cameraShakeIntensity": 0.0,
+    "motionBlurEnabled": false,
+    "persistentReticle": true
+  },
+  "characters": {
+    "maximumBonesPerSkeleton": 64,
+    "maximumInfluencesPerVertex": 4,
+    "fullPoseDistanceMeters": 25.0,
+    "reducedPoseDistanceMeters": 70.0,
+    "maximumFullPoseCharacters": 24,
+    "maximumVisibleCharacters": 64,
+    "footPlacementEnabled": true,
+    "gpuSkinningPreferred": true,
+    "cpuSkinningFallbackEnabled": true,
+    "characterGenerationQueueCapacity": 128,
+    "characterUploadQueueMegabytes": 128
+  },
+  "audio": {
+    "enabled": true,
+    "masterVolume": 1.0,
+    "musicVolume": 0.8,
+    "interfaceVolume": 0.9,
+    "weaponsVolume": 1.0,
+    "creaturesVolume": 1.0,
+    "foleyVolume": 0.9,
+    "ambienceVolume": 0.8,
+    "focusVolume": 0.9,
+    "quality": "RealtimeHigh",
+    "maximumVoices": 96,
+    "targetQueuedBuffers": 4,
+    "renderBlockFrames": 512,
+    "submittedBufferFrames": 1024,
+    "pcmRingBlocks": 12,
+    "occlusionRayBudgetPerFrame": 12,
+    "dynamicRange": "Standard",
+    "reduceSuddenSounds": false,
+    "reduceHighFrequencyDiagnosticSounds": false,
+    "monoOutput": false,
+    "muteWhenUnfocused": false,
+    "continueAmbienceInMenus": true
+  },
+  "music": {
+    "enabled": true,
+    "volume": 0.8,
+    "soundFontRelativePath": "content/music/soundfonts/default.sf2",
+    "expectedSoundFontSha256": "9575028c7a1f589f5770fccc8cff2734566af40cd26ed836944e9a5152688cfe",
+    "catalogRelativePath": "content/music/catalogs/generaluser-gs-roentgen.catalog.json",
+    "sampleRate": 48000,
+    "renderBlockFrames": 512,
+    "commandCapacity": 128,
+    "preparedCueCacheSize": 24,
+    "defaultCrossfadeSeconds": 1.5,
+    "combatEntryThreshold": 0.22,
+    "fullCombatThreshold": 0.58,
+    "eliteCombatThreshold": 0.86,
+    "combatExitThreshold": 0.08,
+    "minimumSituationDwellTicks": 180,
+    "transitionCooldownTicks": 120,
+    "continueInPauseMenu": true,
+    "pauseMusicalTimeInPauseMenu": false,
+    "reducePercussionInDialogue": true,
+    "diagnosticFocusTreatment": true,
+    "dynamicRange": "Standard",
+    "developerSoundFontOverride": ""
+  }
+}

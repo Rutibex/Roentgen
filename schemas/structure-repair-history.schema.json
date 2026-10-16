@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.game/schemas/structure-repair-history.schema.json",
+  "title": "Deterministic structure repair history",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "structureId",
+    "succeeded",
+    "usedSafeFallback",
+    "actions"
+  ],
+  "properties": {
+    "structureId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "succeeded": {
+      "type": "boolean"
+    },
+    "usedSafeFallback": {
+      "type": "boolean"
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "attempt",
+          "kind",
+          "subjectId",
+          "summary",
+          "beforeChecksum",
+          "afterChecksum"
+        ],
+        "properties": {
+          "attempt": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "kind": {
+            "type": "string"
+          },
+          "subjectId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "summary": {
+            "type": "string",
+            "minLength": 1
+          },
+          "beforeChecksum": {
+            "type": "string",
+            "minLength": 1
+          },
+          "afterChecksum": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

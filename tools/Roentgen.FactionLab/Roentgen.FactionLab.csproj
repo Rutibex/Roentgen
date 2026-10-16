@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType><RootNamespace>Roentgen.FactionLab</RootNamespace><AssemblyName>Roentgen.FactionLab</AssemblyName></PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Roentgen.Factions\Roentgen.Factions.csproj" />
+    <ProjectReference Include="..\..\src\Roentgen.Core\Roentgen.Core.csproj" />
+    <ProjectReference Include="..\..\src\Roentgen.Contracts\Roentgen.Contracts.csproj" />
+    <ProjectReference Include="..\..\src\Roentgen.Persistence\Roentgen.Persistence.csproj" />
+  </ItemGroup>
+</Project>

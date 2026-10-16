@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.game/schemas/world-generation-profile.schema.json",
+  "title": "Roentgen world generation profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "worldWidthMeters",
+    "worldDepthMeters",
+    "chunkSizeMeters",
+    "nearChunkSamples",
+    "topologyCellMeters",
+    "waterLevelCentimeters",
+    "minimumElevationCentimeters",
+    "maximumElevationCentimeters",
+    "roadHalfWidthCentimeters",
+    "trailHalfWidthCentimeters",
+    "streamingRadiusChunks",
+    "dormantRadiusChunks",
+    "maximumCpuResidentBytes",
+    "maximumPendingGenerationRequests",
+    "workerCount"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "worldWidthMeters": {
+      "type": "integer",
+      "minimum": 128
+    },
+    "worldDepthMeters": {
+      "type": "integer",
+      "minimum": 128
+    },
+    "chunkSizeMeters": {
+      "type": "integer",
+      "minimum": 32
+    },
+    "nearChunkSamples": {
+      "enum": [
+        17,
+        33,
+        65,
+        129
+      ]
+    },
+    "topologyCellMeters": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "waterLevelCentimeters": {
+      "type": "integer"
+    },
+    "minimumElevationCentimeters": {
+      "type": "integer"
+    },
+    "maximumElevationCentimeters": {
+      "type": "integer"
+    },
+    "roadHalfWidthCentimeters": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "trailHalfWidthCentimeters": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "streamingRadiusChunks": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "dormantRadiusChunks": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "maximumCpuResidentBytes": {
+      "type": "integer",
+      "minimum": 8388608
+    },
+    "maximumPendingGenerationRequests": {
+      "type": "integer",
+      "minimum": 8
+    },
+    "workerCount": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 32
+    }
+  }
+}

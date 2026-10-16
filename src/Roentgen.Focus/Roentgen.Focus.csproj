@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><RootNamespace>Roentgen.Focus</RootNamespace><AssemblyName>Roentgen.Focus</AssemblyName></PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Roentgen.Contracts\Roentgen.Contracts.csproj" />
+    <ProjectReference Include="..\Roentgen.Core\Roentgen.Core.csproj" />
+    <ProjectReference Include="..\Roentgen.Entities\Roentgen.Entities.csproj" />
+    <ProjectReference Include="..\Roentgen.Combat\Roentgen.Combat.csproj" />
+    <ProjectReference Include="..\Roentgen.Simulation\Roentgen.Simulation.csproj" />
+    <ProjectReference Include="..\Roentgen.Rpg\Roentgen.Rpg.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>Roentgen.Campaign</RootNamespace>
+    <AssemblyName>Roentgen.Campaign</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Roentgen.Core\Roentgen.Core.csproj" />
+    <ProjectReference Include="..\Roentgen.Contracts\Roentgen.Contracts.csproj" />
+    <ProjectReference Include="..\Roentgen.Generation\Roentgen.Generation.csproj" />
+    <ProjectReference Include="..\Roentgen.World\Roentgen.World.csproj" />
+    <ProjectReference Include="..\Roentgen.Factions\Roentgen.Factions.csproj" />
+    <ProjectReference Include="..\Roentgen.Narrative\Roentgen.Narrative.csproj" />
+    <ProjectReference Include="..\Roentgen.Rpg\Roentgen.Rpg.csproj" />
+      <ProjectReference Include="..\Roentgen.Content\Roentgen.Content.csproj" />
+  </ItemGroup>
+</Project>

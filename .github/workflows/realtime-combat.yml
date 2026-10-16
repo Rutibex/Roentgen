@@ -1,0 +1,46 @@
+name: Phase 10 Real-time Combat
+
+on:
+  push:
+    paths:
+      - 'src/Roentgen.Combat/**'
+      - 'src/Roentgen.Contracts/CombatContracts.cs'
+      - 'src/Roentgen.Entities/CombatState.cs'
+      - 'src/Roentgen.AI/BasicEnemyCombatAi.cs'
+      - 'src/Roentgen.App/Phase10*'
+      - 'src/Roentgen.App/RoentgenGame.cs'
+      - 'src/Roentgen.UI/Phase8HudRenderer.cs'
+      - 'tools/Roentgen.CombatLab/**'
+      - 'tests/Roentgen.Combat.Tests/**'
+      - 'eng/combat-*'
+      - 'eng/verify_combat_*'
+      - '.github/workflows/realtime-combat.yml'
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: Restore tools and packages
+        run: |
+          dotnet tool restore
+          dotnet restore Roentgen.sln
+      - name: Static contracts
+        run: |
+          python eng/validate_repository.py
+          python eng/verify_combat_contracts.py
+          python eng/verify_combat_vectors.py
+      - name: Release build
+        run: dotnet build Roentgen.sln --configuration Release --no-restore
+      - name: Combat tests
+        run: dotnet test tests/Roentgen.Combat.Tests/Roentgen.Combat.Tests.csproj --configuration Release --no-build
+      - name: CombatLab deterministic smoke
+        run: |
+          dotnet run --project tools/Roentgen.CombatLab --configuration Release --no-build -- weapons
+          dotnet run --project tools/Roentgen.CombatLab --configuration Release --no-build -- duel --ticks 600
+          dotnet run --project tools/Roentgen.CombatLab --configuration Release --no-build -- soak --seeds 1000

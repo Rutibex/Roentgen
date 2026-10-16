@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.game/schemas/weapon-family.schema.json",
+  "title": "Roentgen Weapon Family",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "displayName", "skill", "damageTypes", "componentSlots", "handling", "generation"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$" },
+    "displayName": { "type": "string", "minLength": 1, "maxLength": 80 },
+    "skill": { "type": "string", "enum": ["ballistics", "directedEnergy", "demolitions", "melee", "unarmed"] },
+    "damageTypes": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "enum": ["kinetic", "cutting", "blunt", "thermal", "electrical", "radiological", "chemical", "biological", "sonic"] }
+    },
+    "componentSlots": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+    "handling": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["baseAccuracy", "baseRecoil", "baseActionTime", "minimumPhysique"],
+      "properties": {
+        "baseAccuracy": { "type": "number" },
+        "baseRecoil": { "type": "number", "minimum": 0 },
+        "baseActionTime": { "type": "number", "exclusiveMinimum": 0 },
+        "minimumPhysique": { "type": "integer", "minimum": 1, "maximum": 10 }
+      }
+    },
+    "generation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["meshRecipeFamily", "materialProfile", "soundRecipeFamily"],
+      "properties": {
+        "meshRecipeFamily": { "type": "string" },
+        "materialProfile": { "type": "string" },
+        "soundRecipeFamily": { "type": "string" },
+        "allowedComponentFamilies": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "roentgenFocus": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "baseFocusCost": { "type": "number", "minimum": 0 },
+        "queueable": { "type": "boolean" },
+        "supportsTargetParts": { "type": "boolean" }
+      }
+    }
+  }
+}

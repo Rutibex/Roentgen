@@ -1,0 +1,29 @@
+name: Bug report
+description: Report a reproducible issue in the Roentgen prototype
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the behavior and what you expected.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Include the world seed, platform, and affected scenario when possible.
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: OS and .NET version
+      placeholder: Windows 11 / .NET 10.0.x
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs (redact personal data)
+      render: text

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "settlementId",
+    "housingCapacity",
+    "cohorts"
+  ],
+  "properties": {
+    "settlementId": {
+      "type": "string"
+    },
+    "housingCapacity": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "migrationPressurePermille": {
+      "type": "integer",
+      "minimum": -2000,
+      "maximum": 2000
+    },
+    "cohorts": {
+      "type": "array"
+    }
+  },
+  "title": "Roentgen Population State"
+}

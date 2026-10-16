@@ -1,0 +1,37 @@
+#----------------------------- Global Properties ----------------------------#
+
+/outputDir:bin/$(Platform)
+/intermediateDir:obj/$(Platform)
+/platform:DesktopGL
+/config:
+/profile:HiDef
+/compress:False
+
+#-------------------------------- References --------------------------------#
+
+#---------------------------------- Content ---------------------------------#
+
+#begin Effects/ForwardLit.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/build:Effects/ForwardLit.fx
+
+#begin Effects/ShadowDepth.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/build:Effects/ShadowDepth.fx
+
+#begin Effects/PostProcess.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/build:Effects/PostProcess.fx
+
+#begin Effects/CharacterSkinning.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/build:Effects/CharacterSkinning.fx
+
+#begin Effects/CharacterShadowSkinning.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/build:Effects/CharacterShadowSkinning.fx

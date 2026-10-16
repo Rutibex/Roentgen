@@ -1,0 +1,20 @@
+{
+  "id": "industrial-ruin",
+  "valueBudgetMinorUnits": 145,
+  "slots": [
+    {
+      "id": "materials",
+      "requiredTag": "material",
+      "minimumQuantity": 1,
+      "maximumQuantity": 4,
+      "chancePermille": 900
+    },
+    {
+      "id": "ammunition",
+      "requiredTag": "ammunition",
+      "minimumQuantity": 3,
+      "maximumQuantity": 18,
+      "chancePermille": 400
+    }
+  ]
+}

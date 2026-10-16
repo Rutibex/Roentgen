@@ -1,0 +1,30 @@
+name: campaign-director
+on:
+  push:
+    paths:
+      - 'src/Roentgen.Campaign/**'
+      - 'src/Roentgen.Simulation/Phase17CampaignRuntime.cs'
+      - 'src/Roentgen.Persistence/CampaignSnapshotV17Serializer.cs'
+      - 'tools/Roentgen.CampaignLab/**'
+      - 'tests/Roentgen.Campaign.Tests/**'
+      - 'schemas/campaign-*'
+      - 'samples/campaign/**'
+      - 'eng/verify_phase17_*'
+      - 'eng/phase17-golden-vectors.json'
+      - '.github/workflows/campaign-director.yml'
+  pull_request:
+  workflow_dispatch:
+jobs:
+  phase17:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - run: python eng/verify_phase17_contracts.py
+      - run: python eng/verify_phase17_vectors.py
+      - run: dotnet build Roentgen.sln -c Release
+      - run: dotnet test tests/Roentgen.Campaign.Tests/Roentgen.Campaign.Tests.csproj -c Release
+      - run: dotnet run --project tools/Roentgen.CampaignLab/Roentgen.CampaignLab.csproj -- validate
+      - run: dotnet run --project tools/Roentgen.CampaignLab/Roentgen.CampaignLab.csproj -- solve-all-builds

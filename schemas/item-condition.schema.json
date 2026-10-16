@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.local/schemas/item-condition.schema.json",
+  "title": "Item Condition",
+  "type": "object",
+  "required": [
+    "structuralPermille",
+    "calibrationPermille",
+    "cleanlinessPermille",
+    "contaminationPermille"
+  ],
+  "properties": {
+    "structuralPermille": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1000
+    },
+    "calibrationPermille": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1000
+    },
+    "cleanlinessPermille": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1000
+    },
+    "contaminationPermille": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1000
+    }
+  },
+  "additionalProperties": true
+}

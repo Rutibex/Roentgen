@@ -1,0 +1,16 @@
+{
+  "definitions": [
+    "consumable.trauma-dressing",
+    "consumable.stimulant",
+    "consumable.antitoxin",
+    "consumable.burn-gel",
+    "consumable.contamination-binder",
+    "consumable.clean-water",
+    "consumable.field-ration",
+    "consumable.pain-suppressant",
+    "consumable.coagulant",
+    "consumable.electrolyte",
+    "consumable.diagnostic-dye",
+    "consumable.sedative"
+  ]
+}

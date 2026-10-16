@@ -1,0 +1,20 @@
+{
+  "id": "clinic-storage",
+  "valueBudgetMinorUnits": 120,
+  "slots": [
+    {
+      "id": "materials",
+      "requiredTag": "material",
+      "minimumQuantity": 1,
+      "maximumQuantity": 4,
+      "chancePermille": 900
+    },
+    {
+      "id": "medicine",
+      "requiredTag": "medicine",
+      "minimumQuantity": 1,
+      "maximumQuantity": 2,
+      "chancePermille": 800
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "meshTopology": {
+    "box": {
+      "vertices": 24,
+      "indices": 36,
+      "triangles": 12
+    },
+    "cylinder12": {
+      "vertices": 74,
+      "indices": 144,
+      "triangles": 48
+    }
+  },
+  "solidMaterial4x4": {
+    "rgba": [
+      10,
+      20,
+      30,
+      255
+    ],
+    "byteLength": 64,
+    "sha256": "bf64533a56f5eeb0412abb11b813bed2d0565bf92b338ce951200aa642c1ff9b"
+  },
+  "twoTileAtlas": {
+    "tileWidth": 4,
+    "tileHeight": 4,
+    "padding": 2,
+    "maximumWidth": 16,
+    "atlasWidth": 16,
+    "atlasHeight": 16,
+    "placements": [
+      {
+        "id": "a",
+        "x": 2,
+        "y": 2
+      },
+      {
+        "id": "b",
+        "x": 10,
+        "y": 2
+      }
+    ]
+  },
+  "wireframePreview": {
+    "width": 32,
+    "height": 32,
+    "margin": 2,
+    "screenPoints": [
+      [
+        2,
+        11
+      ],
+      [
+        29,
+        2
+      ],
+      [
+        29,
+        20
+      ],
+      [
+        2,
+        29
+      ]
+    ],
+    "litPixels": 114,
+    "sha256": "65b6465cea0c7b7deedb4e84bdbdce62edd60c3b508fe123b6acc7dcd50210ba"
+  }
+}

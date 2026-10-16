@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "route": {
+    "nodes": ["a", "b", "c", "d"],
+    "edges": [["a", "b", 100], ["b", "d", 150], ["a", "c", 100], ["c", "d", 150]],
+    "start": "a",
+    "goal": "d",
+    "expectedPath": ["a", "b", "d"],
+    "expectedCost": 250
+  },
+  "utility": {
+    "attack": {"awareness": 4, "ready": true, "ammo": true, "expected": "attack"},
+    "surrender": {"awareness": 3, "ready": false, "ammo": false, "morale": 100, "outnumbered": true, "escape": false, "expected": "surrender"}
+  },
+  "tierDistancesMillimeters": [0, 90000, 120000, 400000, 500000],
+  "expectedTiers": ["Full", "Full", "Reduced", "Reduced", "Strategic"]
+}

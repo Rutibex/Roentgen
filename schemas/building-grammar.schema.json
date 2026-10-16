@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.game/schemas/building-grammar.schema.json",
+  "title": "Building grammar",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "grammarId",
+    "schemaVersion",
+    "purpose",
+    "footprint",
+    "floors",
+    "structuralSystem",
+    "requiredRooms",
+    "adjacencyRules",
+    "navigation",
+    "budget"
+  ],
+  "properties": {
+    "grammarId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "schemaVersion": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "purpose": {
+      "type": "string"
+    },
+    "footprint": {
+      "type": "object"
+    },
+    "floors": {
+      "type": "object"
+    },
+    "structuralSystem": {
+      "type": "object"
+    },
+    "requiredRooms": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object"
+      }
+    },
+    "optionalRooms": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "adjacencyRules": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "navigation": {
+      "type": "object"
+    },
+    "budget": {
+      "type": "object"
+    },
+    "damageSeverityPermille": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1000
+    },
+    "$schema": {
+      "type": "string"
+    }
+  }
+}

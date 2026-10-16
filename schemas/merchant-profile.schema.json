@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.local/schemas/merchant-profile.schema.json",
+  "title": "Merchant Profile",
+  "type": "object",
+  "required": [
+    "id",
+    "archetype",
+    "stockTags",
+    "refreshDays"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "archetype": {
+      "type": "string"
+    },
+    "stockTags": {
+      "type": "array"
+    },
+    "refreshDays": {
+      "type": "integer",
+      "minimum": 1
+    }
+  },
+  "additionalProperties": true
+}

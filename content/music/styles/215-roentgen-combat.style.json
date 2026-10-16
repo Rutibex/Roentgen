@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "id": "roentgen-combat",
+  "name": "Roentgen — Combat",
+  "description": "Tense wasteland combat score with an urgent mechanical pulse, restrained percussion and dark modal harmony.",
+  "version": "1.1.0",
+  "family": "game",
+  "abstract": false,
+  "extends": "game-industrial-fps",
+  "tempo": {
+    "minimum": 104,
+    "maximum": 132
+  },
+  "candidateCount": 18,
+  "scales": [
+    "naturalMinor",
+    "phrygian",
+    "dorian"
+  ],
+  "roles": [
+    {
+      "id": "melody",
+      "role": "lead",
+      "density": 58,
+      "instrumentSelector": {
+        "families": [
+          "guitar",
+          "brass",
+          "strings",
+          "synthLead"
+        ],
+        "maximumLayers": 2
+      }
+    },
+    {
+      "id": "bass",
+      "role": "bass",
+      "density": 68,
+      "instrumentSelector": {
+        "families": [
+          "bass",
+          "guitar",
+          "synthLead"
+        ],
+        "maximumLayers": 1
+      }
+    },
+    {
+      "id": "chords",
+      "role": "chords",
+      "density": 52,
+      "instrumentSelector": {
+        "families": [
+          "strings",
+          "brass",
+          "synthPad",
+          "guitar"
+        ],
+        "maximumLayers": 2
+      }
+    },
+    {
+      "id": "arpeggio",
+      "role": "arpeggio",
+      "density": 55,
+      "instrumentSelector": {
+        "families": [
+          "guitar",
+          "chromaticPercussion",
+          "synthLead"
+        ],
+        "maximumLayers": 1
+      }
+    },
+    {
+      "id": "counter",
+      "role": "counterMelody",
+      "density": 35,
+      "instrumentSelector": {
+        "families": [
+          "strings",
+          "brass",
+          "reed"
+        ],
+        "maximumLayers": 1
+      }
+    },
+    {
+      "id": "texture",
+      "role": "texture",
+      "density": 48,
+      "instrumentSelector": {
+        "families": [
+          "synthPad",
+          "synthEffects",
+          "strings"
+        ],
+        "maximumLayers": 2
+      }
+    },
+    {
+      "id": "drums",
+      "role": "drums",
+      "enabled": true,
+      "density": 54
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "id": "roentgen-blackwater-works",
+  "name": "Roentgen \u2014 Blackwater Works",
+  "description": "Flooded treatment systems, chemical marsh pulse and submerged machinery.",
+  "version": "1.0.0",
+  "family": "game",
+  "abstract": false,
+  "extends": "game-survival-horror-save-room"
+}

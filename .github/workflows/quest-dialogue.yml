@@ -1,0 +1,28 @@
+name: quest-dialogue
+on:
+  push:
+    paths:
+      - 'src/Roentgen.Narrative/**'
+      - 'src/Roentgen.Simulation/Phase16NarrativeRuntime.cs'
+      - 'src/Roentgen.Persistence/*V16*'
+      - 'src/Roentgen.Persistence/NarrativeWorldSnapshotSerializer.cs'
+      - 'tools/Roentgen.QuestLab/**'
+      - 'tests/Roentgen.Narrative.Tests/**'
+      - 'eng/verify_phase16_*'
+      - '.github/workflows/quest-dialogue.yml'
+  pull_request:
+  workflow_dispatch:
+jobs:
+  phase16:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - run: python eng/verify_phase16_contracts.py
+      - run: python eng/verify_phase16_vectors.py
+      - run: dotnet build Roentgen.sln -c Release
+      - run: dotnet test tests/Roentgen.Narrative.Tests/Roentgen.Narrative.Tests.csproj -c Release
+      - run: dotnet run --project tools/Roentgen.QuestLab/Roentgen.QuestLab.csproj -- validate
+      - run: dotnet run --project tools/Roentgen.QuestLab/Roentgen.QuestLab.csproj -- solve

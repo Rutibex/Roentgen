@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.local/schemas/item-definition.schema.json",
+  "title": "Item Definition",
+  "type": "object",
+  "required": [
+    "id",
+    "displayName",
+    "kind",
+    "massGrams",
+    "baseValueMinorUnits"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "kind": {
+      "type": "string"
+    },
+    "massGrams": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "baseValueMinorUnits": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

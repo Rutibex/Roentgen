@@ -1,0 +1,895 @@
+{
+  "schemaVersion": 21,
+  "runtimeProjects": [
+    {
+      "name": "Playroma.Sound.Analysis",
+      "path": "src/Playroma.Sound.Analysis/Playroma.Sound.Analysis.csproj",
+      "references": [
+        "Playroma.Sound.Core",
+        "Playroma.Sound.Streaming"
+      ]
+    },
+    {
+      "name": "Playroma.Sound.Core",
+      "path": "src/Playroma.Sound.Core/Playroma.Sound.Core.csproj",
+      "references": []
+    },
+    {
+      "name": "Playroma.Sound.Dsp",
+      "path": "src/Playroma.Sound.Dsp/Playroma.Sound.Dsp.csproj",
+      "references": [
+        "Playroma.Sound.Core"
+      ]
+    },
+    {
+      "name": "Playroma.Sound.Generators",
+      "path": "src/Playroma.Sound.Generators/Playroma.Sound.Generators.csproj",
+      "references": [
+        "Playroma.Sound.Core",
+        "Playroma.Sound.Graph"
+      ]
+    },
+    {
+      "name": "Playroma.Sound.Graph",
+      "path": "src/Playroma.Sound.Graph/Playroma.Sound.Graph.csproj",
+      "references": [
+        "Playroma.Sound.Core",
+        "Playroma.Sound.Dsp"
+      ]
+    },
+    {
+      "name": "Playroma.Sound.Streaming",
+      "path": "src/Playroma.Sound.Streaming/Playroma.Sound.Streaming.csproj",
+      "references": [
+        "Playroma.Sound.Core",
+        "Playroma.Sound.Dsp",
+        "Playroma.Sound.Generators",
+        "Playroma.Sound.Graph"
+      ]
+    },
+    {
+      "name": "PlayromaMusic.Core",
+      "path": "src/PlayromaMusic.Core/PlayromaMusic.Core.csproj",
+      "references": []
+    },
+    {
+      "name": "PlayromaMusic.Generators",
+      "path": "src/PlayromaMusic.Generators/PlayromaMusic.Generators.csproj",
+      "references": [
+        "PlayromaMusic.Core"
+      ]
+    },
+    {
+      "name": "PlayromaMusic.SoundFont",
+      "path": "src/PlayromaMusic.SoundFont/PlayromaMusic.SoundFont.csproj",
+      "references": [
+        "PlayromaMusic.Core"
+      ]
+    },
+    {
+      "name": "Roentgen.AI",
+      "path": "src/Roentgen.AI/Roentgen.AI.csproj",
+      "references": [
+        "Roentgen.Combat",
+        "Roentgen.Contracts",
+        "Roentgen.Core",
+        "Roentgen.Entities",
+        "Roentgen.Factions",
+        "Roentgen.Navigation",
+        "Roentgen.Simulation"
+      ]
+    },
+    {
+      "name": "Roentgen.Animation",
+      "path": "src/Roentgen.Animation/Roentgen.Animation.csproj",
+      "references": [
+        "Roentgen.Contracts",
+        "Roentgen.Core"
+      ]
+    },
+    {
+      "name": "Roentgen.App",
+      "path": "src/Roentgen.App/Roentgen.App.csproj",
+      "references": [
+        "Roentgen.AI",
+        "Roentgen.Animation",
+        "Roentgen.Assets",
+        "Roentgen.Audio",
+        "Roentgen.Audio.MonoGame",
+        "Roentgen.Audio.Playroma",
+        "Roentgen.Campaign",
+        "Roentgen.Combat",
+        "Roentgen.Content",
+        "Roentgen.Contracts",
+        "Roentgen.Core",
+        "Roentgen.Diagnostics",
+        "Roentgen.Entities",
+        "Roentgen.Factions",
+        "Roentgen.Focus",
+        "Roentgen.Generation",
+        "Roentgen.Items",
+        "Roentgen.Music",
+        "Roentgen.Music.Playroma",
+        "Roentgen.Narrative",
+        "Roentgen.Persistence",
+        "Roentgen.Physics",
+        "Roentgen.Rendering",
+        "Roentgen.Rpg",
+        "Roentgen.Simulation",
+        "Roentgen.UI",
+        "Roentgen.World"
+      ]
+    },
+    {
+      "name": "Roentgen.Assets",
+      "path": "src/Roentgen.Assets/Roentgen.Assets.csproj",
+      "references": [
+        "Roentgen.Contracts",
+        "Roentgen.Core",
+        "Roentgen.Generation"
+      ]
+    },
+    {
+      "name": "Roentgen.Audio",
+      "path": "src/Roentgen.Audio/Roentgen.Audio.csproj",
+      "references": [
+        "Roentgen.Content",
+        "Roentgen.Contracts",
+        "Roentgen.Core",
+        "Roentgen.Diagnostics"
+      ]
+    },
+    {
+      "name": "Roentgen.Audio.MonoGame",
+      "path": "src/Roentgen.Audio.MonoGame/Roentgen.Audio.MonoGame.csproj",
+      "references": [
+        "Roentgen.Audio",
+        "Roentgen.Audio.Playroma"
+      ]
+    },
+    {
+      "name": "Roentgen.Audio.Playroma",
+      "path": "src/Roentgen.Audio.Playroma/Roentgen.Audio.Playroma.csproj",
+      "references": [
+        "Playroma.Sound.Core",
+        "Playroma.Sound.Dsp",
+        "Playroma.Sound.Generators",
+        "Playroma.Sound.Graph",
+        "Playroma.Sound.Streaming",
+        "Roentgen.Audio"
+      ]
+    },
+    {
+      "name": "Roentgen.Campaign",
+      "path": "src/Roentgen.Campaign/Roentgen.Campaign.csproj",
+      "references": [
+        "Roentgen.Content",
+        "Roentgen.Contracts",
+        "Roentgen.Core",
+        "Roentgen.Factions",
+        "Roentgen.Generation",
+        "Roentgen.Narrative",
+        "Roentgen.Rpg",
+        "Roentgen.World"
+      ]
+    },
+    {
+      "name": "Roentgen.Combat",
+      "path": "src/Roentgen.Combat/Roentgen.Combat.csproj",
+      "references": [
+        "Roentgen.Content",
+        "Roentgen.Contracts",
+        "Roentgen.Core",
+        "Roentgen.Entities",
+        "Roentgen.Items",
+        "Roentgen.Physics",
+        "Roentgen.Rpg",
+        "Roentgen.Simulation"
+      ]
+    },
+    {
+      "name": "Roentgen.Content",
+      "path": "src/Roentgen.Content/Roentgen.Content.csproj",
+      "references": []
+    },
+    {
+      "name": "Roentgen.Contracts",
+      "path": "src/Roentgen.Contracts/Roentgen.Contracts.csproj",
+      "references": []
+    },
+    {
+      "name": "Roentgen.Core",
+      "path": "src/Roentgen.Core/Roentgen.Core.csproj",
+      "references": [
+        "Roentgen.Contracts"
+      ]
+    },
+    {
+      "name": "Roentgen.Diagnostics",
+      "path": "src/Roentgen.Diagnostics/Roentgen.Diagnostics.csproj",
+      "references": [
+        "Roentgen.Core",
+        "Roentgen.Simulation"
+      ]
+    },
+    {
+      "name": "Roentgen.Entities",
+      "path": "src/Roentgen.Entities/Roentgen.Entities.csproj",
+      "references": [
+        "Roentgen.Contracts",
+        "Roentgen.Core",
+        "Roentgen.World"
+      ]
+    },
+    {
+      "name": "Roentgen.Factions",
+      "path": "src/Roentgen.Factions/Roentgen.Factions.csproj",
+      "references": [
+        "Roentgen.Content",
+        "Roentgen.Contracts",
+        "Roentgen.Core"
+      ]
+    },
+    {
+      "name": "Roentgen.Focus",
+      "path": "src/Roentgen.Focus/Roentgen.Focus.csproj",
+      "references": [
+        "Roentgen.Combat",
+        "Roentgen.Contracts",
+        "Roentgen.Core",
+        "Roentgen.Entities",
+        "Roentgen.Rpg",
+        "Roentgen.Simulation"
+      ]
+    },
+    {
+      "name": "Roentgen.Generation",
+      "path": "src/Roentgen.Generation/Roentgen.Generation.csproj",
+      "references": [
+        "Roentgen.Animation",
+        "Roentgen.Contracts",
+        "Roentgen.Core"
+      ]
+    },
+    {
+      "name": "Roentgen.Headless",
+      "path": "src/Roentgen.Headless/Roentgen.Headless.csproj",
+      "references": [
+        "Roentgen.Contracts",
+        "Roentgen.Core",
+        "Roentgen.Diagnostics",
+        "Roentgen.Entities",
+        "Roentgen.Generation",
+        "Roentgen.Persistence",
+        "Roentgen.Simulation"
+      ]
+    },
+    {
+      "name": "Roentgen.Items",
+      "path": "src/Roentgen.Items/Roentgen.Items.csproj",
+      "references": [
+        "Roentgen.Content",
+        "Roentgen.Contracts",
+        "Roentgen.Core",
+        "Roentgen.Factions"
+      ]
+    },
+    {
+      "name": "Roentgen.Music",
+      "path": "src/Roentgen.Music/Roentgen.Music.csproj",
+      "references": [
+        "Roentgen.Audio",
+        "Roentgen.Content",
+        "Roentgen.Core"
+      ]
+    },
+    {
+      "name": "Roentgen.Music.Playroma",
+      "path": "src/Roentgen.Music.Playroma/Roentgen.Music.Playroma.csproj",
+      "references": [
+        "Playroma.Sound.Core",
+        "Playroma.Sound.Streaming",
+        "PlayromaMusic.Core",
+        "PlayromaMusic.Generators",
+        "PlayromaMusic.SoundFont",
+        "Roentgen.Audio",
+        "Roentgen.Contracts",
+        "Roentgen.Core",
+        "Roentgen.Music"
+      ]
+    },
+    {
+      "name": "Roentgen.Narrative",
+      "path": "src/Roentgen.Narrative/Roentgen.Narrative.csproj",
+      "references": [
+        "Roentgen.Content",
+        "Roentgen.Contracts",
+        "Roentgen.Core",
+        "Roentgen.Rpg"
+      ]
+    },
+    {
+      "name": "Roentgen.Navigation",
+      "path": "src/Roentgen.Navigation/Roentgen.Navigation.csproj",
+      "references": [
+        "Roentgen.Core",
+        "Roentgen.Physics",
+        "Roentgen.World"
+      ]
+    },
+    {
+      "name": "Roentgen.Persistence",
+      "path": "src/Roentgen.Persistence/Roentgen.Persistence.csproj",
+      "references": [
+        "Roentgen.Campaign",
+        "Roentgen.Contracts",
+        "Roentgen.Core",
+        "Roentgen.Entities",
+        "Roentgen.Factions",
+        "Roentgen.Items",
+        "Roentgen.Narrative",
+        "Roentgen.Rpg",
+        "Roentgen.Simulation",
+        "Roentgen.World"
+      ]
+    },
+    {
+      "name": "Roentgen.Physics",
+      "path": "src/Roentgen.Physics/Roentgen.Physics.csproj",
+      "references": [
+        "Roentgen.Contracts",
+        "Roentgen.Core",
+        "Roentgen.Entities",
+        "Roentgen.World"
+      ]
+    },
+    {
+      "name": "Roentgen.Rendering",
+      "path": "src/Roentgen.Rendering/Roentgen.Rendering.csproj",
+      "references": [
+        "Roentgen.Animation",
+        "Roentgen.Assets",
+        "Roentgen.Core",
+        "Roentgen.Diagnostics",
+        "Roentgen.Entities",
+        "Roentgen.World"
+      ]
+    },
+    {
+      "name": "Roentgen.Rpg",
+      "path": "src/Roentgen.Rpg/Roentgen.Rpg.csproj",
+      "references": [
+        "Roentgen.Contracts",
+        "Roentgen.Core",
+        "Roentgen.Entities",
+        "Roentgen.Items"
+      ]
+    },
+    {
+      "name": "Roentgen.Simulation",
+      "path": "src/Roentgen.Simulation/Roentgen.Simulation.csproj",
+      "references": [
+        "Roentgen.Campaign",
+        "Roentgen.Contracts",
+        "Roentgen.Core",
+        "Roentgen.Entities",
+        "Roentgen.Factions",
+        "Roentgen.Items",
+        "Roentgen.Narrative",
+        "Roentgen.Physics",
+        "Roentgen.World"
+      ]
+    },
+    {
+      "name": "Roentgen.UI",
+      "path": "src/Roentgen.UI/Roentgen.UI.csproj",
+      "references": [
+        "Roentgen.Combat",
+        "Roentgen.Content",
+        "Roentgen.Contracts",
+        "Roentgen.Core",
+        "Roentgen.Entities",
+        "Roentgen.Factions",
+        "Roentgen.Focus",
+        "Roentgen.Items",
+        "Roentgen.Narrative",
+        "Roentgen.Persistence",
+        "Roentgen.Rpg",
+        "Roentgen.Simulation"
+      ]
+    },
+    {
+      "name": "Roentgen.World",
+      "path": "src/Roentgen.World/Roentgen.World.csproj",
+      "references": [
+        "Roentgen.Content",
+        "Roentgen.Core",
+        "Roentgen.Generation"
+      ]
+    }
+  ],
+  "testProjects": [
+    {
+      "name": "Roentgen.App.SmokeTests",
+      "path": "tests/Roentgen.App.SmokeTests/Roentgen.App.SmokeTests.csproj",
+      "references": [
+        "Roentgen.App",
+        "Roentgen.Audio.Playroma",
+        "Roentgen.Core",
+        "Roentgen.Music.Playroma"
+      ]
+    },
+    {
+      "name": "Roentgen.Architecture.Tests",
+      "path": "tests/Roentgen.Architecture.Tests/Roentgen.Architecture.Tests.csproj",
+      "references": [
+        "Roentgen.Core"
+      ]
+    },
+    {
+      "name": "Roentgen.Assets.Tests",
+      "path": "tests/Roentgen.Assets.Tests/Roentgen.Assets.Tests.csproj",
+      "references": [
+        "Roentgen.Assets",
+        "Roentgen.Core"
+      ]
+    },
+    {
+      "name": "Roentgen.Audio.MonoGame.Tests",
+      "path": "tests/Roentgen.Audio.MonoGame.Tests/Roentgen.Audio.MonoGame.Tests.csproj",
+      "references": [
+        "Roentgen.Audio",
+        "Roentgen.Audio.MonoGame",
+        "Roentgen.Audio.Playroma"
+      ]
+    },
+    {
+      "name": "Roentgen.Audio.Playroma.Tests",
+      "path": "tests/Roentgen.Audio.Playroma.Tests/Roentgen.Audio.Playroma.Tests.csproj",
+      "references": [
+        "Playroma.Sound.Graph",
+        "Roentgen.Audio",
+        "Roentgen.Audio.Playroma"
+      ]
+    },
+    {
+      "name": "Roentgen.Audio.StressTests",
+      "path": "tests/Roentgen.Audio.StressTests/Roentgen.Audio.StressTests.csproj",
+      "references": [
+        "Roentgen.Audio",
+        "Roentgen.Audio.Playroma"
+      ]
+    },
+    {
+      "name": "Roentgen.Audio.Tests",
+      "path": "tests/Roentgen.Audio.Tests/Roentgen.Audio.Tests.csproj",
+      "references": [
+        "Roentgen.Audio",
+        "Roentgen.Audio.MonoGame"
+      ]
+    },
+    {
+      "name": "Roentgen.Campaign.Tests",
+      "path": "tests/Roentgen.Campaign.Tests/Roentgen.Campaign.Tests.csproj",
+      "references": [
+        "Roentgen.Campaign",
+        "Roentgen.Contracts",
+        "Roentgen.Core",
+        "Roentgen.Factions",
+        "Roentgen.Narrative",
+        "Roentgen.Persistence",
+        "Roentgen.Simulation"
+      ]
+    },
+    {
+      "name": "Roentgen.Characters.Tests",
+      "path": "tests/Roentgen.Characters.Tests/Roentgen.Characters.Tests.csproj",
+      "references": [
+        "Roentgen.AI",
+        "Roentgen.Animation",
+        "Roentgen.Contracts",
+        "Roentgen.Core",
+        "Roentgen.Entities",
+        "Roentgen.Generation"
+      ]
+    },
+    {
+      "name": "Roentgen.Combat.Tests",
+      "path": "tests/Roentgen.Combat.Tests/Roentgen.Combat.Tests.csproj",
+      "references": [
+        "Roentgen.AI",
+        "Roentgen.Animation",
+        "Roentgen.Combat",
+        "Roentgen.Contracts",
+        "Roentgen.Core",
+        "Roentgen.Entities",
+        "Roentgen.Generation",
+        "Roentgen.Simulation"
+      ]
+    },
+    {
+      "name": "Roentgen.Contracts.Tests",
+      "path": "tests/Roentgen.Contracts.Tests/Roentgen.Contracts.Tests.csproj",
+      "references": [
+        "Roentgen.Contracts"
+      ]
+    },
+    {
+      "name": "Roentgen.Core.Tests",
+      "path": "tests/Roentgen.Core.Tests/Roentgen.Core.Tests.csproj",
+      "references": [
+        "Roentgen.Contracts",
+        "Roentgen.Core",
+        "Roentgen.Generation",
+        "Roentgen.Simulation"
+      ]
+    },
+    {
+      "name": "Roentgen.Determinism.Tests",
+      "path": "tests/Roentgen.Determinism.Tests/Roentgen.Determinism.Tests.csproj",
+      "references": [
+        "Roentgen.Contracts",
+        "Roentgen.Core",
+        "Roentgen.Diagnostics",
+        "Roentgen.Generation",
+        "Roentgen.Persistence",
+        "Roentgen.Simulation"
+      ]
+    },
+    {
+      "name": "Roentgen.Factions.Tests",
+      "path": "tests/Roentgen.Factions.Tests/Roentgen.Factions.Tests.csproj",
+      "references": [
+        "Roentgen.Contracts",
+        "Roentgen.Core",
+        "Roentgen.Factions",
+        "Roentgen.Items",
+        "Roentgen.Persistence"
+      ]
+    },
+    {
+      "name": "Roentgen.Focus.Tests",
+      "path": "tests/Roentgen.Focus.Tests/Roentgen.Focus.Tests.csproj",
+      "references": [
+        "Roentgen.Focus"
+      ]
+    },
+    {
+      "name": "Roentgen.Headless.Tests",
+      "path": "tests/Roentgen.Headless.Tests/Roentgen.Headless.Tests.csproj",
+      "references": [
+        "Roentgen.Contracts",
+        "Roentgen.Core",
+        "Roentgen.Diagnostics",
+        "Roentgen.Entities",
+        "Roentgen.Generation",
+        "Roentgen.Headless",
+        "Roentgen.Persistence",
+        "Roentgen.Simulation"
+      ]
+    },
+    {
+      "name": "Roentgen.Items.Tests",
+      "path": "tests/Roentgen.Items.Tests/Roentgen.Items.Tests.csproj",
+      "references": [
+        "Roentgen.Core",
+        "Roentgen.Items"
+      ]
+    },
+    {
+      "name": "Roentgen.Music.Playroma.Tests",
+      "path": "tests/Roentgen.Music.Playroma.Tests/Roentgen.Music.Playroma.Tests.csproj",
+      "references": [
+        "PlayromaMusic.Core",
+        "PlayromaMusic.Generators",
+        "Roentgen.Music",
+        "Roentgen.Music.Playroma"
+      ]
+    },
+    {
+      "name": "Roentgen.Music.StressTests",
+      "path": "tests/Roentgen.Music.StressTests/Roentgen.Music.StressTests.csproj",
+      "references": [
+        "Roentgen.Music",
+        "Roentgen.Music.Playroma"
+      ]
+    },
+    {
+      "name": "Roentgen.Music.Tests",
+      "path": "tests/Roentgen.Music.Tests/Roentgen.Music.Tests.csproj",
+      "references": [
+        "Roentgen.Music"
+      ]
+    },
+    {
+      "name": "Roentgen.Narrative.Tests",
+      "path": "tests/Roentgen.Narrative.Tests/Roentgen.Narrative.Tests.csproj",
+      "references": [
+        "Roentgen.Contracts",
+        "Roentgen.Core",
+        "Roentgen.Narrative",
+        "Roentgen.Persistence",
+        "Roentgen.Simulation"
+      ]
+    },
+    {
+      "name": "Roentgen.Phase14.Tests",
+      "path": "tests/Roentgen.Phase14.Tests/Roentgen.Phase14.Tests.csproj",
+      "references": [
+        "Roentgen.AI",
+        "Roentgen.Core",
+        "Roentgen.Entities",
+        "Roentgen.Items",
+        "Roentgen.Navigation",
+        "Roentgen.Persistence",
+        "Roentgen.World"
+      ]
+    },
+    {
+      "name": "Roentgen.Phase20.Tests",
+      "path": "tests/Roentgen.Phase20.Tests/Roentgen.Phase20.Tests.csproj",
+      "references": [
+        "Roentgen.Contracts",
+        "Roentgen.Core",
+        "Roentgen.Entities",
+        "Roentgen.Persistence",
+        "Roentgen.UI"
+      ]
+    },
+    {
+      "name": "Roentgen.Phase21.Tests",
+      "path": "tests/Roentgen.Phase21.Tests/Roentgen.Phase21.Tests.csproj",
+      "references": [
+        "Roentgen.Audio",
+        "Roentgen.Campaign",
+        "Roentgen.Combat",
+        "Roentgen.Content",
+        "Roentgen.Factions",
+        "Roentgen.Items",
+        "Roentgen.Music",
+        "Roentgen.Narrative",
+        "Roentgen.Rpg",
+        "Roentgen.UI",
+        "Roentgen.World"
+      ]
+    },
+    {
+      "name": "Roentgen.Physics.Tests",
+      "path": "tests/Roentgen.Physics.Tests/Roentgen.Physics.Tests.csproj",
+      "references": [
+        "Roentgen.Contracts",
+        "Roentgen.Physics",
+        "Roentgen.World"
+      ]
+    },
+    {
+      "name": "Roentgen.Player.Tests",
+      "path": "tests/Roentgen.Player.Tests/Roentgen.Player.Tests.csproj",
+      "references": [
+        "Roentgen.Contracts",
+        "Roentgen.Core",
+        "Roentgen.Entities",
+        "Roentgen.Physics",
+        "Roentgen.Simulation",
+        "Roentgen.World"
+      ]
+    },
+    {
+      "name": "Roentgen.Rendering.Tests",
+      "path": "tests/Roentgen.Rendering.Tests/Roentgen.Rendering.Tests.csproj",
+      "references": [
+        "Roentgen.Rendering"
+      ]
+    },
+    {
+      "name": "Roentgen.Rpg.Tests",
+      "path": "tests/Roentgen.Rpg.Tests/Roentgen.Rpg.Tests.csproj",
+      "references": [
+        "Roentgen.Core",
+        "Roentgen.Entities",
+        "Roentgen.Rpg"
+      ]
+    },
+    {
+      "name": "Roentgen.Structures.Tests",
+      "path": "tests/Roentgen.Structures.Tests/Roentgen.Structures.Tests.csproj",
+      "references": [
+        "Roentgen.Contracts",
+        "Roentgen.Core",
+        "Roentgen.Generation",
+        "Roentgen.Navigation",
+        "Roentgen.Physics",
+        "Roentgen.World"
+      ]
+    },
+    {
+      "name": "Roentgen.World.Tests",
+      "path": "tests/Roentgen.World.Tests/Roentgen.World.Tests.csproj",
+      "references": [
+        "Roentgen.Contracts",
+        "Roentgen.Core",
+        "Roentgen.Generation",
+        "Roentgen.World"
+      ]
+    }
+  ],
+  "monogameProjects": [
+    "Roentgen.App",
+    "Roentgen.Rendering",
+    "Roentgen.UI",
+    "Roentgen.Audio.MonoGame"
+  ],
+  "executableProjects": [
+    "Roentgen.AgentLab",
+    "Roentgen.App",
+    "Roentgen.AssetLab",
+    "Roentgen.AudioLab",
+    "Roentgen.CampaignLab",
+    "Roentgen.CombatLab",
+    "Roentgen.ContentLab",
+    "Roentgen.CreatureLab",
+    "Roentgen.FactionLab",
+    "Roentgen.FocusLab",
+    "Roentgen.Headless",
+    "Roentgen.InterfaceLab",
+    "Roentgen.ItemLab",
+    "Roentgen.MusicLab",
+    "Roentgen.QuestLab",
+    "Roentgen.StructureLab",
+    "Roentgen.WorldLab"
+  ],
+  "toolProjects": [
+    {
+      "name": "Roentgen.AgentLab",
+      "path": "tools/Roentgen.AgentLab/Roentgen.AgentLab.csproj",
+      "references": [
+        "Roentgen.AI",
+        "Roentgen.Core",
+        "Roentgen.Navigation",
+        "Roentgen.World"
+      ]
+    },
+    {
+      "name": "Roentgen.AssetLab",
+      "path": "tools/Roentgen.AssetLab/Roentgen.AssetLab.csproj",
+      "references": [
+        "Roentgen.Assets",
+        "Roentgen.Core"
+      ]
+    },
+    {
+      "name": "Roentgen.AudioLab",
+      "path": "tools/Roentgen.AudioLab/Roentgen.AudioLab.csproj",
+      "references": [
+        "Playroma.Sound.Graph",
+        "Roentgen.Audio",
+        "Roentgen.Audio.Playroma"
+      ]
+    },
+    {
+      "name": "Roentgen.BalanceLab",
+      "path": "tools/Roentgen.BalanceLab/Roentgen.BalanceLab.csproj",
+      "references": [
+        "Roentgen.Core",
+        "Roentgen.Rpg"
+      ]
+    },
+    {
+      "name": "Roentgen.CampaignLab",
+      "path": "tools/Roentgen.CampaignLab/Roentgen.CampaignLab.csproj",
+      "references": [
+        "Roentgen.Campaign",
+        "Roentgen.Contracts",
+        "Roentgen.Core",
+        "Roentgen.Factions",
+        "Roentgen.Narrative",
+        "Roentgen.Persistence"
+      ]
+    },
+    {
+      "name": "Roentgen.CombatLab",
+      "path": "tools/Roentgen.CombatLab/Roentgen.CombatLab.csproj",
+      "references": [
+        "Roentgen.AI",
+        "Roentgen.Animation",
+        "Roentgen.Combat",
+        "Roentgen.Contracts",
+        "Roentgen.Core",
+        "Roentgen.Entities",
+        "Roentgen.Generation"
+      ]
+    },
+    {
+      "name": "Roentgen.ContentLab",
+      "path": "tools/Roentgen.ContentLab/Roentgen.ContentLab.csproj",
+      "references": [
+        "Roentgen.Content"
+      ]
+    },
+    {
+      "name": "Roentgen.CreatureLab",
+      "path": "tools/Roentgen.CreatureLab/Roentgen.CreatureLab.csproj",
+      "references": [
+        "Roentgen.Animation",
+        "Roentgen.Contracts",
+        "Roentgen.Core",
+        "Roentgen.Entities",
+        "Roentgen.Generation"
+      ]
+    },
+    {
+      "name": "Roentgen.FactionLab",
+      "path": "tools/Roentgen.FactionLab/Roentgen.FactionLab.csproj",
+      "references": [
+        "Roentgen.Contracts",
+        "Roentgen.Core",
+        "Roentgen.Factions",
+        "Roentgen.Persistence"
+      ]
+    },
+    {
+      "name": "Roentgen.FocusLab",
+      "path": "tools/Roentgen.FocusLab/Roentgen.FocusLab.csproj",
+      "references": [
+        "Roentgen.Combat",
+        "Roentgen.Focus"
+      ]
+    },
+    {
+      "name": "Roentgen.InterfaceLab",
+      "path": "tools/Roentgen.InterfaceLab/Roentgen.InterfaceLab.csproj",
+      "references": [
+        "Roentgen.UI"
+      ]
+    },
+    {
+      "name": "Roentgen.ItemLab",
+      "path": "tools/Roentgen.ItemLab/Roentgen.ItemLab.csproj",
+      "references": [
+        "Roentgen.Core",
+        "Roentgen.Items"
+      ]
+    },
+    {
+      "name": "Roentgen.MusicLab",
+      "path": "tools/Roentgen.MusicLab/Roentgen.MusicLab.csproj",
+      "references": [
+        "PlayromaMusic.Core",
+        "PlayromaMusic.Generators",
+        "Roentgen.Music",
+        "Roentgen.Music.Playroma"
+      ]
+    },
+    {
+      "name": "Roentgen.QuestLab",
+      "path": "tools/Roentgen.QuestLab/Roentgen.QuestLab.csproj",
+      "references": [
+        "Roentgen.Contracts",
+        "Roentgen.Core",
+        "Roentgen.Narrative",
+        "Roentgen.Persistence",
+        "Roentgen.Simulation"
+      ]
+    },
+    {
+      "name": "Roentgen.StructureLab",
+      "path": "tools/Roentgen.StructureLab/Roentgen.StructureLab.csproj",
+      "references": [
+        "Roentgen.Contracts",
+        "Roentgen.Core",
+        "Roentgen.Navigation",
+        "Roentgen.Physics",
+        "Roentgen.World"
+      ]
+    },
+    {
+      "name": "Roentgen.WorldLab",
+      "path": "tools/Roentgen.WorldLab/Roentgen.WorldLab.csproj",
+      "references": [
+        "Roentgen.Contracts",
+        "Roentgen.Core",
+        "Roentgen.World"
+      ]
+    }
+  ]
+}

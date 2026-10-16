@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.invalid/schemas/headless-soak-report.schema.json",
+  "title": "Roentgen Headless Soak Report",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "options",
+    "runs",
+    "faults",
+    "mismatchCount",
+    "faultCount"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "options": {
+      "type": "object"
+    },
+    "runs": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "mismatchCount": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "faultCount": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "faults": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  },
+  "additionalProperties": false
+}

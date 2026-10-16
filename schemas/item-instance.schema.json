@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.local/schemas/item-instance.schema.json",
+  "title": "Item Instance",
+  "type": "object",
+  "required": [
+    "id",
+    "definitionId",
+    "location",
+    "quantity",
+    "condition"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "definitionId": {
+      "type": "string"
+    },
+    "location": {
+      "type": "object"
+    },
+    "quantity": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "condition": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>PlayromaMusic.Audio</RootNamespace>
+    <AssemblyName>PlayromaMusic.SoundFont</AssemblyName>
+    <Description>Integrated 48 kHz SoundFont scheduling and MeltySynth runtime used by Roentgen.</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PlayromaMusic.Core\PlayromaMusic.Core.csproj" />
+    <PackageReference Include="MeltySynth" />
+  </ItemGroup>
+</Project>

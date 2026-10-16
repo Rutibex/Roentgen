@@ -1,0 +1,10 @@
+{
+  "actorId": "00000000000000010000000000000001",
+  "slots": {
+    "Underlayer": "armor.field-underlayer",
+    "Clothing": "armor.field-clothing",
+    "Torso": "armor.field-torso",
+    "Head": "armor.field-head",
+    "Respirator": "armor.field-respirator"
+  }
+}

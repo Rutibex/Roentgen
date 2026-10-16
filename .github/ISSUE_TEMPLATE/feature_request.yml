@@ -1,0 +1,15 @@
+name: Feature request
+description: Suggest a scoped improvement
+title: "[Feature] "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal and player impact
+    validations:
+      required: true
+  - type: textarea
+    id: approach
+    attributes:
+      label: Proposed approach or alternatives

@@ -1,0 +1,23 @@
+{
+  "settlementId": "prospect-clinic",
+  "currencyPolicy": {
+    "kind": "Mixed",
+    "currencyDefinitionId": "currency.diagnostic-scrip"
+  },
+  "taxPolicy": {
+    "purchaseTaxPermille": 120,
+    "saleTaxPermille": 40
+  },
+  "stocks": [
+    {
+      "commodity": "Medicine",
+      "quantityMilliunits": 80000,
+      "targetMilliunits": 100000
+    },
+    {
+      "commodity": "Water",
+      "quantityMilliunits": 120000,
+      "targetMilliunits": 100000
+    }
+  ]
+}

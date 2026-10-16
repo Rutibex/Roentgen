@@ -1,0 +1,1 @@
+<Project Sdk="Microsoft.NET.Sdk"><PropertyGroup><OutputType>Exe</OutputType><RootNamespace>Roentgen.FocusLab</RootNamespace></PropertyGroup><ItemGroup><ProjectReference Include="..\..\src\Roentgen.Focus\Roentgen.Focus.csproj" /><ProjectReference Include="..\..\src\Roentgen.Combat\Roentgen.Combat.csproj" /></ItemGroup></Project>

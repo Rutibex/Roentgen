@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.game/schemas/weapon-definition.schema.json",
+  "title": "Roentgen weapon definition",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "displayName", "family", "attackKind", "damage", "magazineCapacity", "timing", "maximumRangeMillimeters", "baseSpreadPermille", "recoilPerAttackPermille", "conditionLossPerAttack"],
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "displayName": {"type": "string", "minLength": 1},
+    "family": {"type": "string", "enum": ["Unarmed", "Revolver", "SelfLoadingPistol", "Rifle", "Shotgun", "ImprovisedMelee", "Grenade", "Radiographic", "CreatureNatural"]},
+    "attackKind": {"type": "string", "enum": ["Hitscan", "Projectile", "Melee", "Explosive"]},
+    "damage": {
+      "type": "array", "minItems": 1,
+      "items": {"type": "object", "additionalProperties": false, "required": ["type", "amount"], "properties": {"type": {"type": "string", "enum": ["Kinetic", "Cutting", "Blunt", "Thermal", "Electrical", "Radiological", "Chemical", "Biological", "Sonic"]}, "amount": {"type": "integer", "minimum": 0}}}
+    },
+    "magazineCapacity": {"type": "integer", "minimum": 0},
+    "timing": {
+      "type": "object", "additionalProperties": false, "required": ["ticksBetweenAttacks", "windupTicks", "recoveryTicks", "reloadTicks"],
+      "properties": {"ticksBetweenAttacks": {"type": "integer", "minimum": 0}, "windupTicks": {"type": "integer", "minimum": 0}, "recoveryTicks": {"type": "integer", "minimum": 0}, "reloadTicks": {"type": "integer", "minimum": 0}}
+    },
+    "maximumRangeMillimeters": {"type": "integer", "minimum": 1},
+    "baseSpreadPermille": {"type": "integer", "minimum": 0, "maximum": 1000},
+    "recoilPerAttackPermille": {"type": "integer", "minimum": 0, "maximum": 1000},
+    "conditionLossPerAttack": {"type": "integer", "minimum": 0},
+    "projectileSpeedMillimetersPerSecond": {"type": "integer", "minimum": 0},
+    "projectileRadiusMillimeters": {"type": "integer", "minimum": 0},
+    "explosionRadiusMillimeters": {"type": "integer", "minimum": 0},
+    "fuseTicks": {"type": "integer", "minimum": 0},
+    "meleeReachMillimeters": {"type": "integer", "minimum": 0},
+    "meleeSweepRadiusMillimeters": {"type": "integer", "minimum": 0},
+    "pelletCount": {"type": "integer", "minimum": 1}
+  }
+}

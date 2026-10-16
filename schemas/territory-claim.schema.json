@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "locationId",
+    "factionId",
+    "kind",
+    "strengthPermille",
+    "supplySettlementId"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "locationId": {
+      "type": "string"
+    },
+    "factionId": {
+      "type": "string"
+    },
+    "kind": {
+      "enum": [
+        "Claim",
+        "Control",
+        "Influence",
+        "Access"
+      ]
+    },
+    "strengthPermille": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1000
+    },
+    "supplySettlementId": {
+      "type": "string"
+    }
+  },
+  "title": "Roentgen Territory Claim"
+}

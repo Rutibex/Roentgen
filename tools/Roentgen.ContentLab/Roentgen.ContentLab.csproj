@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Roentgen.ContentLab</RootNamespace>
+    <AssemblyName>Roentgen.ContentLab</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Roentgen.Content\Roentgen.Content.csproj" />
+  </ItemGroup>
+</Project>

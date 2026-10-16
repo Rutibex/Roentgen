@@ -1,0 +1,16 @@
+{
+  "type": "object",
+  "required": [
+    "actorId",
+    "nodes"
+  ],
+  "properties": {
+    "actorId": {
+      "type": "string"
+    },
+    "nodes": {
+      "type": "array"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.game/schemas/damage-history.schema.json",
+  "title": "Structure damage history",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "structureId",
+    "aggregateSeverityPermille",
+    "events"
+  ],
+  "properties": {
+    "structureId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "aggregateSeverityPermille": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1000
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "type",
+          "affectedRoomId",
+          "severityPermille"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "type": {
+            "type": "string"
+          },
+          "affectedRoomId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "severityPermille": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 1000
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  }
+}

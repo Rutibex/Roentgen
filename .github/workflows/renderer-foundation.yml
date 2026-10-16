@@ -1,0 +1,29 @@
+name: Renderer Foundation
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  renderer:
+    strategy:
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+      - name: Restore tools
+        run: dotnet tool restore
+      - name: Restore
+        run: dotnet restore Roentgen.sln
+      - name: Build renderer and content
+        run: dotnet build src/Roentgen.App/Roentgen.App.csproj -c Release --no-restore
+      - name: Test renderer
+        run: dotnet test tests/Roentgen.Rendering.Tests/Roentgen.Rendering.Tests.csproj -c Release --no-build
+      - name: Static validation
+        run: python eng/validate_repository.py

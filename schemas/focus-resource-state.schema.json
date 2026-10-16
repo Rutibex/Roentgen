@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "required": [
+    "currentMilliunits",
+    "maximumMilliunits",
+    "reservedMilliunits"
+  ],
+  "properties": {
+    "currentMilliunits": {
+      "type": "integer"
+    },
+    "maximumMilliunits": {
+      "type": "integer"
+    },
+    "reservedMilliunits": {
+      "type": "integer"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

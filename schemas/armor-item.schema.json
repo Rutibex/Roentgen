@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.local/schemas/armor-item.schema.json",
+  "title": "Armor Item",
+  "type": "object",
+  "required": [
+    "id",
+    "layer",
+    "coveredRegions",
+    "protection"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "layer": {
+      "type": "string"
+    },
+    "coveredRegions": {
+      "type": "array",
+      "minItems": 1
+    },
+    "protection": {
+      "type": "array"
+    }
+  },
+  "additionalProperties": true
+}

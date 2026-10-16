@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "phase10-permanent-regression-encounter",
+  "player": {
+    "weapons": ["phase10.sidearm", "phase10.rifle", "phase10.scrap-club", "phase10.grenade"],
+    "armor": "player-field-armor"
+  },
+  "opponents": [
+    {"role": "Hostile", "weapon": "phase10.rifle", "armor": "hostile-scrap-armor"},
+    {"role": "Creature", "weapon": "phase10.creature-bite"}
+  ],
+  "requiredSystems": ["hitscan", "projectile", "melee-sweep", "explosion", "locational-damage", "armor", "injury", "death", "basic-ai", "combat-feedback"]
+}

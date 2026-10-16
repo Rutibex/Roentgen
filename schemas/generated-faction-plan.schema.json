@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "kernelId",
+    "displayName",
+    "generatorVersion",
+    "fingerprint"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "kernelId": {
+      "type": "string"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "generatorVersion": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "fingerprint": {
+      "type": "string"
+    }
+  },
+  "title": "Roentgen Generated Faction Plan"
+}

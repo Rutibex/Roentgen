@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Roentgen Skill Check",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "actorId": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{32}$"
+    },
+    "skill": {
+      "type": "string",
+      "minLength": 1
+    },
+    "difficulty": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 120
+    },
+    "supportsCostlySuccess": {
+      "type": "boolean"
+    },
+    "sourceId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "modifiers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "value": {
+            "type": "integer"
+          },
+          "explanation": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "value",
+          "explanation"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "actorId",
+    "skill",
+    "difficulty",
+    "supportsCostlySuccess",
+    "sourceId",
+    "modifiers"
+  ]
+}

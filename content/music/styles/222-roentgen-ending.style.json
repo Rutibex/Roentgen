@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "id": "roentgen-ending",
+  "name": "Roentgen \u2014 Ending",
+  "description": "Long-form epilogue treatment and reconciled motif transformations.",
+  "version": "1.0.0",
+  "family": "game",
+  "abstract": false,
+  "extends": "jrpg-ending-credits"
+}

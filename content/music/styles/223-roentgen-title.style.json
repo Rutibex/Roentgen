@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "id": "roentgen-title",
+  "name": "Roentgen \u2014 Title",
+  "description": "Radiographic mystery, industrial grandeur and finite-campaign promise.",
+  "version": "1.0.0",
+  "family": "game",
+  "abstract": false,
+  "extends": "game-adventure-title"
+}

@@ -1,0 +1,50 @@
+# Generated .NET and publishing output
+artifacts/
+**/bin/
+**/obj/
+.packages/
+.nuget/
+TestResults/
+**/TestResults/
+*.trx
+*.coverage
+*.coveragexml
+coverage.cobertura.xml
+
+# Editors and OS
+.vs/
+.vscode/*
+!.vscode/README.md
+!.vscode/extensions.json
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.DS_Store
+Thumbs.db
+
+# Python and local validation
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Runtime state and transient diagnostic files
+.cache/
+Cache/
+Logs/
+Saves/
+Screenshots/
+crash-reports/
+upgrade-verification/
+*.log
+*.tmp
+*.bak
+
+# Local packaging; source/config/assets remain versioned
+*.zip
+*.tar.gz
+*.nupkg
+external/

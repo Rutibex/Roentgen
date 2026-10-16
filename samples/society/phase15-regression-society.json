@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 15,
+  "campaignSeed": "0x524F454E5447454E",
+  "factions": [
+    {"id": "prospect-clinic-compact", "name": "Prospect Clinic Compact", "settlement": "Prospect Clinic", "coreNeed": "Medicine"},
+    {"id": "blackwater-recovery-authority", "name": "Blackwater Recovery Authority", "settlement": "Blackwater Intake", "coreNeed": "Food"},
+    {"id": "red-quarry-cooperative", "name": "Red Quarry Cooperative", "settlement": "Red Quarry Crossing", "coreNeed": "Fuel"}
+  ],
+  "regressionSequence": [
+    "operate services",
+    "produce and consume",
+    "dispatch bilateral shipments",
+    "resolve leadership",
+    "process evidence-based crimes",
+    "reserve player-relevant conflict",
+    "save, restore, and compare checksum"
+  ]
+}

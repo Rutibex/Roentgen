@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "settlementId",
+    "displayName",
+    "topology",
+    "controllingFactionId",
+    "populationCapacity",
+    "requiredServices"
+  ],
+  "properties": {
+    "settlementId": {
+      "type": "string"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "topology": {
+      "type": "string"
+    },
+    "controllingFactionId": {
+      "type": "string"
+    },
+    "populationCapacity": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "populationPressurePermille": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 2000
+    },
+    "requiredServices": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    }
+  },
+  "title": "Roentgen Settlement Society"
+}

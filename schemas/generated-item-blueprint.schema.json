@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.local/schemas/generated-item-blueprint.schema.json",
+  "title": "Generated Item Blueprint",
+  "type": "object",
+  "required": [
+    "definitionFamilyId",
+    "itemSeed",
+    "generationVersion",
+    "components",
+    "fingerprint"
+  ],
+  "properties": {
+    "definitionFamilyId": {
+      "type": "string"
+    },
+    "itemSeed": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "generationVersion": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "components": {
+      "type": "array"
+    },
+    "fingerprint": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

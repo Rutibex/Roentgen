@@ -1,0 +1,41 @@
+name: Phase 12 Character Progression
+
+on:
+  push:
+    paths:
+      - 'src/Roentgen.Rpg/**'
+      - 'src/Roentgen.Combat/AttackEvaluation.cs'
+      - 'src/Roentgen.Focus/**'
+      - 'src/Roentgen.UI/CharacterScreen.cs'
+      - 'tests/Roentgen.Rpg.Tests/**'
+      - 'tools/Roentgen.BalanceLab/**'
+      - 'schemas/*progression*'
+      - 'schemas/*perk*'
+      - 'samples/rpg/**'
+      - 'eng/*progression*'
+      - 'eng/balancelab*'
+      - '.github/workflows/character-progression.yml'
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - run: dotnet tool restore
+      - run: dotnet restore Roentgen.sln
+      - name: Static progression contracts
+        run: |
+          python eng/validate_repository.py
+          python eng/verify_progression_contracts.py
+          python eng/verify_progression_vectors.py
+      - run: dotnet build Roentgen.sln --configuration Release --no-restore
+      - run: dotnet test tests/Roentgen.Rpg.Tests/Roentgen.Rpg.Tests.csproj --configuration Release --no-build
+      - name: Six-build gate
+        run: dotnet run --project tools/Roentgen.BalanceLab --configuration Release --no-build -- scenario
+      - name: Progression soak
+        run: dotnet run --project tools/Roentgen.BalanceLab --configuration Release --no-build -- progression-soak 10000

@@ -1,0 +1,69 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Roentgen.App</RootNamespace>
+    <AssemblyName>Roentgen.App</AssemblyName>
+
+    <!--
+      Custom MGCB effects are optional because RendererFoundation already has
+      complete BasicEffect/SpriteBatch fallback paths.  Keep this disabled for
+      normal builds so a shader-toolchain failure cannot prevent Roentgen.App
+      (and every dependent smoke test) from compiling.
+
+      Developers can opt in explicitly with:
+        dotnet build -p:RoentgenCompileCustomEffects=true
+    -->
+    <RoentgenCompileCustomEffects Condition="'$(RoentgenCompileCustomEffects)' == ''">false</RoentgenCompileCustomEffects>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Roentgen.Core\Roentgen.Core.csproj" />
+    <ProjectReference Include="..\Roentgen.Contracts\Roentgen.Contracts.csproj" />
+    <ProjectReference Include="..\Roentgen.Diagnostics\Roentgen.Diagnostics.csproj" />
+    <ProjectReference Include="..\Roentgen.Simulation\Roentgen.Simulation.csproj" />
+    <ProjectReference Include="..\Roentgen.Generation\Roentgen.Generation.csproj" />
+    <ProjectReference Include="..\Roentgen.Assets\Roentgen.Assets.csproj" />
+    <ProjectReference Include="..\Roentgen.World\Roentgen.World.csproj" />
+    <ProjectReference Include="..\Roentgen.Physics\Roentgen.Physics.csproj" />
+    <ProjectReference Include="..\Roentgen.Entities\Roentgen.Entities.csproj" />
+    <ProjectReference Include="..\Roentgen.Animation\Roentgen.Animation.csproj" />
+    <ProjectReference Include="..\Roentgen.AI\Roentgen.AI.csproj" />
+    <ProjectReference Include="..\Roentgen.Combat\Roentgen.Combat.csproj" />
+    <ProjectReference Include="..\Roentgen.Rpg\Roentgen.Rpg.csproj" />
+    <ProjectReference Include="..\Roentgen.Focus\Roentgen.Focus.csproj" />
+    <ProjectReference Include="..\Roentgen.Rendering\Roentgen.Rendering.csproj" />
+    <ProjectReference Include="..\Roentgen.Audio\Roentgen.Audio.csproj" />
+    <ProjectReference Include="..\Roentgen.Audio.Playroma\Roentgen.Audio.Playroma.csproj" />
+    <ProjectReference Include="..\Roentgen.Audio.MonoGame\Roentgen.Audio.MonoGame.csproj" />
+    <ProjectReference Include="..\Roentgen.Music\Roentgen.Music.csproj" />
+    <ProjectReference Include="..\Roentgen.Music.Playroma\Roentgen.Music.Playroma.csproj" />
+    <ProjectReference Include="..\Roentgen.Persistence\Roentgen.Persistence.csproj" />
+    <ProjectReference Include="..\Roentgen.UI\Roentgen.UI.csproj" />
+    <ProjectReference Include="..\Roentgen.Items\Roentgen.Items.csproj" />
+    <ProjectReference Include="..\Roentgen.Factions\Roentgen.Factions.csproj" />
+    <ProjectReference Include="..\Roentgen.Narrative\Roentgen.Narrative.csproj" />
+    <ProjectReference Include="..\Roentgen.Campaign\Roentgen.Campaign.csproj" />
+    <ProjectReference Include="..\Roentgen.Content\Roentgen.Content.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MonoGame.Framework.DesktopGL" />
+  </ItemGroup>
+
+  <!--
+    The custom effects remain in the repository and can still be compiled on
+    machines with a working MGCB/effect-compiler installation.  They are not a
+    hard build dependency in the default configuration.
+  -->
+  <ItemGroup Condition="'$(RoentgenCompileCustomEffects)' == 'true'">
+    <PackageReference Include="MonoGame.Content.Builder.Task" />
+    <MonoGameContentReference Include="Content\Content.mgcb" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\content\ui\**\*" Link="content\ui\%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="..\..\config\roentgen.settings.json" Link="config\roentgen.settings.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="..\..\content\music\**\*" Link="content\music\%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="..\..\content\roentgen\**\*" Link="content\roentgen\%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,10 @@
+{
+  "ownerId": "00000000000000010000000000000001",
+  "maximumMassGrams": 48000,
+  "itemIds": [
+    "generated-sidearm",
+    "ammo-light-stack",
+    "trauma-dressing",
+    "field-pack"
+  ]
+}

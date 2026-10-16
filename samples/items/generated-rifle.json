@@ -1,0 +1,33 @@
+{
+  "definitionFamilyId": "weapon.hunting-rifle",
+  "displayIdentity": "Marked Hunting Rifle",
+  "itemSeed": 77,
+  "generationVersion": 1,
+  "components": [
+    {
+      "slot": "Receiver",
+      "componentDefinitionId": "component.receiver.rifle"
+    },
+    {
+      "slot": "Barrel",
+      "componentDefinitionId": "component.barrel.long"
+    },
+    {
+      "slot": "Grip",
+      "componentDefinitionId": "component.grip.wood"
+    },
+    {
+      "slot": "Stock",
+      "componentDefinitionId": "component.stock.wood"
+    },
+    {
+      "slot": "FeedSystem",
+      "componentDefinitionId": "component.feed.single"
+    },
+    {
+      "slot": "Sight",
+      "componentDefinitionId": "component.sight.aperture"
+    }
+  ],
+  "fingerprint": "fixture-generated-by-itemlab"
+}

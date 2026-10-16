@@ -1,0 +1,46 @@
+{
+  "phase": "Phase 17 \u2014 Campaign Director",
+  "version": "0.17.0-phase17",
+  "validationDate": "2026-07-29",
+  "status": "passed-static-validation",
+  "projectGraph": {
+    "runtimeProjects": 28,
+    "testProjects": 21,
+    "toolProjects": 12,
+    "acyclic": true,
+    "solutionMembershipComplete": true
+  },
+  "checks": {
+    "jsonXmlYamlAndSchemas": "passed",
+    "monogameBoundary": "passed",
+    "projectGraph": "passed",
+    "deterministicApiPolicy": "passed",
+    "phase16Regression": "passed",
+    "phase17CampaignContracts": "passed",
+    "phase17CampaignVectors": "passed",
+    "regionalFamilies": 6,
+    "premiseKernels": 7,
+    "majorMilestones": 12,
+    "revelations": 3,
+    "irreversibleChoices": 2,
+    "endingFamilies": 8,
+    "criticalRoles": 8,
+    "regressionBuilds": 6,
+    "snapshotSections": 4,
+    "sourceManifest": "passed"
+  },
+  "environmentLimitations": [
+    "The artifact environment does not include the .NET 10 SDK.",
+    "Network access was unavailable for installing the SDK.",
+    "C# compilation, xUnit execution, MonoGame interaction tests, and native CampaignLab soaks were not run here."
+  ],
+  "authoritativeCommands": [
+    "./eng/build.sh",
+    "./eng/test.sh",
+    "./eng/campaignlab.sh validate",
+    "./eng/campaignlab.sh solve-all-builds",
+    "./eng/campaignlab.sh analyze-endings",
+    "python3 eng/validate_repository.py",
+    "python3 eng/verify_source_manifest.py"
+  ]
+}

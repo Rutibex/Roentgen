@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>Roentgen.Audio.MonoGame</RootNamespace>
+    <AssemblyName>Roentgen.Audio.MonoGame</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MonoGame.Framework.DesktopGL" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Roentgen.Audio\Roentgen.Audio.csproj" />
+    <ProjectReference Include="..\Roentgen.Audio.Playroma\Roentgen.Audio.Playroma.csproj" />
+  </ItemGroup>
+</Project>

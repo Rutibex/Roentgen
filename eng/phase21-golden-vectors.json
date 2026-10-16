@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 21,
+  "packageId": "roentgen.launch-content",
+  "contentVersion": "0.21.0",
+  "sourceSha256": "92f9ed924095136b866898dc5ca28a329495bc715f41aecfbd55f901c41c5b95",
+  "counts": {
+    "regions": 6,
+    "settlementGrammars": 12,
+    "structureGrammars": 50,
+    "roomMotifs": 80,
+    "damageProfiles": 20,
+    "factions": 8,
+    "organizations": 20,
+    "humanoidArchetypes": 20,
+    "creatureFamilies": 30,
+    "robotChassis": 12,
+    "companionArchetypes": 12,
+    "weaponFamilies": 14,
+    "weaponComponents": 80,
+    "armorFamilies": 12,
+    "armorComponents": 60,
+    "consumables": 50,
+    "craftingProcesses": 40,
+    "perks": 110,
+    "backgrounds": 18,
+    "traits": 30,
+    "questKernels": 120,
+    "campaignKernels": 30,
+    "dialogueActs": 250,
+    "rumorTemplates": 100,
+    "tutorials": 18,
+    "epilogueRules": 96,
+    "audioProfiles": 157,
+    "musicBindings": 44
+  },
+  "minimumBehavioralPerkPercent": 70,
+  "minimumQuestRoutes": 3,
+  "requiredCampaignRoles": [
+    "opening-crisis",
+    "regional-crisis",
+    "faction-introduction",
+    "revelation",
+    "regional-expansion",
+    "irreversible-choice",
+    "counteraction",
+    "final-convergence"
+  ],
+  "launchWorldMeters": [
+    8192,
+    8192
+  ],
+  "fixedSoundFontRequired": true
+}

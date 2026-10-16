@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "id": "roentgen-suspicion",
+  "name": "Roentgen \u2014 Suspicion",
+  "description": "Slow threat accumulation and incomplete diagnostic motifs.",
+  "version": "1.0.0",
+  "family": "game",
+  "abstract": false,
+  "extends": "game-immersive-sim-suspense"
+}

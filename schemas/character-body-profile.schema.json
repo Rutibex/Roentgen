@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.game/schemas/character-body-profile.schema.json",
+  "title": "Roentgen Character Body Profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "characterId",
+    "species",
+    "heightMillimeters",
+    "buildPermille",
+    "posturePermille",
+    "agePresentationPermille"
+  ],
+  "properties": {
+    "characterId": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{32}$"
+    },
+    "species": {
+      "type": "string"
+    },
+    "heightMillimeters": {
+      "type": "integer",
+      "minimum": 300,
+      "maximum": 4000
+    },
+    "buildPermille": {
+      "type": "integer",
+      "minimum": 400,
+      "maximum": 1800
+    },
+    "posturePermille": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1200
+    },
+    "agePresentationPermille": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1000
+    }
+  }
+}

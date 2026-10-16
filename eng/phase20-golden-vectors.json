@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 20,
+  "saveMagic": "RGSAVE20",
+  "requiredScreens": ["MainMenu", "NewCampaign", "LoadGame", "SaveGame", "PauseMenu", "Inventory", "Equipment", "Character", "Skills", "Perks", "Map", "Journal", "Dialogue", "Factions", "Crafting", "Merchant", "Companion", "Settings", "Accessibility", "InputBindings", "Tutorials", "Credits", "Ending", "Epilogue", "Confirmation", "RoentgenFocus"],
+  "layoutProfiles": ["720p-small", "720p-default", "1080p-default", "1440p-large", "ultrawide", "narrow-window", "1080p-maximum-scale"],
+  "fixedSoundFontRequired": true,
+  "minimumTutorialCards": 7,
+  "minimumSemanticActions": 30
+}

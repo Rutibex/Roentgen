@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "profile": {
+    "worldWidthMeters": 2048,
+    "worldDepthMeters": 2048,
+    "chunkSizeMeters": 128,
+    "nearChunkSamples": 65,
+    "topologyCellMeters": 16,
+    "chunkCountX": 16,
+    "chunkCountZ": 16,
+    "minimumChunkX": -8,
+    "maximumChunkX": 7,
+    "minimumChunkZ": -8,
+    "maximumChunkZ": 7,
+    "lodSampleCounts": [65, 33, 17],
+    "lodSpacingCentimeters": [200, 400, 800]
+  },
+  "floorDivision": [
+    { "value": -12801, "divisor": 12800, "quotient": -2, "remainder": 12799 },
+    { "value": -12800, "divisor": 12800, "quotient": -1, "remainder": 0 },
+    { "value": -1, "divisor": 12800, "quotient": -1, "remainder": 12799 },
+    { "value": 0, "divisor": 12800, "quotient": 0, "remainder": 0 },
+    { "value": 12799, "divisor": 12800, "quotient": 0, "remainder": 12799 },
+    { "value": 12800, "divisor": 12800, "quotient": 1, "remainder": 0 }
+  ],
+  "sharedEdges": [
+    {
+      "leftChunk": [-1, 0],
+      "rightChunk": [0, 0],
+      "lod": 0,
+      "leftEdgeWorldXCentimeters": 0,
+      "rightEdgeWorldXCentimeters": 0,
+      "sampleWorldZCentimeters": [0, 200, 6400, 12600, 12800]
+    },
+    {
+      "backChunk": [0, -1],
+      "frontChunk": [0, 0],
+      "lod": 2,
+      "backEdgeWorldZCentimeters": 0,
+      "frontEdgeWorldZCentimeters": 0,
+      "sampleWorldXCentimeters": [0, 800, 6400, 12000, 12800]
+    }
+  ]
+}

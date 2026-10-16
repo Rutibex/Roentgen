@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType><AssemblyName>Roentgen.AudioLab</AssemblyName><RootNamespace>Roentgen.AudioLab</RootNamespace></PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Roentgen.Audio\Roentgen.Audio.csproj" />
+    <ProjectReference Include="..\..\src\Roentgen.Audio.Playroma\Roentgen.Audio.Playroma.csproj" />
+    <ProjectReference Include="..\..\src\Playroma.Sound.Graph\Playroma.Sound.Graph.csproj" />
+  </ItemGroup>
+</Project>

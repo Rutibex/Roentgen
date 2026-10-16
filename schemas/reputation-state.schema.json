@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "subjectId",
+    "factionId",
+    "values"
+  ],
+  "properties": {
+    "subjectId": {
+      "type": "string"
+    },
+    "factionId": {
+      "type": "string"
+    },
+    "values": {
+      "type": "object",
+      "properties": {
+        "Trust": {
+          "type": "integer",
+          "minimum": -1000,
+          "maximum": 1000
+        },
+        "Fear": {
+          "type": "integer",
+          "minimum": -1000,
+          "maximum": 1000
+        },
+        "Respect": {
+          "type": "integer",
+          "minimum": -1000,
+          "maximum": 1000
+        },
+        "Obligation": {
+          "type": "integer",
+          "minimum": -1000,
+          "maximum": 1000
+        },
+        "IdeologicalAlignment": {
+          "type": "integer",
+          "minimum": -1000,
+          "maximum": 1000
+        },
+        "KnownCrimeSeverity": {
+          "type": "integer",
+          "minimum": -1000,
+          "maximum": 1000
+        },
+        "PublicFamiliarity": {
+          "type": "integer",
+          "minimum": -1000,
+          "maximum": 1000
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "title": "Roentgen Reputation State"
+}

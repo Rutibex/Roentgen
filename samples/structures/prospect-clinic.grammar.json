@@ -1,0 +1,50 @@
+{
+  "$schema": "../../schemas/building-grammar.schema.json",
+  "grammarId": "prospect-clinic",
+  "schemaVersion": 1,
+  "purpose": "Clinic",
+  "footprint": {
+    "minimumWidthCentimeters": 1800,
+    "maximumWidthCentimeters": 2600,
+    "minimumDepthCentimeters": 1600,
+    "maximumDepthCentimeters": 2400,
+    "setbackCentimeters": 200
+  },
+  "floors": {
+    "minimumFloors": 1,
+    "maximumFloors": 2,
+    "allowsBasement": false,
+    "requiresRoofAccess": false
+  },
+  "structuralSystem": {
+    "kind": "ReinforcedConcrete",
+    "wallThicknessCentimeters": 30,
+    "floorHeightCentimeters": 360,
+    "maximumUnsupportedSpanCentimeters": 900
+  },
+  "requiredRooms": [
+    { "key": "entrance", "archetype": "Entrance", "access": "Public", "minimumAreaSquareMeters": 6, "preferredAreaSquareMeters": 8 },
+    { "key": "reception", "archetype": "Reception", "access": "Public", "minimumAreaSquareMeters": 12, "preferredAreaSquareMeters": 18 },
+    { "key": "treatment", "archetype": "Treatment", "access": "Staff", "minimumAreaSquareMeters": 14, "preferredAreaSquareMeters": 20 },
+    { "key": "secure", "archetype": "SecureStorage", "access": "Secure", "minimumAreaSquareMeters": 8, "preferredAreaSquareMeters": 10 }
+  ],
+  "optionalRooms": [],
+  "adjacencyRules": [
+    { "roomKeyA": "entrance", "roomKeyB": "reception", "requirement": "Required" },
+    { "roomKeyA": "reception", "roomKeyB": "treatment", "requirement": "Required" },
+    { "roomKeyA": "treatment", "roomKeyB": "secure", "requirement": "Required", "lockPolicy": "LockedWithAlternative" }
+  ],
+  "navigation": {
+    "minimumCorridorWidthCentimeters": 150,
+    "minimumDoorWidthCentimeters": 100,
+    "requiresAlternateCriticalRoute": true,
+    "requiresRetreatRoute": true
+  },
+  "budget": {
+    "maximumRooms": 32,
+    "maximumPrimitives": 768,
+    "maximumDoors": 64,
+    "maximumStreamingCells": 16
+  },
+  "damageSeverityPermille": 120
+}

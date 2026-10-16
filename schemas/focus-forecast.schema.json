@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "required": [
+    "hitChancePermille",
+    "focusCostMilliunits"
+  ],
+  "properties": {
+    "hitChancePermille": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1000
+    },
+    "focusCostMilliunits": {
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.invalid/schemas/headless-telemetry.schema.json",
+  "title": "Roentgen Headless Telemetry Report",
+  "type": "object",
+  "required": [
+    "schemaVersion", "startedUtc", "completedUtc", "firstTick", "lastTick", "tickCount",
+    "commandsProcessed", "eventsDispatched", "peakEntityCount", "peakManagedBytes",
+    "tickDurations", "checkpoints", "faults"
+  ],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "startedUtc": { "type": "string", "format": "date-time" },
+    "completedUtc": { "type": "string", "format": "date-time" },
+    "firstTick": { "type": "integer", "minimum": 0 },
+    "lastTick": { "type": "integer", "minimum": 0 },
+    "tickCount": { "type": "integer", "minimum": 0 },
+    "commandsProcessed": { "type": "integer", "minimum": 0 },
+    "eventsDispatched": { "type": "integer", "minimum": 0 },
+    "peakEntityCount": { "type": "integer", "minimum": 0 },
+    "peakManagedBytes": { "type": "integer", "minimum": 0 },
+    "tickDurations": {
+      "type": "object",
+      "required": ["minimumMilliseconds", "averageMilliseconds", "p50Milliseconds", "p95Milliseconds", "p99Milliseconds", "maximumMilliseconds"],
+      "additionalProperties": false,
+      "properties": {
+        "minimumMilliseconds": { "type": "number", "minimum": 0 },
+        "averageMilliseconds": { "type": "number", "minimum": 0 },
+        "p50Milliseconds": { "type": "number", "minimum": 0 },
+        "p95Milliseconds": { "type": "number", "minimum": 0 },
+        "p99Milliseconds": { "type": "number", "minimum": 0 },
+        "maximumMilliseconds": { "type": "number", "minimum": 0 }
+      }
+    },
+    "checkpoints": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["tick", "checksum"],
+        "additionalProperties": false,
+        "properties": {
+          "tick": { "type": "integer", "minimum": 0 },
+          "checksum": { "type": "object" }
+        }
+      }
+    },
+    "faults": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["completedTick", "exceptionType", "message"],
+        "additionalProperties": false,
+        "properties": {
+          "completedTick": { "type": "integer", "minimum": 0 },
+          "exceptionType": { "type": "string", "minLength": 1 },
+          "message": { "type": "string" }
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

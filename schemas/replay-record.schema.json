@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.game/schemas/replay-record.schema.json",
+  "title": "Roentgen Replay JSONL Record",
+  "oneOf": [
+    { "$ref": "#/$defs/header" },
+    { "$ref": "#/$defs/command" },
+    { "$ref": "#/$defs/checkpoint" },
+    { "$ref": "#/$defs/footer" }
+  ],
+  "$defs": {
+    "hex128": { "type": "string", "pattern": "^[0-9a-f]{32}$" },
+    "hex256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "header": {
+      "type": "object",
+      "required": ["RecordType", "FormatVersion", "Product", "ConstitutionVersion", "CampaignSeed", "TicksPerSecond", "RandomAlgorithmId", "BuildFingerprint", "HeaderChecksum"],
+      "properties": {
+        "RecordType": { "const": "header" },
+        "FormatVersion": { "const": 1 },
+        "Product": { "const": "Roentgen" },
+        "ConstitutionVersion": { "type": "string", "minLength": 1 },
+        "CampaignSeed": { "type": "integer", "minimum": 0 },
+        "TicksPerSecond": { "type": "integer", "minimum": 1 },
+        "RandomAlgorithmId": { "const": "pcg32-roentgen-v1" },
+        "BuildFingerprint": { "type": "string", "minLength": 1 },
+        "HeaderChecksum": { "$ref": "#/$defs/hex256" }
+      },
+      "additionalProperties": false
+    },
+    "command": {
+      "type": "object",
+      "required": ["RecordType", "CommandId", "IssuerId", "TargetTick", "OriginPriority", "Sequence", "TypeId", "SchemaVersion", "Payload", "PayloadChecksum", "PreviousChecksum", "RecordChecksum"],
+      "properties": {
+        "RecordType": { "const": "command" },
+        "CommandId": { "$ref": "#/$defs/hex128" },
+        "IssuerId": { "$ref": "#/$defs/hex128" },
+        "TargetTick": { "type": "integer", "minimum": 0 },
+        "OriginPriority": { "type": "integer" },
+        "Sequence": { "type": "integer", "minimum": 0 },
+        "TypeId": { "type": "string", "minLength": 1 },
+        "SchemaVersion": { "type": "integer", "minimum": 1 },
+        "Payload": { "type": "string", "contentEncoding": "base64" },
+        "PayloadChecksum": { "$ref": "#/$defs/hex256" },
+        "PreviousChecksum": { "$ref": "#/$defs/hex256" },
+        "RecordChecksum": { "$ref": "#/$defs/hex256" }
+      },
+      "additionalProperties": false
+    },
+    "checkpoint": {
+      "type": "object",
+      "required": ["RecordType", "Tick", "StateChecksum", "PreviousChecksum", "RecordChecksum"],
+      "properties": {
+        "RecordType": { "const": "checkpoint" },
+        "Tick": { "type": "integer", "minimum": 0 },
+        "StateChecksum": { "$ref": "#/$defs/hex256" },
+        "PreviousChecksum": { "$ref": "#/$defs/hex256" },
+        "RecordChecksum": { "$ref": "#/$defs/hex256" }
+      },
+      "additionalProperties": false
+    },
+    "footer": {
+      "type": "object",
+      "required": ["RecordType", "RecordCount", "FinalChecksum"],
+      "properties": {
+        "RecordType": { "const": "footer" },
+        "RecordCount": { "type": "integer", "minimum": 0 },
+        "FinalChecksum": { "$ref": "#/$defs/hex256" }
+      },
+      "additionalProperties": false
+    }
+  }
+}

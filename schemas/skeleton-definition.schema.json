@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.game/schemas/skeleton-definition.schema.json",
+  "title": "Roentgen Skeleton Definition",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "skeletonId",
+    "bones",
+    "sockets"
+  ],
+  "properties": {
+    "skeletonId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "bones": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 64,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "parentIndex",
+          "translation",
+          "rotation",
+          "scale"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{32}$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "parentIndex": {
+            "type": "integer",
+            "minimum": -1,
+            "maximum": 63
+          },
+          "translation": {
+            "$ref": "#/$defs/vector3"
+          },
+          "rotation": {
+            "$ref": "#/$defs/vector4"
+          },
+          "scale": {
+            "$ref": "#/$defs/vector3"
+          }
+        }
+      }
+    },
+    "sockets": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 63
+      }
+    }
+  },
+  "$defs": {
+    "vector3": {
+      "type": "array",
+      "prefixItems": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "number"
+        }
+      ],
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "vector4": {
+      "type": "array",
+      "prefixItems": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "number"
+        }
+      ],
+      "minItems": 4,
+      "maxItems": 4
+    }
+  }
+}

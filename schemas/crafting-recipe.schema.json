@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.local/schemas/crafting-recipe.schema.json",
+  "title": "Crafting Recipe",
+  "type": "object",
+  "required": [
+    "id",
+    "operation",
+    "station",
+    "inputs",
+    "outputs",
+    "skill",
+    "difficulty"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "operation": {
+      "type": "string"
+    },
+    "station": {
+      "type": "string"
+    },
+    "inputs": {
+      "type": "array"
+    },
+    "outputs": {
+      "type": "array"
+    },
+    "skill": {
+      "type": "string"
+    },
+    "difficulty": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100
+    }
+  },
+  "additionalProperties": true
+}

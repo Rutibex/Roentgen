@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 16,
+  "kernelCount": 30,
+  "kernelIdsSha256": "fa36b4ecd8e8a6111b7a7ad15379d25cfc5d8e1cd4db8205331526768a6e7936",
+  "firstKernel": "contaminated-supply",
+  "lastKernel": "evacuation-relocation",
+  "minimumRoutesPerKernel": 3,
+  "regressionQuest": "The Pale Manifest"
+}

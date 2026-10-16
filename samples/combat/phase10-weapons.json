@@ -1,0 +1,34 @@
+[
+  {
+    "id": "phase10.sidearm",
+    "displayName": "Service Sidearm",
+    "family": "SelfLoadingPistol",
+    "attackKind": "Hitscan",
+    "damage": [{"type": "Kinetic", "amount": 28}, {"type": "Blunt", "amount": 4}],
+    "magazineCapacity": 10,
+    "timing": {"ticksBetweenAttacks": 12, "windupTicks": 2, "recoveryTicks": 8, "reloadTicks": 72},
+    "maximumRangeMillimeters": 45000,
+    "baseSpreadPermille": 42,
+    "recoilPerAttackPermille": 125,
+    "conditionLossPerAttack": 1,
+    "pelletCount": 1
+  },
+  {
+    "id": "phase10.grenade",
+    "displayName": "Fragmentation Charge",
+    "family": "Grenade",
+    "attackKind": "Explosive",
+    "damage": [{"type": "Kinetic", "amount": 42}, {"type": "Blunt", "amount": 30}, {"type": "Thermal", "amount": 12}],
+    "magazineCapacity": 1,
+    "timing": {"ticksBetweenAttacks": 90, "windupTicks": 12, "recoveryTicks": 30, "reloadTicks": 0},
+    "maximumRangeMillimeters": 28000,
+    "baseSpreadPermille": 12,
+    "recoilPerAttackPermille": 0,
+    "conditionLossPerAttack": 1,
+    "projectileSpeedMillimetersPerSecond": 18000,
+    "projectileRadiusMillimeters": 45,
+    "explosionRadiusMillimeters": 6000,
+    "fuseTicks": 120,
+    "pelletCount": 1
+  }
+]

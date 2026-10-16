@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "id": "roentgen-red-quarry",
+  "name": "Roentgen \u2014 Red Quarry Country",
+  "description": "Excavation machinery, cliff resonance and heavy mineral rhythm.",
+  "version": "1.0.0",
+  "family": "game",
+  "abstract": false,
+  "extends": "game-industrial-fps"
+}

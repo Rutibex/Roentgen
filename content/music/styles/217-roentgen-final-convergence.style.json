@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "id": "roentgen-final-convergence",
+  "name": "Roentgen \u2014 Final Convergence",
+  "description": "Campaign motifs converge through high-stakes harmonic transformation.",
+  "version": "1.0.0",
+  "family": "game",
+  "abstract": false,
+  "extends": "jrpg-boss-final-transcendent"
+}

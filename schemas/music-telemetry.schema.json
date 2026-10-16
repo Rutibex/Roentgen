@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Music telemetry","type":"object","required":["state","situation","renderedFrames","soundFontFingerprint"],"properties":{"state":{"type":"string"},"situation":{"type":"string"},"renderedFrames":{"type":"integer","minimum":0},"activeNotes":{"type":"integer","minimum":0},"soundFontFingerprint":{"type":"string"}}}

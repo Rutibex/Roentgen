@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.game/schemas/character-pose-profile.schema.json",
+  "title": "Roentgen Character Pose Profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "profileId",
+    "actions",
+    "equipmentProfiles"
+  ],
+  "properties": {
+    "profileId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "equipmentProfiles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "footPlacementEnabled": {
+      "type": "boolean"
+    },
+    "lookAtEnabled": {
+      "type": "boolean"
+    },
+    "injuryOverridesEnabled": {
+      "type": "boolean"
+    }
+  }
+}

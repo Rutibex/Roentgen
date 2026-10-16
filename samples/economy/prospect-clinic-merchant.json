@@ -1,0 +1,11 @@
+{
+  "id": "merchant.medic",
+  "archetype": "Medic",
+  "stockTags": [
+    "medicine",
+    "consumable"
+  ],
+  "refreshDays": 2,
+  "maximumStockValueMinorUnits": 2800,
+  "cashReserveMinorUnits": 1800
+}

@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><IsPackable>false</IsPackable><IsTestProject>true</IsTestProject></PropertyGroup>
+  <ItemGroup><PackageReference Include="Microsoft.NET.Test.Sdk" /><PackageReference Include="xunit" /><PackageReference Include="xunit.runner.visualstudio" /><PackageReference Include="coverlet.collector" /></ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Roentgen.Core\Roentgen.Core.csproj" />
+    <ProjectReference Include="..\..\src\Roentgen.Contracts\Roentgen.Contracts.csproj" />
+    <ProjectReference Include="..\..\src\Roentgen.Entities\Roentgen.Entities.csproj" />
+    <ProjectReference Include="..\..\src\Roentgen.Persistence\Roentgen.Persistence.csproj" />
+    <ProjectReference Include="..\..\src\Roentgen.UI\Roentgen.UI.csproj" />
+  </ItemGroup>
+</Project>

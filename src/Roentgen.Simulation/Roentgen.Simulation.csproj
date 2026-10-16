@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+
+    <RootNamespace>Roentgen.Simulation</RootNamespace>
+    <AssemblyName>Roentgen.Simulation</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Roentgen.Core\Roentgen.Core.csproj" />
+    <ProjectReference Include="..\Roentgen.Contracts\Roentgen.Contracts.csproj" />
+    <ProjectReference Include="..\Roentgen.Entities\Roentgen.Entities.csproj" />
+    <ProjectReference Include="..\Roentgen.World\Roentgen.World.csproj" />
+    <ProjectReference Include="..\Roentgen.Physics\Roentgen.Physics.csproj" />
+      <ProjectReference Include="..\Roentgen.Items\Roentgen.Items.csproj" />
+    <ProjectReference Include="..\Roentgen.Factions\Roentgen.Factions.csproj" />
+    <ProjectReference Include="..\Roentgen.Narrative\Roentgen.Narrative.csproj" />
+    <ProjectReference Include="..\Roentgen.Campaign\Roentgen.Campaign.csproj" />
+</ItemGroup>
+</Project>

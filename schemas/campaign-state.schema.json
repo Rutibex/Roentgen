@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.game/schemas/campaign-state.schema.json",
+  "title": "Roentgen Phase 17 Campaign Runtime State",
+  "type": "object",
+  "required": ["schemaVersion", "campaignId", "tick", "day", "milestones", "revelations", "commitments", "criticalRoles", "flags", "completed"],
+  "properties": {
+    "schemaVersion": { "const": 17 },
+    "campaignId": { "type": "string" },
+    "tick": { "type": "integer", "minimum": 0 },
+    "day": { "type": "integer", "minimum": 0 },
+    "milestones": { "type": "array", "items": { "type": "object", "required": ["id", "status"] } },
+    "revelations": { "type": "array", "items": { "type": "object", "required": ["id", "status", "evidenceIds"] } },
+    "commitments": { "type": "array", "items": { "type": "object", "required": ["choiceId", "optionId"] } },
+    "criticalRoles": { "type": "array", "items": { "type": "object", "required": ["roleId", "currentEntityId", "available"] } },
+    "flags": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "selectedEndingId": { "type": ["string", "null"] },
+    "completed": { "type": "boolean" }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "box": {
+    "size": [
+      2,
+      4,
+      6
+    ],
+    "vertices": 24,
+    "indices": 36,
+    "triangles": 12,
+    "minimum": [
+      -1,
+      -2,
+      -3
+    ],
+    "maximum": [
+      1,
+      2,
+      3
+    ]
+  },
+  "terrain": {
+    "cellsX": 4,
+    "cellsZ": 3,
+    "vertices": 20,
+    "indices": 72,
+    "triangles": 24
+  },
+  "cylinder": {
+    "sides": 12,
+    "vertices": 74,
+    "indices": 144,
+    "triangles": 48
+  }
+}

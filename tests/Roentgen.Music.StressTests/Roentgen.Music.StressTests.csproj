@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><IsPackable>false</IsPackable><IsTestProject>true</IsTestProject></PropertyGroup>
+  <ItemGroup><PackageReference Include="Microsoft.NET.Test.Sdk" /><PackageReference Include="xunit" /><PackageReference Include="xunit.runner.visualstudio" /><PackageReference Include="coverlet.collector" /></ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Roentgen.Music\Roentgen.Music.csproj" />
+    <ProjectReference Include="..\..\src\Roentgen.Music.Playroma\Roentgen.Music.Playroma.csproj" />
+  </ItemGroup>
+  <ItemGroup><None Include="..\..\content\music\**\*" Link="content\music\%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" /></ItemGroup>
+</Project>

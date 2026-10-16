@@ -1,0 +1,37 @@
+{
+  "id": "rusted-steel-sample",
+  "schemaVersion": 1,
+  "width": 128,
+  "height": 128,
+  "roughness": 0.72,
+  "metallic": 0.42,
+  "emissiveStrength": 0.0,
+  "tileable": true,
+  "layers": [
+    {
+      "id": "base",
+      "kind": "solid",
+      "channel": "albedo",
+      "primary": { "r": 91, "g": 91, "b": 85, "a": 255 },
+      "secondary": { "r": 91, "g": 91, "b": 85, "a": 255 },
+      "opacity": 1.0,
+      "scale": 1.0,
+      "threshold": 0.0,
+      "angleDegrees": 0.0,
+      "seed": 1
+    },
+    {
+      "id": "rust",
+      "kind": "rustSpots",
+      "channel": "albedo",
+      "primary": { "r": 99, "g": 43, "b": 25, "a": 255 },
+      "secondary": { "r": 174, "g": 83, "b": 39, "a": 255 },
+      "opacity": 0.84,
+      "scale": 7.0,
+      "threshold": 0.58,
+      "angleDegrees": 0.0,
+      "seed": 19
+    }
+  ],
+  "metadata": { "category": "metal", "sample": "true" }
+}

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "campaignSeed": 5931035436993955150,
+  "regressionSites": [
+    "Prospect Clinic",
+    "Blackwater Intake",
+    "Meridian Relay"
+  ],
+  "gridCentimeters": 50,
+  "maximumFloors": 4,
+  "initialGrammarCount": 10,
+  "validationStructureTarget": 10000,
+  "repairAttemptLimit": 8,
+  "streaming": {
+    "workerCount": 2,
+    "requestCapacity": 64,
+    "resultCapacity": 64,
+    "maximumResidentCpuBytes": 134217728
+  }
+}

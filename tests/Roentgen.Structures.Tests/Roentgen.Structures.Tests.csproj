@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>Roentgen.Structures.Tests</RootNamespace>
+    <AssemblyName>Roentgen.Structures.Tests</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Roentgen.Contracts\Roentgen.Contracts.csproj" />
+    <ProjectReference Include="..\..\src\Roentgen.Core\Roentgen.Core.csproj" />
+    <ProjectReference Include="..\..\src\Roentgen.Generation\Roentgen.Generation.csproj" />
+    <ProjectReference Include="..\..\src\Roentgen.World\Roentgen.World.csproj" />
+    <ProjectReference Include="..\..\src\Roentgen.Navigation\Roentgen.Navigation.csproj" />
+    <ProjectReference Include="..\..\src\Roentgen.Physics\Roentgen.Physics.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="xunit" />
+    <PackageReference Include="xunit.runner.visualstudio" PrivateAssets="all" />
+    <PackageReference Include="coverlet.collector" PrivateAssets="all" />
+  </ItemGroup>
+</Project>

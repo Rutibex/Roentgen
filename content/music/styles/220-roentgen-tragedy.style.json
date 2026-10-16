@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "id": "roentgen-tragedy",
+  "name": "Roentgen \u2014 Tragedy",
+  "description": "Sparse aftermath and damaged motif presentation.",
+  "version": "1.0.0",
+  "family": "game",
+  "abstract": false,
+  "extends": "jrpg-sorrow"
+}

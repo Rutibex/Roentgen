@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 18,
+  "integratedProjectCount": 6,
+  "sceneDomainCount": 5,
+  "sampleRate": 48000,
+  "channels": 2,
+  "renderBlockFrames": 512,
+  "submittedBufferFrames": 1024,
+  "initialRegions": 6,
+  "requiredAssets": [
+    "ui.confirm",
+    "focus.enter",
+    "weapon.service-sidearm.fire",
+    "weapon.industrial-rifle.fire",
+    "combat.fragmentation.explosion",
+    "footstep.concrete.walk",
+    "creature.pain",
+    "machine.generator.start"
+  ]
+}

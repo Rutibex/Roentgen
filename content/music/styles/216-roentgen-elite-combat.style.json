@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "id": "roentgen-elite-combat",
+  "name": "Roentgen \u2014 Elite Combat",
+  "description": "Large threat profile, brass weight and transformed faction motifs.",
+  "version": "1.0.0",
+  "family": "game",
+  "abstract": false,
+  "extends": "jrpg-boss-ominous"
+}

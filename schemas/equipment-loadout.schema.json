@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.local/schemas/equipment-loadout.schema.json",
+  "title": "Equipment Loadout",
+  "type": "object",
+  "required": [
+    "actorId",
+    "slots"
+  ],
+  "properties": {
+    "actorId": {
+      "type": "string"
+    },
+    "slots": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}

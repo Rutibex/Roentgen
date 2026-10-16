@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.game/schemas/body-part-profile.schema.json",
+  "title": "Roentgen Body Part Profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "entityFamily", "parts"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$" },
+    "entityFamily": { "type": "string" },
+    "parts": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["partId", "displayName", "targetSize", "structuralHealth", "functions", "consequences"],
+        "properties": {
+          "partId": { "type": "string" },
+          "displayName": { "type": "string" },
+          "parentPartId": { "type": ["string", "null"] },
+          "targetSize": { "type": "number", "exclusiveMinimum": 0 },
+          "structuralHealth": { "type": "number", "exclusiveMinimum": 0 },
+          "armorSlots": { "type": "array", "items": { "type": "string" } },
+          "functions": { "type": "array", "minItems": 1, "items": { "type": "string" }, "uniqueItems": true },
+          "consequences": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["threshold", "effectType"],
+              "properties": {
+                "threshold": { "type": "number", "minimum": 0, "maximum": 1 },
+                "effectType": { "type": "string" },
+                "parameters": { "type": "object" }
+              }
+            }
+          },
+          "canBeDestroyed": { "type": "boolean" }
+        }
+      }
+    }
+  }
+}

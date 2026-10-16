@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "characterId": "00000000000000010000000000000001",
+  "level": 10,
+  "experience": 450,
+  "attributes": {
+    "Physique": 6,
+    "Awareness": 8,
+    "Vitality": 5,
+    "Presence": 3,
+    "Intellect": 6,
+    "Reflex": 7,
+    "Fortune": 3
+  },
+  "skills": {
+    "Ballistics": 70,
+    "Fieldcraft": 70,
+    "Athletics": 70
+  },
+  "specializedSkills": [
+    "Ballistics",
+    "Fieldcraft",
+    "Athletics"
+  ],
+  "backgroundId": "perimeter-scout",
+  "traitIds": [
+    "methodical",
+    "quiet-breath"
+  ],
+  "perkRanks": {},
+  "unspentPoints": {
+    "skill": 0,
+    "perk": 0,
+    "attribute": 0
+  }
+}

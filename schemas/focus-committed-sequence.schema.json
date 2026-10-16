@@ -1,0 +1,16 @@
+{
+  "type": "object",
+  "required": [
+    "rootSeed",
+    "actions"
+  ],
+  "properties": {
+    "rootSeed": {
+      "type": "integer"
+    },
+    "actions": {
+      "type": "array"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

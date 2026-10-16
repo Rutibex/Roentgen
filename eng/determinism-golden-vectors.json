@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "stableIds": [
+    {
+      "namespace": "world.landmark",
+      "key": "north-relay",
+      "expected": "64de579d106c580f7689737d17bc031f"
+    },
+    {
+      "namespace": "campaign",
+      "key": "7351982471",
+      "expected": "5a84fd9156f5c579a712738462a808e3"
+    },
+    {
+      "namespace": "entity.npc",
+      "key": "doctor-001",
+      "expected": "aadf69a9f0db0e2f0a9661227ee0d180"
+    }
+  ],
+  "childStableIds": [
+    {
+      "parent": "64de579d106c580f7689737d17bc031f",
+      "kind": "room",
+      "key": "3",
+      "expected": "124d6674a59549999232f819d5f609d6"
+    },
+    {
+      "parent": "64de579d106c580f7689737d17bc031f",
+      "kind": "loot",
+      "key": "cabinet-a",
+      "expected": "4f8f2b966ef9d6c651212910394c51b0"
+    }
+  ],
+  "randomStreams": [
+    {
+      "campaignSeed": 7351982471,
+      "domain": "world.terrain",
+      "stream": "height.primary",
+      "expectedDomainSeed": 12074612642374661263,
+      "expectedUInt32": [
+        2099954129,
+        2560230803,
+        3337791276,
+        2075296612,
+        766993672,
+        1500560158,
+        1803241724,
+        1759725560
+      ]
+    }
+  ]
+}

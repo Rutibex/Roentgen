@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "displayNamePattern",
+    "foundingEvent",
+    "survivalMethod",
+    "ideology",
+    "materialNeeds",
+    "leadership",
+    "objectives"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "displayNamePattern": {
+      "type": "string"
+    },
+    "foundingEvent": {
+      "type": "string"
+    },
+    "survivalMethod": {
+      "type": "string"
+    },
+    "ideology": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "materialNeeds": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "taboos": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "leadership": {
+      "type": "object"
+    },
+    "objectives": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  },
+  "title": "Roentgen Faction Kernel"
+}

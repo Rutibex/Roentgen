@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.game/schemas/combat-actor-state.schema.json",
+  "title": "Roentgen combat actor state diagnostic projection",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "role", "factionId", "health", "maximumHealth", "staminaPermille", "moralePermille", "action", "bodyParts", "armor", "statuses"],
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "role": {"type": "string", "enum": ["Player", "Ally", "Neutral", "Hostile", "Creature"]},
+    "factionId": {"type": "string"},
+    "health": {"type": "integer", "minimum": 0},
+    "maximumHealth": {"type": "integer", "minimum": 1},
+    "staminaPermille": {"type": "integer", "minimum": 0, "maximum": 1000},
+    "moralePermille": {"type": "integer", "minimum": 0, "maximum": 1000},
+    "action": {"type": "string"},
+    "isBlocking": {"type": "boolean"},
+    "isRetreating": {"type": "boolean"},
+    "isDead": {"type": "boolean"},
+    "bodyParts": {"type": "array", "items": {"type": "object", "required": ["id", "region", "integrity", "maximumIntegrity", "functionalState"], "properties": {"id": {"type": "string"}, "region": {"type": "string"}, "integrity": {"type": "integer", "minimum": 0}, "maximumIntegrity": {"type": "integer", "minimum": 1}, "functionalState": {"type": "string", "enum": ["Healthy", "Impaired", "Crippled", "Destroyed"]}}}},
+    "armor": {"type": "array", "items": {"type": "string"}},
+    "statuses": {"type": "array", "items": {"type": "string"}}
+  }
+}

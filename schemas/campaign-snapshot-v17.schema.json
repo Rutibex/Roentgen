@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.game/schemas/campaign-snapshot-v17.schema.json",
+  "title": "Roentgen Phase 17 Campaign Snapshot Envelope",
+  "type": "object",
+  "required": ["formatVersion", "campaignSeed", "simulationTick", "generationSchemaVersion", "contentFingerprint", "sections"],
+  "properties": {
+    "formatVersion": { "const": 17 },
+    "campaignSeed": { "type": "string" },
+    "simulationTick": { "type": "integer", "minimum": 0 },
+    "generationSchemaVersion": { "type": "integer", "minimum": 1 },
+    "contentFingerprint": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "sections": {
+      "type": "object",
+      "required": ["items", "society", "narrative", "campaign"],
+      "properties": {
+        "items": { "$ref": "#/$defs/section" },
+        "society": { "$ref": "#/$defs/section" },
+        "narrative": { "$ref": "#/$defs/section" },
+        "campaign": { "$ref": "#/$defs/section" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "$defs": {
+    "section": {
+      "type": "object",
+      "required": ["length", "sha256"],
+      "properties": {
+        "length": { "type": "integer", "minimum": 0 },
+        "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

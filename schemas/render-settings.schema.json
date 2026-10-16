@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.game/schemas/render-settings.schema.json",
+  "title": "Roentgen rendering settings",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "fieldOfViewDegrees",
+    "nearPlane",
+    "farPlane",
+    "shadowMapSize",
+    "shadowDistance",
+    "fogStart",
+    "fogEnd",
+    "exposure",
+    "gamma",
+    "vignetteStrength",
+    "enableShadows",
+    "enablePostProcessing",
+    "enableFrustumCulling",
+    "maximumUploadsPerFrame",
+    "maximumUploadBytesPerFrame",
+    "maximumUploadMillisecondsPerFrame",
+    "maximumPendingUploadOperations",
+    "maximumPendingUploadBytes"
+  ],
+  "properties": {
+    "fieldOfViewDegrees": {
+      "type": "number",
+      "minimum": 35,
+      "maximum": 120
+    },
+    "nearPlane": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "farPlane": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "shadowMapSize": {
+      "enum": [
+        256,
+        512,
+        1024,
+        2048,
+        4096,
+        8192
+      ]
+    },
+    "shadowDistance": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "fogStart": {
+      "type": "number",
+      "minimum": 0
+    },
+    "fogEnd": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "exposure": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "gamma": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "vignetteStrength": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "enableShadows": {
+      "type": "boolean"
+    },
+    "enablePostProcessing": {
+      "type": "boolean"
+    },
+    "enableFrustumCulling": {
+      "type": "boolean"
+    },
+    "maximumUploadsPerFrame": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 256
+    },
+    "maximumUploadBytesPerFrame": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "maximumUploadMillisecondsPerFrame": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "maximumPendingUploadOperations": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "maximumPendingUploadBytes": {
+      "type": "integer",
+      "minimum": 1
+    }
+  }
+}

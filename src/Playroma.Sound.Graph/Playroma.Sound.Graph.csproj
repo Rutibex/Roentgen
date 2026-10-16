@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Description>Serializable sound graphs, validation, compilation, runtime execution, macros, and events for Playroma Sound.</Description>
+    <PackageId>Playroma.Sound.Graph</PackageId>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Playroma.Sound.Core\Playroma.Sound.Core.csproj" />
+    <ProjectReference Include="..\Playroma.Sound.Dsp\Playroma.Sound.Dsp.csproj" />
+  </ItemGroup>
+</Project>

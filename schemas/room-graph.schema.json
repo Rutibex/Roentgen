@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.game/schemas/room-graph.schema.json",
+  "title": "Room and door graph",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "structureId",
+    "rooms",
+    "connections",
+    "doors",
+    "verticalLinks"
+  ],
+  "properties": {
+    "structureId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "rooms": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object"
+      }
+    },
+    "connections": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object"
+      }
+    },
+    "doors": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object"
+      }
+    },
+    "verticalLinks": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  }
+}

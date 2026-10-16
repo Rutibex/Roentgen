@@ -1,0 +1,316 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.game/schemas/mesh-recipe.schema.json",
+  "title": "Roentgen procedural mesh recipe",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "schemaVersion",
+    "parts",
+    "collision",
+    "lodCount",
+    "metadata"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[a-z0-9][a-z0-9._-]*$"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "collision": {
+      "enum": [
+        "none",
+        "axisAlignedBox",
+        "boundingSphere",
+        "capsuleY",
+        "compoundBoxes"
+      ]
+    },
+    "lodCount": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "parts": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 256,
+      "items": {
+        "$ref": "#/$defs/part"
+      }
+    }
+  },
+  "$defs": {
+    "vector2": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "x",
+        "y"
+      ],
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        }
+      }
+    },
+    "vector3": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "x",
+        "y",
+        "z"
+      ],
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "z": {
+          "type": "number"
+        }
+      }
+    },
+    "color": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "r",
+        "g",
+        "b",
+        "a"
+      ],
+      "properties": {
+        "r": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 255
+        },
+        "g": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 255
+        },
+        "b": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 255
+        },
+        "a": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 255
+        }
+      }
+    },
+    "transform": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "translation",
+        "rotationDegrees",
+        "scale"
+      ],
+      "properties": {
+        "translation": {
+          "$ref": "#/$defs/vector3"
+        },
+        "rotationDegrees": {
+          "$ref": "#/$defs/vector3"
+        },
+        "scale": {
+          "$ref": "#/$defs/positiveVector3"
+        }
+      }
+    },
+    "modifier": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "vector",
+        "amount",
+        "secondary",
+        "seed"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "translate",
+            "scale",
+            "rotateEulerDegrees",
+            "taper",
+            "twistDegrees",
+            "bendDegrees",
+            "noiseDisplace",
+            "clipBelow",
+            "clipAbove"
+          ]
+        },
+        "vector": {
+          "$ref": "#/$defs/vector3"
+        },
+        "amount": {
+          "type": "number"
+        },
+        "secondary": {
+          "type": "number"
+        },
+        "seed": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "part": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "primitive",
+        "size",
+        "radius",
+        "height",
+        "segments",
+        "rings",
+        "profile",
+        "polygon",
+        "path",
+        "transform",
+        "color",
+        "materialSlot",
+        "minimumLod",
+        "uvProjection",
+        "modifiers"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "primitive": {
+          "enum": [
+            "box",
+            "cylinder",
+            "cone",
+            "uvSphere",
+            "wedge",
+            "lathe",
+            "extrusion",
+            "tube"
+          ]
+        },
+        "size": {
+          "$ref": "#/$defs/vector3"
+        },
+        "radius": {
+          "type": "number",
+          "minimum": 0
+        },
+        "height": {
+          "type": "number",
+          "minimum": 0
+        },
+        "segments": {
+          "type": "integer",
+          "minimum": 3,
+          "maximum": 512
+        },
+        "rings": {
+          "type": "integer",
+          "minimum": 2,
+          "maximum": 512
+        },
+        "profile": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/vector2"
+          }
+        },
+        "polygon": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/vector2"
+          }
+        },
+        "path": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/vector3"
+          }
+        },
+        "transform": {
+          "$ref": "#/$defs/transform"
+        },
+        "color": {
+          "$ref": "#/$defs/color"
+        },
+        "materialSlot": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 65535
+        },
+        "minimumLod": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 8
+        },
+        "uvProjection": {
+          "enum": [
+            "primitive",
+            "planarX",
+            "planarY",
+            "planarZ",
+            "cylindricalY",
+            "spherical"
+          ]
+        },
+        "modifiers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/modifier"
+          }
+        }
+      }
+    },
+    "positiveVector3": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "x",
+        "y",
+        "z"
+      ],
+      "properties": {
+        "x": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "y": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "z": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      }
+    }
+  }
+}

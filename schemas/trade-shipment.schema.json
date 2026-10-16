@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "routeId",
+    "exporterSettlementId",
+    "importerSettlementId",
+    "commodity",
+    "loadedMilliunits",
+    "departureDay",
+    "arrivalDay"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "routeId": {
+      "type": "string"
+    },
+    "exporterSettlementId": {
+      "type": "string"
+    },
+    "importerSettlementId": {
+      "type": "string"
+    },
+    "commodity": {
+      "type": "string"
+    },
+    "loadedMilliunits": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "departureDay": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "arrivalDay": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "lostMilliunits": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "deliveredMilliunits": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "resolved": {
+      "type": "boolean"
+    }
+  },
+  "title": "Roentgen Trade Shipment"
+}

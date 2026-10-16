@@ -1,0 +1,163 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.game/schemas/regional-topology.schema.json",
+  "title": "Roentgen regional topology summary",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "campaignSeed",
+    "topologyId",
+    "contentChecksum",
+    "profile",
+    "regionCounts",
+    "roads",
+    "reservations"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "campaignSeed": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "topologyId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "contentChecksum": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "profile": {
+      "$ref": "world-generation-profile.schema.json"
+    },
+    "regionCounts": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 0
+      }
+    },
+    "roads": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "kind",
+          "halfWidthCentimeters",
+          "polyline"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "enum": [
+              "MajorRoad",
+              "MinorRoad",
+              "Trail"
+            ]
+          },
+          "halfWidthCentimeters": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "polyline": {
+            "type": "array",
+            "minItems": 2,
+            "items": {
+              "type": "array",
+              "prefixItems": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "integer"
+                }
+              ],
+              "items": false
+            }
+          }
+        }
+      }
+    },
+    "reservations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "purpose",
+          "centerCentimeters",
+          "halfWidthCentimeters",
+          "halfDepthCentimeters",
+          "targetElevationCentimeters",
+          "maximumSlopePermille",
+          "requiresRoadAccess"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "purpose": {
+            "enum": [
+              "Settlement",
+              "Ruin",
+              "Infrastructure",
+              "Hazard",
+              "QuestReserved"
+            ]
+          },
+          "centerCentimeters": {
+            "type": "array",
+            "prefixItems": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "integer"
+              }
+            ],
+            "items": false
+          },
+          "halfWidthCentimeters": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "halfDepthCentimeters": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "targetElevationCentimeters": {
+            "type": "integer"
+          },
+          "maximumSlopePermille": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 1000
+          },
+          "requiresRoadAccess": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  }
+}

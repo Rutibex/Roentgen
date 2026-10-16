@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "vectors": [
+    {
+      "name": "pristine-revolver",
+      "baseDamage": 24,
+      "damageAdditive": 2,
+      "damageMultiplierPermille": 1000,
+      "expectedDamage": 26,
+      "baseCapacity": 6,
+      "capacityAdditive": 0,
+      "expectedCapacity": 6
+    },
+    {
+      "name": "rifle-long-barrel",
+      "baseDamage": 42,
+      "damageAdditive": 5,
+      "damageMultiplierPermille": 1102,
+      "expectedDamage": 51,
+      "baseRange": 65000,
+      "rangeMultipliersPermille": [
+        1050,
+        1250
+      ],
+      "expectedRange": 85312,
+      "baseCapacity": 5,
+      "capacityAdditive": -4,
+      "expectedCapacity": 1
+    },
+    {
+      "name": "condition-reliability",
+      "baseReliability": 900,
+      "componentReliabilityAdditive": 40,
+      "conditionPermille": 620,
+      "expectedReliability": 582
+    },
+    {
+      "name": "scarcity-low-stock",
+      "target": 100000,
+      "quantity": 40000,
+      "expectedScarcityPermille": 2500
+    },
+    {
+      "name": "scarcity-high-stock",
+      "target": 100000,
+      "quantity": 240000,
+      "expectedScarcityPermille": 500
+    }
+  ]
+}

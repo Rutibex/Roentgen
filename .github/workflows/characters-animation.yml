@@ -1,0 +1,44 @@
+name: Phase 9 Characters and Animation
+
+on:
+  push:
+    paths:
+      - 'src/Roentgen.Animation/**'
+      - 'src/Roentgen.Generation/**'
+      - 'src/Roentgen.Rendering/**'
+      - 'src/Roentgen.Entities/**'
+      - 'src/Roentgen.AI/**'
+      - 'tools/Roentgen.CreatureLab/**'
+      - 'tests/Roentgen.Characters.Tests/**'
+      - 'eng/character-*'
+      - 'eng/verify_character_*'
+      - '.github/workflows/characters-animation.yml'
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: Restore tools and packages
+        run: |
+          dotnet tool restore
+          dotnet restore Roentgen.sln
+      - name: Static contracts
+        run: |
+          python eng/validate_repository.py
+          python eng/verify_character_contracts.py
+          python eng/verify_character_vectors.py
+      - name: Release build
+        run: dotnet build Roentgen.sln --configuration Release --no-restore
+      - name: Character tests
+        run: dotnet test tests/Roentgen.Characters.Tests/Roentgen.Characters.Tests.csproj --configuration Release --no-build
+      - name: CreatureLab smoke
+        run: |
+          dotnet run --project tools/Roentgen.CreatureLab --configuration Release --no-build -- humanoid
+          dotnet run --project tools/Roentgen.CreatureLab --configuration Release --no-build -- creature
+          dotnet run --project tools/Roentgen.CreatureLab --configuration Release --no-build -- validate-seeds --count 1000

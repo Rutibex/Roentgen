@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.game/schemas/character-validation-report.schema.json",
+  "title": "Roentgen Character Validation Report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "characterId",
+    "valid",
+    "issues",
+    "repairHistory"
+  ],
+  "properties": {
+    "characterId": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{32}$"
+    },
+    "valid": {
+      "type": "boolean"
+    },
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "code",
+          "message",
+          "critical"
+        ],
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "critical": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "repairHistory": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

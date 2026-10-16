@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.game/schemas/creature-body-plan.schema.json",
+  "title": "Roentgen Creature Body Plan",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "bodyPlanId",
+    "axialBones",
+    "limbChains",
+    "targetParts",
+    "locomotionModes"
+  ],
+  "properties": {
+    "bodyPlanId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "axialBones": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "limbChains": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "array",
+        "minItems": 2,
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "targetParts": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "locomotionModes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "supportLimbCount": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 32
+    }
+  }
+}

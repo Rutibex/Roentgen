@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "vectors": [
+    {
+      "name": "baseline-level1",
+      "level": 1,
+      "attributes": {
+        "Physique": 4,
+        "Awareness": 4,
+        "Vitality": 4,
+        "Presence": 4,
+        "Intellect": 4,
+        "Reflex": 4,
+        "Fortune": 4
+      },
+      "expected": {
+        "MaximumHealth": 100,
+        "MaximumStamina": 118,
+        "CarryCapacityGrams": 48000,
+        "MaximumFocusMilliunits": 81000,
+        "FocusRecoveryPerSecondMilliunits": 4000,
+        "Initiative": 32,
+        "CriticalReserveMilliunits": 5000,
+        "SkillPointsPerLevel": 10
+      }
+    },
+    {
+      "name": "specialist-level10",
+      "level": 10,
+      "attributes": {
+        "Physique": 6,
+        "Awareness": 8,
+        "Vitality": 5,
+        "Presence": 3,
+        "Intellect": 6,
+        "Reflex": 7,
+        "Fortune": 3
+      },
+      "expected": {
+        "MaximumHealth": 146,
+        "MaximumStamina": 138,
+        "CarryCapacityGrams": 62000,
+        "MaximumFocusMilliunits": 112000,
+        "FocusRecoveryPerSecondMilliunits": 4750,
+        "Initiative": 56,
+        "CriticalReserveMilliunits": 4250,
+        "SkillPointsPerLevel": 11
+      }
+    }
+  ]
+}

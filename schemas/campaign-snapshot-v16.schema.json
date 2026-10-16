@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.game/schemas/campaign-snapshot-v16.schema.json",
+  "title": "Campaign Snapshot V16",
+  "type": "object",
+  "required": ["formatVersion", "campaignSeed", "simulationTick", "generationSchemaVersion", "contentFingerprint", "itemSnapshot", "societySnapshot", "narrativeSnapshot"],
+  "properties": {
+    "formatVersion": {"const": 16},
+    "campaignSeed": {"type": "integer", "minimum": 0},
+    "simulationTick": {"type": "integer", "minimum": 0},
+    "generationSchemaVersion": {"type": "integer", "minimum": 1},
+    "contentFingerprint": {"type": "string", "minLength": 1},
+    "itemSnapshot": {"type": "string", "contentEncoding": "base64"},
+    "societySnapshot": {"type": "string", "contentEncoding": "base64"},
+    "narrativeSnapshot": {"type": "string", "contentEncoding": "base64"}
+  },
+  "additionalProperties": false
+}

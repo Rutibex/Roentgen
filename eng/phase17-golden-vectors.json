@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 17,
+  "premiseCount": 7,
+  "premiseIdsSha256": "5d907e8d5994c1e82fc949698fc0cb0be86314a26322d08281fe10d5547577b8",
+  "milestoneCount": 12,
+  "milestoneIdsAndRolesSha256": "afa83aa953d003482ca2afb4e3643de34b94595a6695444a368788598e6a6166",
+  "criticalRoleCount": 8,
+  "criticalRoleIdsSha256": "ff05b93ea1be9ea66d664d6b3b237206099b343d3059b2c62b02d2a0cbe2613a",
+  "endingFamilyCount": 8,
+  "endingIdsSha256": "5e79308a11700fdabed39b11f7ec94233ab35cd0ae249933ba719728d40de2e9",
+  "revelationCount": 3,
+  "irreversibleChoiceCount": 2,
+  "regressionBuildCount": 6
+}

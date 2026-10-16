@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Roentgen Attribute Definition",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "minimum": {
+      "type": "integer",
+      "const": 1
+    },
+    "maximum": {
+      "type": "integer",
+      "const": 10
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "id",
+    "minimum",
+    "maximum",
+    "description"
+  ]
+}

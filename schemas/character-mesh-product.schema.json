@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.game/schemas/character-mesh-product.schema.json",
+  "title": "Roentgen Character Mesh Product",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "name",
+    "vertexCount",
+    "indexCount",
+    "boneCount",
+    "maximumInfluences"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "vertexCount": {
+      "type": "integer",
+      "minimum": 3
+    },
+    "indexCount": {
+      "type": "integer",
+      "minimum": 3,
+      "multipleOf": 3
+    },
+    "boneCount": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 64
+    },
+    "maximumInfluences": {
+      "const": 4
+    },
+    "lodLevel": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 2
+    }
+  }
+}

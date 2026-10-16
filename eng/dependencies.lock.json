@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 3,
+  "dependencies": [],
+  "integratedSources": [
+    {
+      "id": "playroma-sound",
+      "sourceArchive": "PlayromaSound_GitHub_Ready_v0.8.0.zip",
+      "sourceVersion": "0.8.0",
+      "integration": "source-copied-under-src-and-upgraded-for-phase18",
+      "projects": [
+        "src/Playroma.Sound.Core/Playroma.Sound.Core.csproj",
+        "src/Playroma.Sound.Dsp/Playroma.Sound.Dsp.csproj",
+        "src/Playroma.Sound.Graph/Playroma.Sound.Graph.csproj",
+        "src/Playroma.Sound.Generators/Playroma.Sound.Generators.csproj",
+        "src/Playroma.Sound.Streaming/Playroma.Sound.Streaming.csproj",
+        "src/Playroma.Sound.Analysis/Playroma.Sound.Analysis.csproj"
+      ],
+      "license": "MIT",
+      "notice": "licenses/PLAYROMA_SOUND_THIRD_PARTY_NOTICES.md"
+    },
+    {
+      "id": "playroma-music",
+      "sourceArchive": "PlayromaMusic-main.zip",
+      "sourceRevision": "ae6561e0a74509a2a04580179d9a64d0865e7538",
+      "integration": "source-copied-under-src-and-adapted-for-phase19",
+      "projects": [
+        "src/PlayromaMusic.Core/PlayromaMusic.Core.csproj",
+        "src/PlayromaMusic.Generators/PlayromaMusic.Generators.csproj",
+        "src/PlayromaMusic.SoundFont/PlayromaMusic.SoundFont.csproj"
+      ],
+      "license": "MIT",
+      "notice": "licenses/PLAYROMA_MUSIC_THIRD_PARTY_NOTICES.md",
+      "soundFont": {
+        "asset": "content/music/soundfonts/default.sf2",
+        "internalName": "GeneralUser GS 2.0.3 BETA",
+        "sha256": "9575028c7a1f589f5770fccc8cff2734566af40cd26ed836944e9a5152688cfe",
+        "license": "content/music/soundfonts/GeneralUser-GS-LICENSE.txt"
+      }
+    }
+  ]
+}

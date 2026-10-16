@@ -1,0 +1,41 @@
+name: Procedural Assets
+
+on:
+  push:
+    paths:
+      - 'src/Roentgen.Assets/**'
+      - 'src/Roentgen.Rendering/**'
+      - 'tools/Roentgen.AssetLab/**'
+      - 'tests/Roentgen.Assets.Tests/**'
+      - 'samples/assets/**'
+      - 'schemas/*asset*.json'
+      - 'schemas/mesh-recipe.schema.json'
+      - 'schemas/material-recipe.schema.json'
+      - 'eng/asset*'
+      - '.github/workflows/procedural-assets.yml'
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate-and-compile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - run: pip install jsonschema pyyaml
+      - run: python eng/verify_asset_contracts.py
+      - run: python eng/verify_asset_vectors.py
+      - run: dotnet restore Roentgen.sln --locked-mode || dotnet restore Roentgen.sln
+      - run: dotnet build Roentgen.sln --configuration Release --no-restore
+      - run: dotnet test tests/Roentgen.Assets.Tests --configuration Release --no-build
+      - run: dotnet run --project tools/Roentgen.AssetLab --configuration Release --no-build -- catalog
+      - run: dotnet run --project tools/Roentgen.AssetLab --configuration Release --no-build -- compile-catalog --output artifacts/assetlab
+      - uses: actions/upload-artifact@v4
+        with:
+          name: phase5-assetlab-output
+          path: artifacts/assetlab

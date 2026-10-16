@@ -1,0 +1,18 @@
+name: Navigation and Full AI
+on:
+  push:
+  pull_request:
+jobs:
+  phase14:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+      - run: dotnet restore Roentgen.sln
+      - run: dotnet build Roentgen.sln -c Release --no-restore
+      - run: dotnet test tests/Roentgen.Phase14.Tests/Roentgen.Phase14.Tests.csproj -c Release --no-build
+      - run: dotnet run --project tools/Roentgen.AgentLab -c Release --no-build -- smoke
+      - run: python eng/verify_phase14_contracts.py
+      - run: python eng/verify_phase14_vectors.py

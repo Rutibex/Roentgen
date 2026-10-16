@@ -1,0 +1,6 @@
+<Project>
+  <Target Name="ValidateRoentgenProjectPolicy" BeforeTargets="PrepareForBuild" Condition="$([System.String]::Copy('$(MSBuildProjectName)').StartsWith('Roentgen.'))">
+    <Error Condition="'$(TargetFramework)' != 'net10.0'" Text="Roentgen projects must target net10.0." />
+    <Error Condition="'$(Nullable)' != 'enable'" Text="Roentgen projects must enable nullable reference types." />
+  </Target>
+</Project>

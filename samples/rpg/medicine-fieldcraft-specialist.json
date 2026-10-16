@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "characterId": "00000000000000050000000000000005",
+  "level": 10,
+  "experience": 450,
+  "attributes": {
+    "Physique": 6,
+    "Awareness": 8,
+    "Vitality": 5,
+    "Presence": 3,
+    "Intellect": 6,
+    "Reflex": 7,
+    "Fortune": 3
+  },
+  "skills": {
+    "Medicine": 70,
+    "Fieldcraft": 70,
+    "Science": 70
+  },
+  "specializedSkills": [
+    "Medicine",
+    "Fieldcraft",
+    "Science"
+  ],
+  "backgroundId": "clinic-orderly",
+  "traitIds": [
+    "field-naturalist",
+    "iron-stomach"
+  ],
+  "perkRanks": {},
+  "unspentPoints": {
+    "skill": 0,
+    "perk": 0,
+    "attribute": 0
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "phase": "phase7",
+  "defaultCampaignSeed": 5931035436993955150,
+  "gridCentimeters": 50,
+  "regressionSites": [
+    "Prospect Clinic",
+    "Blackwater Intake",
+    "Meridian Relay"
+  ],
+  "grammarIds": [
+    "blackwater-intake",
+    "boarding-house",
+    "generic-shelter",
+    "guard-post",
+    "market-shelter",
+    "meridian-relay",
+    "prospect-clinic",
+    "salvage-workshop",
+    "small-residence",
+    "warehouse"
+  ],
+  "structureExitTarget": 10000,
+  "repairAttemptLimit": 8,
+  "streamingLayers": [
+    "ExteriorShell",
+    "CriticalInterior",
+    "Decoration"
+  ],
+  "contractSha256": "7a1f6f91a02504622dee79366f2fee9703bca464307e4febd51e3e6c808b36f2"
+}

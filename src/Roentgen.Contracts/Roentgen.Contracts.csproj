@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+
+    <RootNamespace>Roentgen.Contracts</RootNamespace>
+    <AssemblyName>Roentgen.Contracts</AssemblyName>
+  </PropertyGroup>
+
+</Project>

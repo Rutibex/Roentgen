@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "id": "roentgen-industrial-ruin",
+  "name": "Roentgen — Industrial Ruin",
+  "description": "Sparse interior suspense with low machinery pulse, corroded resonances and intermittent melodic fragments rather than constant action music.",
+  "version": "1.1.0",
+  "family": "game",
+  "abstract": false,
+  "extends": "game-dark-ambient-fps",
+  "tempo": {
+    "minimum": 52,
+    "maximum": 78
+  },
+  "candidateCount": 18,
+  "scales": [
+    "naturalMinor",
+    "phrygian"
+  ],
+  "rhythms": [
+    {
+      "id": "ruin-pulse",
+      "steps": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "roles": [
+    {
+      "id": "melody",
+      "role": "lead",
+      "density": 10,
+      "instrumentSelector": {
+        "families": [
+          "guitar",
+          "reed",
+          "chromaticPercussion",
+          "synthLead"
+        ],
+        "maximumLayers": 1
+      }
+    },
+    {
+      "id": "bass",
+      "role": "bass",
+      "rhythmPatternId": "ruin-pulse",
+      "density": 22,
+      "instrumentSelector": {
+        "families": [
+          "bass",
+          "synthPad",
+          "organ"
+        ],
+        "maximumLayers": 1
+      }
+    },
+    {
+      "id": "chords",
+      "role": "chords",
+      "density": 15,
+      "instrumentSelector": {
+        "families": [
+          "synthPad",
+          "organ",
+          "strings"
+        ],
+        "maximumLayers": 2
+      }
+    },
+    {
+      "id": "arpeggio",
+      "role": "arpeggio",
+      "rhythmPatternId": "ruin-pulse",
+      "density": 12,
+      "instrumentSelector": {
+        "families": [
+          "chromaticPercussion",
+          "synthEffects",
+          "guitar"
+        ],
+        "maximumLayers": 1
+      }
+    },
+    {
+      "id": "counter",
+      "role": "counterMelody",
+      "density": 5
+    },
+    {
+      "id": "texture",
+      "role": "texture",
+      "density": 38,
+      "instrumentSelector": {
+        "families": [
+          "synthPad",
+          "synthEffects",
+          "soundEffects",
+          "organ"
+        ],
+        "maximumLayers": 2
+      }
+    },
+    {
+      "id": "drums",
+      "role": "drums",
+      "enabled": false,
+      "density": 0
+    }
+  ]
+}

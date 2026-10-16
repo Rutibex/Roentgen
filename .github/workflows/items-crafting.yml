@@ -1,0 +1,34 @@
+name: Items and Crafting
+on:
+  push:
+    paths:
+      - 'src/Roentgen.Items/**'
+      - 'src/Roentgen.Combat/ItemCombatAdapter.cs'
+      - 'src/Roentgen.Rpg/Phase13ItemCapabilityProvider.cs'
+      - 'tests/Roentgen.Items.Tests/**'
+      - 'tools/Roentgen.ItemLab/**'
+      - 'eng/item*'
+      - '.github/workflows/items-crafting.yml'
+  pull_request:
+    paths:
+      - 'src/Roentgen.Items/**'
+      - 'tests/Roentgen.Items.Tests/**'
+      - 'tools/Roentgen.ItemLab/**'
+      - 'eng/item*'
+jobs:
+  phase13:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+      - run: python eng/verify_item_contracts.py
+      - run: python eng/verify_item_vectors.py
+      - run: dotnet restore Roentgen.sln --locked-mode
+      - run: dotnet build Roentgen.sln --configuration Release --no-restore
+      - run: dotnet test tests/Roentgen.Items.Tests/Roentgen.Items.Tests.csproj --configuration Release --no-build
+      - run: dotnet run --project tools/Roentgen.ItemLab/Roentgen.ItemLab.csproj -- inventory-soak 100000
+      - run: dotnet run --project tools/Roentgen.ItemLab/Roentgen.ItemLab.csproj -- loot clinic-storage 10000
+      - run: dotnet run --project tools/Roentgen.ItemLab/Roentgen.ItemLab.csproj -- economy 3650
+      - run: dotnet run --project tools/Roentgen.ItemLab/Roentgen.ItemLab.csproj -- arbitrage-audit

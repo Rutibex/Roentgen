@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType><AssemblyName>Roentgen.CampaignLab</AssemblyName><RootNamespace>Roentgen.CampaignLab</RootNamespace></PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Roentgen.Campaign\Roentgen.Campaign.csproj" />
+    <ProjectReference Include="..\..\src\Roentgen.Factions\Roentgen.Factions.csproj" />
+    <ProjectReference Include="..\..\src\Roentgen.Narrative\Roentgen.Narrative.csproj" />
+    <ProjectReference Include="..\..\src\Roentgen.Persistence\Roentgen.Persistence.csproj" />
+    <ProjectReference Include="..\..\src\Roentgen.Core\Roentgen.Core.csproj" />
+    <ProjectReference Include="..\..\src\Roentgen.Contracts\Roentgen.Contracts.csproj" />
+  </ItemGroup>
+</Project>

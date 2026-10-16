@@ -1,0 +1,206 @@
+{
+  "version": 2,
+  "dependencies": {
+    "net10.0": {
+      "MonoGame.Framework.DesktopGL": {
+        "type": "Direct",
+        "requested": "[3.8.5, )",
+        "resolved": "3.8.5",
+        "contentHash": "oG5Thkic4i/6kX3OWtq2p6DEATflP71yM0p/1ymIoFaIp1xNFOqAd4jW2D9GIQLIMT6mn5RmJknYPqJnOQbi5w==",
+        "dependencies": {
+          "MonoGame.Library.OpenAL": "1.24.3.4",
+          "MonoGame.Library.SDL": "2.32.10.2",
+          "NVorbis": "0.10.4"
+        }
+      },
+      "MonoGame.Library.OpenAL": {
+        "type": "Transitive",
+        "resolved": "1.24.3.4",
+        "contentHash": "/FhE0hblY9owGPvIHnMbH+6kXtjfl+/t3Cm776RQiZnGyxGy2Qd9pTAzclLuMO8pvtjiGLYkkRwjRciUA4XFyQ=="
+      },
+      "MonoGame.Library.SDL": {
+        "type": "Transitive",
+        "resolved": "2.32.10.2",
+        "contentHash": "mtnmWr50KgH2Ui9fPscHPMI3sXgb5NBRnPS7igi4ViJ23ROdP+MLi/j9CmLWX47KuXvI3Bp5BElCDVwRUlswgg=="
+      },
+      "NVorbis": {
+        "type": "Transitive",
+        "resolved": "0.10.4",
+        "contentHash": "WYnil3DhQHzjCY0dM9I2B3r1vWip90AOuQd25KE4NrjPQBg0tBJFluRLm5YPnO5ZLDmwrfosY8jCQGQRmWI/Pg=="
+      },
+      "playroma.sound.core": {
+        "type": "Project"
+      },
+      "playroma.sound.dsp": {
+        "type": "Project",
+        "dependencies": {
+          "Playroma.Sound.Core": "[0.21.0-phase21, )"
+        }
+      },
+      "playroma.sound.generators": {
+        "type": "Project",
+        "dependencies": {
+          "Playroma.Sound.Core": "[0.21.0-phase21, )",
+          "Playroma.Sound.Graph": "[0.21.0-phase21, )"
+        }
+      },
+      "playroma.sound.graph": {
+        "type": "Project",
+        "dependencies": {
+          "Playroma.Sound.Core": "[0.21.0-phase21, )",
+          "Playroma.Sound.Dsp": "[0.21.0-phase21, )"
+        }
+      },
+      "playroma.sound.streaming": {
+        "type": "Project",
+        "dependencies": {
+          "Playroma.Sound.Core": "[0.21.0-phase21, )",
+          "Playroma.Sound.Dsp": "[0.21.0-phase21, )",
+          "Playroma.Sound.Generators": "[0.21.0-phase21, )",
+          "Playroma.Sound.Graph": "[0.21.0-phase21, )"
+        }
+      },
+      "roentgen.animation": {
+        "type": "Project",
+        "dependencies": {
+          "Roentgen.Contracts": "[0.21.0-phase21, )",
+          "Roentgen.Core": "[0.21.0-phase21, )"
+        }
+      },
+      "roentgen.audio": {
+        "type": "Project",
+        "dependencies": {
+          "Roentgen.Content": "[0.21.0-phase21, )",
+          "Roentgen.Contracts": "[0.21.0-phase21, )",
+          "Roentgen.Core": "[0.21.0-phase21, )",
+          "Roentgen.Diagnostics": "[0.21.0-phase21, )"
+        }
+      },
+      "roentgen.audio.playroma": {
+        "type": "Project",
+        "dependencies": {
+          "Playroma.Sound.Core": "[0.21.0-phase21, )",
+          "Playroma.Sound.Dsp": "[0.21.0-phase21, )",
+          "Playroma.Sound.Generators": "[0.21.0-phase21, )",
+          "Playroma.Sound.Graph": "[0.21.0-phase21, )",
+          "Playroma.Sound.Streaming": "[0.21.0-phase21, )",
+          "Roentgen.Audio": "[0.21.0-phase21, )"
+        }
+      },
+      "roentgen.campaign": {
+        "type": "Project",
+        "dependencies": {
+          "Roentgen.Content": "[0.21.0-phase21, )",
+          "Roentgen.Contracts": "[0.21.0-phase21, )",
+          "Roentgen.Core": "[0.21.0-phase21, )",
+          "Roentgen.Factions": "[0.21.0-phase21, )",
+          "Roentgen.Generation": "[0.21.0-phase21, )",
+          "Roentgen.Narrative": "[0.21.0-phase21, )",
+          "Roentgen.Rpg": "[0.21.0-phase21, )",
+          "Roentgen.World": "[0.21.0-phase21, )"
+        }
+      },
+      "roentgen.content": {
+        "type": "Project"
+      },
+      "roentgen.contracts": {
+        "type": "Project"
+      },
+      "roentgen.core": {
+        "type": "Project",
+        "dependencies": {
+          "Roentgen.Contracts": "[0.21.0-phase21, )"
+        }
+      },
+      "roentgen.diagnostics": {
+        "type": "Project",
+        "dependencies": {
+          "Roentgen.Core": "[0.21.0-phase21, )",
+          "Roentgen.Simulation": "[0.21.0-phase21, )"
+        }
+      },
+      "roentgen.entities": {
+        "type": "Project",
+        "dependencies": {
+          "Roentgen.Contracts": "[0.21.0-phase21, )",
+          "Roentgen.Core": "[0.21.0-phase21, )",
+          "Roentgen.World": "[0.21.0-phase21, )"
+        }
+      },
+      "roentgen.factions": {
+        "type": "Project",
+        "dependencies": {
+          "Roentgen.Content": "[0.21.0-phase21, )",
+          "Roentgen.Contracts": "[0.21.0-phase21, )",
+          "Roentgen.Core": "[0.21.0-phase21, )"
+        }
+      },
+      "roentgen.generation": {
+        "type": "Project",
+        "dependencies": {
+          "Roentgen.Animation": "[0.21.0-phase21, )",
+          "Roentgen.Contracts": "[0.21.0-phase21, )",
+          "Roentgen.Core": "[0.21.0-phase21, )"
+        }
+      },
+      "roentgen.items": {
+        "type": "Project",
+        "dependencies": {
+          "Roentgen.Content": "[0.21.0-phase21, )",
+          "Roentgen.Contracts": "[0.21.0-phase21, )",
+          "Roentgen.Core": "[0.21.0-phase21, )",
+          "Roentgen.Factions": "[0.21.0-phase21, )"
+        }
+      },
+      "roentgen.narrative": {
+        "type": "Project",
+        "dependencies": {
+          "Roentgen.Content": "[0.21.0-phase21, )",
+          "Roentgen.Contracts": "[0.21.0-phase21, )",
+          "Roentgen.Core": "[0.21.0-phase21, )",
+          "Roentgen.Rpg": "[0.21.0-phase21, )"
+        }
+      },
+      "roentgen.physics": {
+        "type": "Project",
+        "dependencies": {
+          "Roentgen.Contracts": "[0.21.0-phase21, )",
+          "Roentgen.Core": "[0.21.0-phase21, )",
+          "Roentgen.Entities": "[0.21.0-phase21, )",
+          "Roentgen.World": "[0.21.0-phase21, )"
+        }
+      },
+      "roentgen.rpg": {
+        "type": "Project",
+        "dependencies": {
+          "Roentgen.Contracts": "[0.21.0-phase21, )",
+          "Roentgen.Core": "[0.21.0-phase21, )",
+          "Roentgen.Entities": "[0.21.0-phase21, )",
+          "Roentgen.Items": "[0.21.0-phase21, )"
+        }
+      },
+      "roentgen.simulation": {
+        "type": "Project",
+        "dependencies": {
+          "Roentgen.Campaign": "[0.21.0-phase21, )",
+          "Roentgen.Contracts": "[0.21.0-phase21, )",
+          "Roentgen.Core": "[0.21.0-phase21, )",
+          "Roentgen.Entities": "[0.21.0-phase21, )",
+          "Roentgen.Factions": "[0.21.0-phase21, )",
+          "Roentgen.Items": "[0.21.0-phase21, )",
+          "Roentgen.Narrative": "[0.21.0-phase21, )",
+          "Roentgen.Physics": "[0.21.0-phase21, )",
+          "Roentgen.World": "[0.21.0-phase21, )"
+        }
+      },
+      "roentgen.world": {
+        "type": "Project",
+        "dependencies": {
+          "Roentgen.Content": "[0.21.0-phase21, )",
+          "Roentgen.Core": "[0.21.0-phase21, )",
+          "Roentgen.Generation": "[0.21.0-phase21, )"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "characterId": "00000000000000020000000000000002",
+  "level": 10,
+  "experience": 450,
+  "attributes": {
+    "Physique": 6,
+    "Awareness": 8,
+    "Vitality": 5,
+    "Presence": 3,
+    "Intellect": 6,
+    "Reflex": 7,
+    "Fortune": 3
+  },
+  "skills": {
+    "Melee": 70,
+    "Unarmed": 70,
+    "Athletics": 70
+  },
+  "specializedSkills": [
+    "Melee",
+    "Unarmed",
+    "Athletics"
+  ],
+  "backgroundId": "quarry-mechanic",
+  "traitIds": [
+    "heavy-handed",
+    "scar-tissue"
+  ],
+  "perkRanks": {},
+  "unspentPoints": {
+    "skill": 0,
+    "perk": 0,
+    "attribute": 0
+  }
+}

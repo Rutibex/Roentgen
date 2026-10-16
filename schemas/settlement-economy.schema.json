@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.local/schemas/settlement-economy.schema.json",
+  "title": "Settlement Economy",
+  "type": "object",
+  "required": [
+    "settlementId",
+    "stocks",
+    "currencyPolicy",
+    "taxPolicy"
+  ],
+  "properties": {
+    "settlementId": {
+      "type": "string"
+    },
+    "stocks": {
+      "type": "array"
+    },
+    "currencyPolicy": {
+      "type": "object"
+    },
+    "taxPolicy": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}

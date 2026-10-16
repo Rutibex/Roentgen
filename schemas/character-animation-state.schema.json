@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.game/schemas/character-animation-state.schema.json",
+  "title": "Roentgen Character Animation State",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "characterId",
+    "action",
+    "actionProgressPermille",
+    "locomotionPhasePermille",
+    "lod"
+  ],
+  "properties": {
+    "characterId": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{32}$"
+    },
+    "action": {
+      "type": "string"
+    },
+    "actionProgressPermille": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1000
+    },
+    "locomotionPhasePermille": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 999
+    },
+    "lod": {
+      "enum": [
+        "Full",
+        "Reduced",
+        "Distant"
+      ]
+    },
+    "equipmentProfileId": {
+      "type": "string"
+    },
+    "lookTargetId": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{32}$"
+    }
+  }
+}

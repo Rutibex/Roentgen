@@ -1,0 +1,12 @@
+{
+  "definitions": [
+    "ammo.light-cartridge",
+    "ammo.heavy-cartridge",
+    "ammo.shot-shell",
+    "ammo.rifle-cartridge",
+    "ammo.energy-cell",
+    "ammo.radiographic-charge",
+    "ammo.chemical-canister",
+    "ammo.explosive-charge"
+  ]
+}

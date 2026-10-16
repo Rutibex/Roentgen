@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "traits": [
+    {
+      "id": "methodical",
+      "name": "Methodical"
+    },
+    {
+      "id": "adaptable",
+      "name": "Adaptable"
+    },
+    {
+      "id": "impulsive",
+      "name": "Impulsive"
+    },
+    {
+      "id": "scar-tissue",
+      "name": "Scar Tissue"
+    },
+    {
+      "id": "radiographic-sensitivity",
+      "name": "Radiographic Sensitivity"
+    },
+    {
+      "id": "iron-stomach",
+      "name": "Iron Stomach"
+    },
+    {
+      "id": "commanding",
+      "name": "Commanding"
+    },
+    {
+      "id": "unassuming",
+      "name": "Unassuming"
+    },
+    {
+      "id": "last-reserve",
+      "name": "Last Reserve"
+    },
+    {
+      "id": "heavy-handed",
+      "name": "Heavy Handed"
+    },
+    {
+      "id": "fine-touch",
+      "name": "Fine Touch"
+    },
+    {
+      "id": "field-naturalist",
+      "name": "Field Naturalist"
+    },
+    {
+      "id": "machine-empathy",
+      "name": "Machine Empathy"
+    },
+    {
+      "id": "lucky-breaks",
+      "name": "Lucky Breaks"
+    },
+    {
+      "id": "pack-frame",
+      "name": "Pack Frame"
+    },
+    {
+      "id": "quiet-breath",
+      "name": "Quiet Breath"
+    }
+  ]
+}

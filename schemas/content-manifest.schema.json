@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.game/schemas/content-manifest.schema.json",
+  "title": "Roentgen Content Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["manifestVersion", "contentId", "contentType", "displayName", "schemaVersion", "tags"],
+  "properties": {
+    "manifestVersion": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "contentId": { "type": "string", "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$" },
+    "contentType": {
+      "type": "string",
+      "enum": ["perk", "questKernel", "campaignKernel", "weaponFamily", "armorFamily", "creatureFamily", "bodyPartProfile", "regionFamily", "structureGrammar", "factionFamily", "companionArchetype", "audioRecipe", "musicStyle"]
+    },
+    "displayName": { "type": "string", "minLength": 1, "maxLength": 120 },
+    "schemaVersion": { "type": "integer", "minimum": 1 },
+    "generatorVersion": { "type": "string" },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[a-z0-9]+(?:[._-][a-z0-9]+)*$" },
+      "uniqueItems": true
+    },
+    "source": { "type": "string" },
+    "license": { "type": "string" },
+    "notes": { "type": "string" }
+  }
+}

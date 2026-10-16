@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.game/schemas/audio-telemetry.schema.json",
+  "type": "object",
+  "required": [
+    "runtimeState",
+    "sampleRate",
+    "channels",
+    "underruns",
+    "startedVoices"
+  ],
+  "properties": {
+    "runtimeState": {
+      "type": "string"
+    },
+    "sampleRate": {
+      "type": "integer"
+    },
+    "channels": {
+      "type": "integer"
+    },
+    "underruns": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "startedVoices": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "stolenVoices": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "activeEmitters": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "lastRenderMilliseconds": {
+      "type": "number",
+      "minimum": 0
+    }
+  },
+  "additionalProperties": true
+}

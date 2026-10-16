@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 17,
+  "campaignSeed": "0x524F454E5447454E",
+  "regionalHistory": {
+    "regions": 6,
+    "minimumEventsPerRegion": 5,
+    "crossRegionEvents": 2
+  },
+  "premiseLibrary": [
+    "resource-conflict",
+    "diagnostic-failure",
+    "buried-system",
+    "founding-myth",
+    "transport-directive",
+    "medical-transformation",
+    "convergent-cause"
+  ],
+  "milestoneRoles": [
+    "Opening", "RegionalCrisis", "FactionIntroduction", "Revelation",
+    "RegionalExpansion", "FactionRealignment", "IrreversibleChoice", "Counteraction",
+    "Revelation", "IrreversibleChoice", "FinalConvergence", "Ending"
+  ],
+  "revelations": 3,
+  "irreversibleChoices": 2,
+  "criticalRoles": 8,
+  "endingFamilies": 8,
+  "requiredRegressionBuilds": 6
+}

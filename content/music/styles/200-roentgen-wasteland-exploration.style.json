@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "id": "roentgen-wasteland-exploration",
+  "name": "Roentgen — Wasteland Exploration",
+  "description": "Original sparse post-apocalyptic exploration: dry plucked strings, low drones, distant winds and long uneasy spaces.",
+  "version": "1.1.0",
+  "family": "game",
+  "abstract": false,
+  "extends": "game-dark-ambient-fps",
+  "tempo": {
+    "minimum": 50,
+    "maximum": 76
+  },
+  "candidateCount": 18,
+  "scales": [
+    "naturalMinor",
+    "dorian",
+    "phrygian"
+  ],
+  "rhythms": [
+    {
+      "id": "wasteland-drift",
+      "steps": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "roles": [
+    {
+      "id": "melody",
+      "role": "lead",
+      "generalMidiProgram": 25,
+      "rhythmPatternId": "wasteland-drift",
+      "density": 18,
+      "instrumentSelector": {
+        "families": [
+          "guitar",
+          "reed",
+          "pipe",
+          "strings"
+        ],
+        "preferredTags": [
+          "expressive",
+          "distinct"
+        ],
+        "maximumLayers": 1
+      }
+    },
+    {
+      "id": "bass",
+      "role": "bass",
+      "density": 20,
+      "instrumentSelector": {
+        "families": [
+          "bass",
+          "strings",
+          "synthPad"
+        ],
+        "maximumLayers": 1
+      }
+    },
+    {
+      "id": "chords",
+      "role": "chords",
+      "density": 18,
+      "instrumentSelector": {
+        "families": [
+          "synthPad",
+          "strings",
+          "organ",
+          "guitar"
+        ],
+        "preferredTags": [
+          "atmospheric",
+          "sustaining"
+        ],
+        "maximumLayers": 2
+      }
+    },
+    {
+      "id": "arpeggio",
+      "role": "arpeggio",
+      "rhythmPatternId": "wasteland-drift",
+      "density": 9,
+      "instrumentSelector": {
+        "families": [
+          "guitar",
+          "chromaticPercussion",
+          "synthEffects"
+        ],
+        "maximumLayers": 1
+      }
+    },
+    {
+      "id": "counter",
+      "role": "counterMelody",
+      "density": 7,
+      "instrumentSelector": {
+        "families": [
+          "reed",
+          "pipe",
+          "strings"
+        ],
+        "maximumLayers": 1
+      }
+    },
+    {
+      "id": "texture",
+      "role": "texture",
+      "density": 28,
+      "instrumentSelector": {
+        "families": [
+          "synthPad",
+          "synthEffects",
+          "strings",
+          "soundEffects"
+        ],
+        "preferredTags": [
+          "atmospheric",
+          "sustaining"
+        ],
+        "maximumLayers": 2
+      }
+    },
+    {
+      "id": "drums",
+      "role": "drums",
+      "enabled": false,
+      "density": 0
+    }
+  ]
+}

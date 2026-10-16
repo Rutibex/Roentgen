@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "id": "roentgen-quiet-range",
+  "name": "Roentgen \u2014 Quiet Range",
+  "description": "Highland observatories, relay harmonics and buried installations.",
+  "version": "1.0.0",
+  "family": "game",
+  "abstract": false,
+  "extends": "generative-ecosystem"
+}

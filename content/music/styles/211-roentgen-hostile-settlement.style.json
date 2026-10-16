@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "id": "roentgen-hostile-settlement",
+  "name": "Roentgen \u2014 Hostile Settlement",
+  "description": "Social unease, restrained percussion and unstable harmony.",
+  "version": "1.0.0",
+  "family": "game",
+  "abstract": false,
+  "extends": "modal-noir"
+}

@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "id": "roentgen-escape",
+  "name": "Roentgen \u2014 Escape",
+  "description": "Accelerating pulse and urgent transition-ready phrases.",
+  "version": "1.0.0",
+  "family": "game",
+  "abstract": false,
+  "extends": "game-survival-horror-chase"
+}

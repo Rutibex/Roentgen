@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.local/schemas/inventory-state.schema.json",
+  "title": "Inventory State",
+  "type": "object",
+  "required": [
+    "ownerId",
+    "maximumMassGrams",
+    "itemIds"
+  ],
+  "properties": {
+    "ownerId": {
+      "type": "string"
+    },
+    "maximumMassGrams": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "itemIds": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

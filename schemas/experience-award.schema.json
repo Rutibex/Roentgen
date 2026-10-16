@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Roentgen Experience Award",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "awardId": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{32}$"
+    },
+    "sourceType": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sourceKey": {
+      "type": "string",
+      "minLength": 1
+    },
+    "amount": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "repeatPolicy": {
+      "enum": [
+        "Once",
+        "OncePerSourceRevision",
+        "Repeatable"
+      ]
+    },
+    "awardedTick": {
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "required": [
+    "awardId",
+    "sourceType",
+    "sourceKey",
+    "amount",
+    "repeatPolicy",
+    "awardedTick"
+  ]
+}

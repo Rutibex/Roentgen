@@ -1,0 +1,12 @@
+name: player-movement-interaction
+on: [push, pull_request]
+jobs:
+  phase8:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.302
+      - run: python3 eng/verify_player_contracts.py
+      - run: dotnet test tests/Roentgen.Player.Tests/Roentgen.Player.Tests.csproj --configuration Release

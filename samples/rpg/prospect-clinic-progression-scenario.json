@@ -1,0 +1,58 @@
+{
+  "id": "prospect-clinic-progression-gate",
+  "objective": "Resolve the clinic crisis through six distinct build-centered routes.",
+  "routes": [
+    {
+      "id": "combat-ballistics",
+      "primarySkill": "Ballistics",
+      "difficulty": 55,
+      "requiredBehaviors": [],
+      "resolutionFamily": "combat"
+    },
+    {
+      "id": "combat-melee",
+      "primarySkill": "Melee",
+      "difficulty": 55,
+      "requiredBehaviors": [
+        "combat.action.unlock:guard-break"
+      ],
+      "resolutionFamily": "melee"
+    },
+    {
+      "id": "stealth-security",
+      "primarySkill": "Security",
+      "difficulty": 55,
+      "requiredBehaviors": [
+        "interaction.solution.unlock:alarm-ghost"
+      ],
+      "resolutionFamily": "stealth"
+    },
+    {
+      "id": "engineering-science",
+      "primarySkill": "Engineering",
+      "difficulty": 55,
+      "requiredBehaviors": [
+        "interaction.solution.unlock:power-reroute"
+      ],
+      "resolutionFamily": "technical"
+    },
+    {
+      "id": "medicine-fieldcraft",
+      "primarySkill": "Medicine",
+      "difficulty": 55,
+      "requiredBehaviors": [
+        "interaction.solution.unlock:field-stabilize"
+      ],
+      "resolutionFamily": "medical"
+    },
+    {
+      "id": "influence-commerce",
+      "primarySkill": "Influence",
+      "difficulty": 55,
+      "requiredBehaviors": [
+        "dialogue.option.unlock:leverage-ledger"
+      ],
+      "resolutionFamily": "social"
+    }
+  ]
+}

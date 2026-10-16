@@ -1,0 +1,165 @@
+{
+  "schemaVersion": 1,
+  "perks": [
+    {
+      "id": "sidearm-snapline",
+      "name": "Sidearm Snapline"
+    },
+    {
+      "id": "supported-fire",
+      "name": "Supported Fire"
+    },
+    {
+      "id": "breach-geometry",
+      "name": "Breach Geometry"
+    },
+    {
+      "id": "charge-discipline",
+      "name": "Charge Discipline"
+    },
+    {
+      "id": "arc-conduction",
+      "name": "Arc Conduction"
+    },
+    {
+      "id": "calculated-fuse",
+      "name": "Calculated Fuse"
+    },
+    {
+      "id": "fragment-mapping",
+      "name": "Fragment Mapping"
+    },
+    {
+      "id": "trap-reversal",
+      "name": "Trap Reversal"
+    },
+    {
+      "id": "guard-break",
+      "name": "Guard Break"
+    },
+    {
+      "id": "countermeasure",
+      "name": "Countermeasure"
+    },
+    {
+      "id": "limb-hook",
+      "name": "Limb Hook"
+    },
+    {
+      "id": "clinch-control",
+      "name": "Clinch Control"
+    },
+    {
+      "id": "rapid-intake",
+      "name": "Rapid Intake"
+    },
+    {
+      "id": "layer-separation",
+      "name": "Layer Separation"
+    },
+    {
+      "id": "stress-mapping",
+      "name": "Stress Mapping"
+    },
+    {
+      "id": "trauma-projection",
+      "name": "Trauma Projection"
+    },
+    {
+      "id": "component-isolation",
+      "name": "Component Isolation"
+    },
+    {
+      "id": "obscured-anatomy",
+      "name": "Obscured Anatomy"
+    },
+    {
+      "id": "sequence-compression",
+      "name": "Sequence Compression"
+    },
+    {
+      "id": "continuity-reserve",
+      "name": "Continuity Reserve"
+    },
+    {
+      "id": "recoil-reconstruction",
+      "name": "Recoil Reconstruction"
+    },
+    {
+      "id": "exposure-geometry",
+      "name": "Exposure Geometry"
+    },
+    {
+      "id": "target-transfer",
+      "name": "Target Transfer"
+    },
+    {
+      "id": "interrupt-reserve",
+      "name": "Interrupt Reserve"
+    },
+    {
+      "id": "quiet-entry",
+      "name": "Quiet Entry"
+    },
+    {
+      "id": "shadow-route",
+      "name": "Shadow Route"
+    },
+    {
+      "id": "alarm-ghost",
+      "name": "Alarm Ghost"
+    },
+    {
+      "id": "prepared-exit",
+      "name": "Prepared Exit"
+    },
+    {
+      "id": "field-jury-rig",
+      "name": "Field Jury-Rig"
+    },
+    {
+      "id": "diagnostic-override",
+      "name": "Diagnostic Override"
+    },
+    {
+      "id": "power-reroute",
+      "name": "Power Reroute"
+    },
+    {
+      "id": "reverse-analysis",
+      "name": "Reverse Analysis"
+    },
+    {
+      "id": "triage-protocol",
+      "name": "Triage Protocol"
+    },
+    {
+      "id": "anatomical-exploit",
+      "name": "Anatomical Exploit"
+    },
+    {
+      "id": "clean-harvest",
+      "name": "Clean Harvest"
+    },
+    {
+      "id": "expedition-camp",
+      "name": "Expedition Camp"
+    },
+    {
+      "id": "leverage-ledger",
+      "name": "Leverage Ledger"
+    },
+    {
+      "id": "conditional-surrender",
+      "name": "Conditional Surrender"
+    },
+    {
+      "id": "network-credit",
+      "name": "Network Credit"
+    },
+    {
+      "id": "mediated-exchange",
+      "name": "Mediated Exchange"
+    }
+  ]
+}

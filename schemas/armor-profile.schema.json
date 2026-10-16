@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.game/schemas/armor-profile.schema.json",
+  "title": "Roentgen armor profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "layer", "coverage", "thresholds", "resistances", "conditionPermille"],
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "layer": {"type": "string", "enum": ["Underlayer", "Clothing", "Primary", "Outer", "PoweredFrame"]},
+    "coverage": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+    "thresholds": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 0}},
+    "resistances": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 0, "maximum": 950}},
+    "conditionPermille": {"type": "integer", "minimum": 0, "maximum": 1000}
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.game/schemas/renderer-telemetry.schema.json",
+  "title": "Roentgen renderer telemetry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "frameNumber",
+    "submittedItems",
+    "visibleItems",
+    "culledItems",
+    "drawCalls",
+    "triangles",
+    "shadowDrawCalls",
+    "uploadsCompleted",
+    "uploadsPending",
+    "cpuMilliseconds",
+    "shadowsEnabled",
+    "postProcessingEnabled",
+    "uploadsSkipped",
+    "uploadsFailed",
+    "uploadBytesCompleted",
+    "uploadBytesPending",
+    "uploadsRejected",
+    "uploadMilliseconds"
+  ],
+  "properties": {
+    "frameNumber": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "submittedItems": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "visibleItems": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "culledItems": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "drawCalls": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "triangles": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "shadowDrawCalls": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "uploadsCompleted": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "uploadsPending": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "cpuMilliseconds": {
+      "type": "number",
+      "minimum": 0
+    },
+    "shadowsEnabled": {
+      "type": "boolean"
+    },
+    "postProcessingEnabled": {
+      "type": "boolean"
+    },
+    "uploadsSkipped": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "uploadsFailed": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "uploadBytesCompleted": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "uploadBytesPending": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "uploadsRejected": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "uploadMilliseconds": {
+      "type": "number",
+      "minimum": 0
+    }
+  }
+}

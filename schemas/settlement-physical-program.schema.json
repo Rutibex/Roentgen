@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.game/schemas/settlement-physical-program.schema.json",
+  "title": "Settlement physical program",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "scale",
+    "purpose",
+    "resourceAnchors",
+    "defense",
+    "requiredDistricts",
+    "requiredServices",
+    "palette",
+    "historicalDamage"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scale": {
+      "type": "string"
+    },
+    "purpose": {
+      "type": "string"
+    },
+    "resourceAnchors": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object"
+      }
+    },
+    "defense": {
+      "type": "string"
+    },
+    "requiredDistricts": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object"
+      }
+    },
+    "requiredServices": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object"
+      }
+    },
+    "palette": {
+      "type": "object"
+    },
+    "historicalDamage": {
+      "type": "object"
+    }
+  }
+}

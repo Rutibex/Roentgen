@@ -1,0 +1,47 @@
+name: Terrain and regional topology
+
+on:
+  push:
+    paths:
+      - 'src/Roentgen.World/**'
+      - 'src/Roentgen.Physics/**'
+      - 'src/Roentgen.Rendering/Terrain*'
+      - 'src/Roentgen.App/Phase7WorldScene.cs'
+      - 'tests/Roentgen.World.Tests/**'
+      - 'tests/Roentgen.Physics.Tests/**'
+      - 'tools/Roentgen.WorldLab/**'
+      - 'eng/verify_world_*'
+      - 'eng/world-golden-vectors.json'
+      - 'schemas/*terrain*'
+      - 'schemas/regional-topology.schema.json'
+      - '.github/workflows/terrain-regional-topology.yml'
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  terrain:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: Restore tools and packages
+        run: |
+          dotnet tool restore
+          dotnet restore Roentgen.sln --locked-mode
+      - name: Static contracts and vectors
+        run: |
+          python eng/verify_world_contracts.py
+          python eng/verify_world_vectors.py
+      - name: Build
+        run: dotnet build Roentgen.sln --configuration Release --no-restore
+      - name: World tests
+        run: dotnet test tests/Roentgen.World.Tests/Roentgen.World.Tests.csproj --configuration Release --no-build
+      - name: Physics tests
+        run: dotnet test tests/Roentgen.Physics.Tests/Roentgen.Physics.Tests.csproj --configuration Release --no-build
+      - name: Representative seed batch
+        run: dotnet run --project tools/Roentgen.WorldLab --configuration Release --no-build -- validate-seeds --count 100 --start 1

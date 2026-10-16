@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "worldWidthMeters": 2048,
+  "worldDepthMeters": 2048,
+  "chunkSizeMeters": 128,
+  "nearChunkSamples": 65,
+  "topologyCellMeters": 16,
+  "waterLevelCentimeters": -250,
+  "minimumElevationCentimeters": -2500,
+  "maximumElevationCentimeters": 14000,
+  "roadHalfWidthCentimeters": 500,
+  "trailHalfWidthCentimeters": 220,
+  "streamingRadiusChunks": 3,
+  "dormantRadiusChunks": 5,
+  "maximumCpuResidentBytes": 201326592,
+  "maximumPendingGenerationRequests": 256,
+  "workerCount": 2
+}

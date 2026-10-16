@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.game/schemas/audio-cache-record.schema.json",
+  "type": "object",
+  "required": [
+    "assetId",
+    "generatorVersion",
+    "rootSeed",
+    "familySeed",
+    "definitionChecksum"
+  ],
+  "properties": {
+    "assetId": {
+      "type": "string"
+    },
+    "generatorVersion": {
+      "type": "integer"
+    },
+    "rootSeed": {
+      "type": "string"
+    },
+    "familySeed": {
+      "type": "string"
+    },
+    "definitionChecksum": {
+      "type": "string"
+    },
+    "quality": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

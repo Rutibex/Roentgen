@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>Roentgen.Music.Playroma</RootNamespace>
+    <AssemblyName>Roentgen.Music.Playroma</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Roentgen.Music\Roentgen.Music.csproj" />
+    <ProjectReference Include="..\Roentgen.Audio\Roentgen.Audio.csproj" />
+    <ProjectReference Include="..\Roentgen.Core\Roentgen.Core.csproj" />
+    <ProjectReference Include="..\Roentgen.Contracts\Roentgen.Contracts.csproj" />
+    <ProjectReference Include="..\Playroma.Sound.Core\Playroma.Sound.Core.csproj" />
+    <ProjectReference Include="..\Playroma.Sound.Streaming\Playroma.Sound.Streaming.csproj" />
+    <ProjectReference Include="..\PlayromaMusic.Core\PlayromaMusic.Core.csproj" />
+    <ProjectReference Include="..\PlayromaMusic.Generators\PlayromaMusic.Generators.csproj" />
+    <ProjectReference Include="..\PlayromaMusic.SoundFont\PlayromaMusic.SoundFont.csproj" />
+  </ItemGroup>
+</Project>

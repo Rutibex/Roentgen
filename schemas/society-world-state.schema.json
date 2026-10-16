@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "day",
+    "factions",
+    "settlements",
+    "relationships",
+    "territoryClaims",
+    "leadership",
+    "tradeRoutes",
+    "shipments",
+    "crimes",
+    "conflicts",
+    "revision"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 15
+    },
+    "day": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "factions": {
+      "type": "array"
+    },
+    "settlements": {
+      "type": "array"
+    },
+    "relationships": {
+      "type": "array"
+    },
+    "territoryClaims": {
+      "type": "array"
+    },
+    "leadership": {
+      "type": "array"
+    },
+    "tradeRoutes": {
+      "type": "array"
+    },
+    "shipments": {
+      "type": "array"
+    },
+    "reputations": {
+      "type": "array"
+    },
+    "crimes": {
+      "type": "array"
+    },
+    "disguises": {
+      "type": "array"
+    },
+    "conflicts": {
+      "type": "array"
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "title": "Roentgen Society World State"
+}

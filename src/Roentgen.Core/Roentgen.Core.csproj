@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+
+    <RootNamespace>Roentgen.Core</RootNamespace>
+    <AssemblyName>Roentgen.Core</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Roentgen.Contracts\Roentgen.Contracts.csproj" />
+  </ItemGroup>
+</Project>

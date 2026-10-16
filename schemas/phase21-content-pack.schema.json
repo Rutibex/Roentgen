@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.game/schemas/phase21-content-pack.schema.json",
+  "title": "Roentgen Phase 21 Launch Content Pack",
+  "type": "object",
+  "required": ["schemaVersion", "packageId", "contentVersion", "regions", "settlementGrammars", "structureGrammars", "roomMotifs", "damageProfiles", "factions", "organizations", "humanoidArchetypes", "creatureFamilies", "robotChassis", "companionArchetypes", "weaponFamilies", "weaponComponents", "armorFamilies", "armorComponents", "consumables", "craftingProcesses", "perks", "backgrounds", "traits", "questKernels", "campaignKernels", "dialogueActs", "rumorTemplates", "tutorials", "epilogueRules", "audioProfiles", "musicBindings"],
+  "properties": {
+    "schemaVersion": { "const": 21 },
+    "packageId": { "const": "roentgen.launch-content" },
+    "contentVersion": { "type": "string", "minLength": 1 },
+    "regions": { "$ref": "#/$defs/idArray", "minItems": 6, "maxItems": 6 },
+    "settlementGrammars": { "$ref": "#/$defs/idArray", "minItems": 12, "maxItems": 12 },
+    "structureGrammars": { "$ref": "#/$defs/idArray", "minItems": 50, "maxItems": 50 },
+    "roomMotifs": { "$ref": "#/$defs/idArray", "minItems": 80, "maxItems": 80 },
+    "damageProfiles": { "$ref": "#/$defs/idArray", "minItems": 20, "maxItems": 20 },
+    "factions": { "$ref": "#/$defs/idArray", "minItems": 8, "maxItems": 8 },
+    "organizations": { "$ref": "#/$defs/idArray", "minItems": 20, "maxItems": 20 },
+    "humanoidArchetypes": { "$ref": "#/$defs/idArray", "minItems": 20, "maxItems": 20 },
+    "creatureFamilies": { "$ref": "#/$defs/idArray", "minItems": 30, "maxItems": 30 },
+    "robotChassis": { "$ref": "#/$defs/idArray", "minItems": 12, "maxItems": 12 },
+    "companionArchetypes": { "$ref": "#/$defs/idArray", "minItems": 12, "maxItems": 12 },
+    "weaponFamilies": { "$ref": "#/$defs/idArray", "minItems": 14, "maxItems": 14 },
+    "weaponComponents": { "$ref": "#/$defs/idArray", "minItems": 80, "maxItems": 80 },
+    "armorFamilies": { "$ref": "#/$defs/idArray", "minItems": 12, "maxItems": 12 },
+    "armorComponents": { "$ref": "#/$defs/idArray", "minItems": 60, "maxItems": 60 },
+    "consumables": { "$ref": "#/$defs/idArray", "minItems": 50, "maxItems": 50 },
+    "craftingProcesses": { "$ref": "#/$defs/idArray", "minItems": 40, "maxItems": 40 },
+    "perks": { "$ref": "#/$defs/idArray", "minItems": 110, "maxItems": 110 },
+    "backgrounds": { "$ref": "#/$defs/idArray", "minItems": 18, "maxItems": 18 },
+    "traits": { "$ref": "#/$defs/idArray", "minItems": 30, "maxItems": 30 },
+    "questKernels": { "$ref": "#/$defs/idArray", "minItems": 120, "maxItems": 120 },
+    "campaignKernels": { "$ref": "#/$defs/idArray", "minItems": 30, "maxItems": 30 },
+    "dialogueActs": { "$ref": "#/$defs/idArray", "minItems": 250, "maxItems": 250 },
+    "rumorTemplates": { "$ref": "#/$defs/idArray", "minItems": 100, "maxItems": 100 },
+    "tutorials": { "$ref": "#/$defs/idArray", "minItems": 18, "maxItems": 18 },
+    "epilogueRules": { "$ref": "#/$defs/idArray", "minItems": 96, "maxItems": 96 },
+    "audioProfiles": { "$ref": "#/$defs/idArray", "minItems": 157, "maxItems": 157 },
+    "musicBindings": { "$ref": "#/$defs/idArray", "minItems": 44, "maxItems": 44 }
+  },
+  "$defs": {
+    "idArray": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id"],
+        "properties": { "id": { "type": "string", "minLength": 1 } },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": false
+}

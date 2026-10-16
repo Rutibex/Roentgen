@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Roentgen.StructureLab</RootNamespace>
+    <AssemblyName>Roentgen.StructureLab</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Roentgen.Contracts\Roentgen.Contracts.csproj" />
+    <ProjectReference Include="..\..\src\Roentgen.Core\Roentgen.Core.csproj" />
+    <ProjectReference Include="..\..\src\Roentgen.World\Roentgen.World.csproj" />
+    <ProjectReference Include="..\..\src\Roentgen.Navigation\Roentgen.Navigation.csproj" />
+    <ProjectReference Include="..\..\src\Roentgen.Physics\Roentgen.Physics.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,50 @@
+name: Structures and interiors
+
+on:
+  push:
+    paths:
+      - 'src/Roentgen.World/Structures/**'
+      - 'src/Roentgen.Navigation/**'
+      - 'src/Roentgen.Physics/Structure*'
+      - 'src/Roentgen.Rendering/Structure*'
+      - 'src/Roentgen.App/Phase7WorldScene.cs'
+      - 'tests/Roentgen.Structures.Tests/**'
+      - 'tools/Roentgen.StructureLab/**'
+      - 'eng/verify_structure_*'
+      - 'eng/structure-golden-vectors.json'
+      - 'schemas/*structure*'
+      - 'schemas/room-graph.schema.json'
+      - 'schemas/damage-history.schema.json'
+      - '.github/workflows/structures-interiors.yml'
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  structures:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: Restore tools and packages
+        run: |
+          dotnet tool restore
+          dotnet restore Roentgen.sln --locked-mode
+      - name: Static contracts and vectors
+        run: |
+          python eng/verify_structure_contracts.py
+          python eng/verify_structure_vectors.py
+      - name: Build
+        run: dotnet build Roentgen.sln --configuration Release --no-restore
+      - name: Structure tests
+        run: dotnet test tests/Roentgen.Structures.Tests/Roentgen.Structures.Tests.csproj --configuration Release --no-build
+      - name: Representative structure batch
+        run: dotnet run --project tools/Roentgen.StructureLab --configuration Release --no-build -- validate-seeds --count 1000
+      - name: Streaming and collision smoke
+        run: |
+          dotnet run --project tools/Roentgen.StructureLab --configuration Release --no-build -- stream-smoke --iterations 256
+          dotnet run --project tools/Roentgen.StructureLab --configuration Release --no-build -- collision-smoke

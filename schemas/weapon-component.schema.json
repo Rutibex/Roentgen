@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.local/schemas/weapon-component.schema.json",
+  "title": "Weapon Component",
+  "type": "object",
+  "required": [
+    "id",
+    "slot",
+    "modifiers"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "slot": {
+      "type": "string"
+    },
+    "modifiers": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}

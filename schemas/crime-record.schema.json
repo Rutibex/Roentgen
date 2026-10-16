@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "kind",
+    "jurisdictionFactionId",
+    "locationId",
+    "suspectedActorId",
+    "severityPermille",
+    "status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "kind": {
+      "type": "string"
+    },
+    "jurisdictionFactionId": {
+      "type": "string"
+    },
+    "locationId": {
+      "type": "string"
+    },
+    "suspectedActorId": {
+      "type": "string"
+    },
+    "severityPermille": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1000
+    },
+    "status": {
+      "enum": [
+        "Unreported",
+        "Reported",
+        "WarrantIssued",
+        "Resolved",
+        "Forgiven"
+      ]
+    },
+    "witnessIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "evidenceIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    }
+  },
+  "title": "Roentgen Crime Record"
+}

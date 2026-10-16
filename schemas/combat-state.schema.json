@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.game/schemas/combat-state.schema.json",
+  "title": "Roentgen combat state diagnostic projection",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "tick", "actors", "weapons", "projectiles", "pendingActions", "feedback"],
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "tick": {"type": "integer", "minimum": 0},
+    "actors": {"type": "array", "items": {"$ref": "combat-actor-state.schema.json"}},
+    "weapons": {"type": "array", "items": {"type": "object"}},
+    "projectiles": {"type": "array", "items": {"type": "object"}},
+    "pendingActions": {"type": "array", "items": {"type": "object"}},
+    "feedback": {"type": "array", "maxItems": 128, "items": {"type": "object"}}
+  }
+}

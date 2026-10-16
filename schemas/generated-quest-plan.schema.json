@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.game/schemas/generated-quest-plan.schema.json",
+  "title": "Generated Quest Plan",
+  "type": "object",
+  "required": ["id", "kernelId", "kernelVersion", "boundSlots", "seedValue", "validationHistory", "repairHistory"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^[0-9a-fA-F]{32}$"},
+    "kernelId": {"type": "string", "minLength": 1},
+    "kernelVersion": {"type": "integer", "minimum": 1},
+    "boundSlots": {"type": "object", "additionalProperties": {"type": "string", "pattern": "^[0-9a-fA-F]{32}$"}},
+    "bindingReasons": {"type": "object", "additionalProperties": {"type": "string"}},
+    "seedValue": {"type": "integer", "minimum": 0},
+    "validationHistory": {"type": "array", "items": {"type": "string"}},
+    "repairHistory": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}

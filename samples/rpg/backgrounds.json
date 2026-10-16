@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "backgrounds": [
+    {
+      "id": "perimeter-scout",
+      "name": "Perimeter Scout"
+    },
+    {
+      "id": "clinic-orderly",
+      "name": "Clinic Orderly"
+    },
+    {
+      "id": "relay-technician",
+      "name": "Relay Technician"
+    },
+    {
+      "id": "quarry-mechanic",
+      "name": "Quarry Mechanic"
+    },
+    {
+      "id": "caravan-factor",
+      "name": "Caravan Factor"
+    },
+    {
+      "id": "salvage-inspector",
+      "name": "Salvage Inspector"
+    },
+    {
+      "id": "settlement-mediator",
+      "name": "Settlement Mediator"
+    },
+    {
+      "id": "demolition-recovery-worker",
+      "name": "Demolition Recovery Worker"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "definitionFamilyId": "weapon.revolver",
+  "displayIdentity": "Enamel-Worn Revolver",
+  "itemSeed": 42,
+  "generationVersion": 1,
+  "components": [
+    {
+      "slot": "Receiver",
+      "componentDefinitionId": "component.receiver.revolver"
+    },
+    {
+      "slot": "Barrel",
+      "componentDefinitionId": "component.barrel.standard"
+    },
+    {
+      "slot": "Grip",
+      "componentDefinitionId": "component.grip.rubber"
+    },
+    {
+      "slot": "FeedSystem",
+      "componentDefinitionId": "component.feed.cylinder"
+    },
+    {
+      "slot": "Sight",
+      "componentDefinitionId": "component.sight.iron"
+    }
+  ],
+  "fingerprint": "fixture-generated-by-itemlab"
+}

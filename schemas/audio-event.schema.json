@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roentgen.game/schemas/audio-event.schema.json",
+  "type": "object",
+  "required": [
+    "eventId",
+    "simulationTick",
+    "kind",
+    "emitter"
+  ],
+  "properties": {
+    "eventId": {
+      "type": "string"
+    },
+    "simulationTick": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "kind": {
+      "type": "string"
+    },
+    "sourceId": {
+      "type": "string"
+    },
+    "targetId": {
+      "type": "string"
+    },
+    "itemId": {
+      "type": "string"
+    },
+    "locationId": {
+      "type": "string"
+    },
+    "emitter": {
+      "type": "object"
+    },
+    "parameters": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": false
+}

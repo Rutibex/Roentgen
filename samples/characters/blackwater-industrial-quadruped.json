@@ -1,0 +1,34 @@
+{
+  "bodyPlanId": "blackwater-industrial-quadruped",
+  "axialBones": [
+    "pelvis",
+    "spine_rear",
+    "spine_mid",
+    "chest",
+    "neck",
+    "head"
+  ],
+  "limbChains": [
+    ["front_l_upper", "front_l_lower", "front_l_foot"],
+    ["front_r_upper", "front_r_lower", "front_r_foot"],
+    ["rear_l_upper", "rear_l_lower", "rear_l_foot"],
+    ["rear_r_upper", "rear_r_lower", "rear_r_foot"]
+  ],
+  "targetParts": [
+    "Sensory Cluster",
+    "Jaw",
+    "Torso",
+    "Front Left Limb",
+    "Front Right Limb",
+    "Rear Left Limb",
+    "Rear Right Limb",
+    "Exposed Growth"
+  ],
+  "locomotionModes": [
+    "idle",
+    "walk",
+    "run",
+    "melee-demonstration"
+  ],
+  "supportLimbCount": 4
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "bilateralTrade": {
+    "exporterBefore": 100000,
+    "loaded": 30000,
+    "lossPermille": 125,
+    "expectedExporterAfter": 70000,
+    "expectedDelivered": 26250,
+    "expectedLost": 3750
+  },
+  "reputation": {
+    "initial": {"trust": 0, "fear": 0, "respect": 0},
+    "evidence": [
+      {"dimension": "fear", "delta": 800, "reliabilityPermille": 1000, "publicityPermille": 1000},
+      {"dimension": "trust", "delta": -300, "reliabilityPermille": 1000, "publicityPermille": 1000},
+      {"dimension": "respect", "delta": 600, "reliabilityPermille": 1000, "publicityPermille": 1000}
+    ],
+    "expected": {"trust": -300, "fear": 800, "respect": 600, "standing": "feared"}
+  },
+  "disguise": {
+    "qualityPermille": 700,
+    "casualInspection": 250,
+    "casualFamiliarity": 100,
+    "guardInspection": 900,
+    "guardFamiliarity": 900,
+    "guardExposure": 500,
+    "expectedCasual": "Accepted",
+    "expectedGuard": "Exposed"
+  },
+  "conflict": {
+    "playerRelevancePermille": 800,
+    "reservationThreshold": 600,
+    "expectedReserved": true
+  }
+}
