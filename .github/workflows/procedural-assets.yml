@@ -35,7 +35,7 @@ jobs:
       - run: dotnet test tests/Roentgen.Assets.Tests --configuration Release --no-build
       - run: dotnet run --project tools/Roentgen.AssetLab --configuration Release --no-build -- catalog
       - run: dotnet run --project tools/Roentgen.AssetLab --configuration Release --no-build -- compile-catalog --output artifacts/assetlab
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: phase5-assetlab-output
           path: artifacts/assetlab
